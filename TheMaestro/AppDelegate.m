@@ -10,8 +10,8 @@
 
 #import "AppDelegate.h"
 #import "BlankScene.h"
+#import "GameScene.h"
 #import "GameSoundManager.h"
-#import "TitleScene.h"
 
 @implementation AppController
 
@@ -83,8 +83,8 @@
 	[CCTexture2D PVRImagesHavePremultipliedAlpha:YES];
 
 	// and add the scene to the stack. The director will run it when it automatically when the view is displayed.
-	[director_ pushScene:[BlankScene node]]; 
-//	[director_ pushScene:[TitleScene node]]; 
+	//[director_ pushScene:[BlankScene node]]; 
+	[director_ pushScene:[GameScene node]]; 
 
 	return YES;
 }
