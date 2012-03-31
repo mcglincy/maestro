@@ -21,8 +21,9 @@
 //        HUDLayer *hudLayer = [HUDLayer node];       
 //        [self addChild:hudLayer z:1];                         
         
-        GameLayer *gameLayer = [GameLayer node];
-        [self addChild:gameLayer z:0];                         
+//        GameLayer *gameLayer = [GameLayer node];
+//        [self addChild:gameLayer z:0];                         
+        [self addChild:[GameLayer node]];
     }
     return self;
 }

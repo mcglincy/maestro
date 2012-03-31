@@ -12,7 +12,6 @@
 #import "BlankScene.h"
 #import "GameScene.h"
 #import "GameSoundManager.h"
-#import "HelloWorldLayer.h"
 
 @implementation AppController
 
@@ -87,7 +86,6 @@
 #warning TODO: go straight to GameScene for development
 	//[director_ pushScene:[BlankScene node]]; 
 	[director_ pushScene:[GameScene node]]; 
-	//[director_ pushScene:[HelloWorldLayer scene]]; 
 
 	return YES;
 }

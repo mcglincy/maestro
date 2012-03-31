@@ -11,5 +11,6 @@
 #import "PhysicsSprite.h"
 
 @interface Tear : PhysicsSprite
+- (void)addToPhysics;
 
 @end
