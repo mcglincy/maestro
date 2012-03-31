@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "GameObject.h"
+#import "PhysicsSprite.h"
 
-@interface Tear : GameObject
+@interface Tear : PhysicsSprite
 
 @end

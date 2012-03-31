@@ -15,6 +15,7 @@
 {
     self = [super initWithFile:@"tear.png" rect:CGRectMake(0, 0, 80, 58)];
     if (self) {
+        [self addToPhysics];
     }
     return self;
 }

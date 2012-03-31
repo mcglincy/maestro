@@ -72,6 +72,8 @@
 		0B1A49F41527B60E0062DECC /* LICENSE_Chipmunk.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0B1A49F31527B60E0062DECC /* LICENSE_Chipmunk.txt */; };
 		0B1A49F71527B6330062DECC /* PhysicsSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1A49F61527B6330062DECC /* PhysicsSprite.m */; };
 		0B1A49FA1527B66D0062DECC /* Physics.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1A49F91527B66D0062DECC /* Physics.m */; };
+		0B1A4A001527BE100062DECC /* grossini_dance_atlas.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B1A49FF1527BE100062DECC /* grossini_dance_atlas.png */; };
+		0B1A4A041527BE1D0062DECC /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1A4A031527BE1C0062DECC /* HelloWorldLayer.m */; };
 		0B87A2721527A020001A28E7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B87A2711527A020001A28E7 /* QuartzCore.framework */; };
 		0B87A2741527A020001A28E7 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B87A2731527A020001A28E7 /* OpenGLES.framework */; };
 		0B87A2761527A020001A28E7 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B87A2751527A020001A28E7 /* OpenAL.framework */; };
@@ -317,6 +319,9 @@
 		0B1A49F61527B6330062DECC /* PhysicsSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhysicsSprite.m; sourceTree = "<group>"; };
 		0B1A49F81527B66D0062DECC /* Physics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Physics.h; sourceTree = "<group>"; };
 		0B1A49F91527B66D0062DECC /* Physics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Physics.m; sourceTree = "<group>"; };
+		0B1A49FF1527BE100062DECC /* grossini_dance_atlas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = grossini_dance_atlas.png; path = ../../../maestro/Assets/Graphics/grossini_dance_atlas.png; sourceTree = "<group>"; };
+		0B1A4A021527BE1C0062DECC /* HelloWorldLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HelloWorldLayer.h; path = ../../maestro/Maestro/HelloWorldLayer.h; sourceTree = "<group>"; };
+		0B1A4A031527BE1C0062DECC /* HelloWorldLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HelloWorldLayer.m; path = ../../maestro/Maestro/HelloWorldLayer.m; sourceTree = "<group>"; };
 		0B87A26D1527A020001A28E7 /* Maestro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Maestro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B87A2711527A020001A28E7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		0B87A2731527A020001A28E7 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -609,6 +614,7 @@
 		0B1A47031527A0F70062DECC /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
+				0B1A49FF1527BE100062DECC /* grossini_dance_atlas.png */,
 				0B1A47041527A0F70062DECC /* background.png */,
 				0B1A47051527A0F70062DECC /* blank_screen.png */,
 				0B1A47061527A0F70062DECC /* gray_note.png */,
@@ -806,6 +812,8 @@
 				0B1A46E51527A0EC0062DECC /* GameScene.m */,
 				0B1A46E61527A0EC0062DECC /* GameSoundManager.h */,
 				0B1A46E71527A0EC0062DECC /* GameSoundManager.m */,
+				0B1A4A021527BE1C0062DECC /* HelloWorldLayer.h */,
+				0B1A4A031527BE1C0062DECC /* HelloWorldLayer.m */,
 				0B1A46E81527A0EC0062DECC /* Maestro.h */,
 				0B1A46E91527A0EC0062DECC /* Maestro.m */,
 				0B1A46EA1527A0EC0062DECC /* Note.h */,
@@ -1283,6 +1291,7 @@
 				0B1A49D31527B5210062DECC /* README.txt in Resources */,
 				0B1A49D51527B5210062DECC /* CMakeLists.txt in Resources */,
 				0B1A49F41527B60E0062DECC /* LICENSE_Chipmunk.txt in Resources */,
+				0B1A4A001527BE100062DECC /* grossini_dance_atlas.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1436,6 +1445,7 @@
 				0B1A49F11527B5210062DECC /* cpVect.c in Sources */,
 				0B1A49F71527B6330062DECC /* PhysicsSprite.m in Sources */,
 				0B1A49FA1527B66D0062DECC /* Physics.m in Sources */,
+				0B1A4A041527BE1D0062DECC /* HelloWorldLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

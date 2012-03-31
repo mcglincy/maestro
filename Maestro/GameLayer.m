@@ -69,4 +69,9 @@
     [node runAction:[CCRepeatForever actionWithAction:sequence]];   
 }
 
+- (void)update:(ccTime) delta
+{
+    [[Physics sharedInstance] update:delta];
+}
+
 @end

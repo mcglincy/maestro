@@ -30,7 +30,7 @@
 {
     self = [super init];
     if (self) {
-        
+        [self initPhysics];
     }
     return self;
 }
@@ -59,7 +59,9 @@
 	
 	space_ = cpSpaceNew();
 	
-	space_->gravity = ccp(0, -100);
+#warning messing with gravity
+//	space_->gravity = ccp(0, -100);
+	space_->gravity = ccp(10, 10);
 	
 	//
 	// rogue shapes
