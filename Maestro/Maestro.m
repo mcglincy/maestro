@@ -12,8 +12,18 @@
 
 - (id)init
 {
-    self = [super initWithFile:@"maestro.png" rect:CGRectMake(0, 0, 160, 320)];
+    self = [super initWithFile:@"maestro_frame_0.png" rect:CGRectMake(0, 0, 384, 384)];
     if (self) {
+        CCAnimation *anim = [CCAnimation animation];
+        [anim addFrameWithFilename:@"maestro_frame_1.png"];
+        [anim addFrameWithFilename:@"maestro_frame_2.png"];
+        [anim addFrameWithFilename:@"maestro_frame_3.png"];
+        
+        id animationAction = [CCAnimate actionWithDuration:0.5f
+                                                 animation:anim
+                                      restoreOriginalFrame:YES];
+        id repeatAnimation = [CCRepeatForever actionWithAction:animationAction];
+        [self runAction:repeatAnimation];
     }
     return self;
 }
