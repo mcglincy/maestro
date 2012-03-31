@@ -11,6 +11,7 @@
 // Import the interfaces
 #import "HelloWorldLayer.h"
 #import "PhysicsSprite.h"
+#import "Rope.h"
 
 enum {
 	kTagParentNode = 1,
@@ -118,6 +119,37 @@ enum {
 		walls_[i]->u = 1.0f;
 		cpSpaceAddStaticShape(space_, walls_[i] );
 	}	
+    
+    //A rope
+    CCNode *parent = [self getChildByTag:kTagParentNode];
+	
+	Rope *rope = [Rope node];
+	[parent addChild: rope];
+    
+	CGPoint location = CGPointMake(1.0f, 1.0f);
+    location = [[CCDirector sharedDirector] convertToGL: location];
+    
+	rope.position = location;
+	
+	int num = 4;
+	CGPoint verts[] = {
+		ccp(-24,-54),
+		ccp(-24, 54),
+		ccp( 24, 54),
+		ccp( 24,-54),
+	};
+	
+	cpBody *body = cpBodyNew(1.0f, cpMomentForPoly(1.0f, num, verts, CGPointZero));
+
+	body->p = location;		
+
+	cpSpaceAddBody(space_, body);
+	
+	cpShape* shape = cpPolyShapeNew(body, num, verts, CGPointZero);
+	shape->e = 0.5f; shape->u = 0.5f;
+	cpSpaceAddShape(space_, shape);
+	
+	[rope setPhysicsBody:body];
 }
 
 - (void)dealloc

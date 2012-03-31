@@ -203,6 +203,7 @@
 		0B87A3EE1527A023001A28E7 /* vec4.c in Sources */ = {isa = PBXBuildFile; fileRef = 0B87A3ED1527A023001A28E7 /* vec4.c */; };
 		0B87A3F31527A023001A28E7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B87A3F21527A023001A28E7 /* main.m */; };
 		0B87A3F61527A023001A28E7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B87A3F51527A023001A28E7 /* AppDelegate.m */; };
+		739156C01527C531008FFC62 /* Rope.m in Sources */ = {isa = PBXBuildFile; fileRef = 739156BF1527C531008FFC62 /* Rope.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -567,6 +568,8 @@
 		0B87A3F21527A023001A28E7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0B87A3F41527A023001A28E7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0B87A3F51527A023001A28E7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		739156BE1527C531008FFC62 /* Rope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rope.h; sourceTree = "<group>"; };
+		739156BF1527C531008FFC62 /* Rope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rope.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -823,6 +826,8 @@
 				0B1A49F81527B66D0062DECC /* Physics.h */,
 				0B1A49F91527B66D0062DECC /* Physics.m */,
 				0B1A49F51527B6330062DECC /* PhysicsSprite.h */,
+				739156BE1527C531008FFC62 /* Rope.h */,
+				739156BF1527C531008FFC62 /* Rope.m */,
 				0B1A49F61527B6330062DECC /* PhysicsSprite.m */,
 				0B1A46EE1527A0EC0062DECC /* Tear.h */,
 				0B1A46EF1527A0EC0062DECC /* Tear.m */,
@@ -1446,6 +1451,7 @@
 				0B1A49F71527B6330062DECC /* PhysicsSprite.m in Sources */,
 				0B1A49FA1527B66D0062DECC /* Physics.m in Sources */,
 				0B1A4A041527BE1D0062DECC /* HelloWorldLayer.m in Sources */,
+				739156C01527C531008FFC62 /* Rope.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

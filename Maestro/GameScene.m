@@ -8,6 +8,7 @@
 
 #import "BackgroundLayer.h"
 #import "GameLayer.h"
+#import "HelloWorldLayer.h"
 #import "GameScene.h"
 
 @implementation GameScene
@@ -21,8 +22,12 @@
 //        HUDLayer *hudLayer = [HUDLayer node];       
 //        [self addChild:hudLayer z:1];                         
         
-        GameLayer *gameLayer = [GameLayer node];
-        [self addChild:gameLayer z:0];                         
+//        GameLayer *gameLayer = [GameLayer node];
+//        [self addChild:gameLayer z:0];
+        
+        HelloWorldLayer *helloWorldLayer = [HelloWorldLayer node];
+        [self addChild:helloWorldLayer z:0];
+        
     }
     return self;
 }
