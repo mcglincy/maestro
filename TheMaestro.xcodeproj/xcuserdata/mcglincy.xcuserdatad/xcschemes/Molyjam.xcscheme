@@ -15,8 +15,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0BE6F57A1526B6F500F5C88A"
                BuildableName = "Molyjam.app"
-               BlueprintName = "Molyjam"
-               ReferencedContainer = "container:Molyjam.xcodeproj">
+               BlueprintName = "TheMaestro"
+               ReferencedContainer = "container:TheMaestro.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,8 +33,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0BE6F57A1526B6F500F5C88A"
             BuildableName = "Molyjam.app"
-            BlueprintName = "Molyjam"
-            ReferencedContainer = "container:Molyjam.xcodeproj">
+            BlueprintName = "TheMaestro"
+            ReferencedContainer = "container:TheMaestro.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -52,8 +52,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0BE6F57A1526B6F500F5C88A"
             BuildableName = "Molyjam.app"
-            BlueprintName = "Molyjam"
-            ReferencedContainer = "container:Molyjam.xcodeproj">
+            BlueprintName = "TheMaestro"
+            ReferencedContainer = "container:TheMaestro.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -70,8 +70,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0BE6F57A1526B6F500F5C88A"
             BuildableName = "Molyjam.app"
-            BlueprintName = "Molyjam"
-            ReferencedContainer = "container:Molyjam.xcodeproj">
+            BlueprintName = "TheMaestro"
+            ReferencedContainer = "container:TheMaestro.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

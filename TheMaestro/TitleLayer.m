@@ -7,7 +7,6 @@
 //
 
 #import "GameScene.h"
-#import "Note.h"
 #import "TitleLayer.h"
 
 @implementation TitleLayer
@@ -22,17 +21,6 @@
         [backgroundImage setPosition:CGPointMake(screenSize.width/2, screenSize.height/2)];
         [self addChild:backgroundImage z:0 tag:0];
         
-        Note *note = [Note node];
-        note.position = ccp(0 + note.contentSize.width / 2, 
-                            0 + note.contentSize.height / 2);
-        [self addChild:note z:1];
-        
-        CCMoveBy *moveRight = [CCMoveTo actionWithDuration:5.0 
-                                                  position:ccp(screenSize.width - note.contentSize.width/2, 0 + note.contentSize.height / 2)];
-        CCMoveBy *moveLeft = [CCMoveTo actionWithDuration:5.0 
-                                                 position:ccp(0 + note.contentSize.width/2, 0 + note.contentSize.height / 2)];
-        CCSequence *sequence = [CCSequence actions:moveRight, moveLeft, nil];
-        [note runAction:[CCRepeatForever actionWithAction:sequence]]; 
     }
     return self;
 }

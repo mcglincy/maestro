@@ -21,14 +21,4 @@
     return self;
 }
 
-- (void)onEnter {
-    
-    [super onEnter];
-    static BOOL musicStarted = NO;
-    if (!musicStarted) {
-        [[GameSoundManager sharedInstance].soundEngine playBackgroundMusic:@"intro.mp3"];
-        musicStarted = YES;
-    }
-}
-
 @end

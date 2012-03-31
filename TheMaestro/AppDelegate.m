@@ -9,6 +9,7 @@
 #import "cocos2d.h"
 
 #import "AppDelegate.h"
+#import "BlankScene.h"
 #import "GameSoundManager.h"
 #import "TitleScene.h"
 
@@ -82,7 +83,8 @@
 	[CCTexture2D PVRImagesHavePremultipliedAlpha:YES];
 
 	// and add the scene to the stack. The director will run it when it automatically when the view is displayed.
-	[director_ pushScene:[TitleScene node]]; 
+	[director_ pushScene:[BlankScene node]]; 
+//	[director_ pushScene:[TitleScene node]]; 
 
 	return YES;
 }
