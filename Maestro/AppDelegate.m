@@ -83,8 +83,9 @@
 	[CCTexture2D PVRImagesHavePremultipliedAlpha:YES];
 
 	// and add the scene to the stack. The director will run it when it automatically when the view is displayed.
-	[director_ pushScene:[BlankScene node]]; 
-	//[director_ pushScene:[GameScene node]]; 
+#warning TODO: go straight to GameScene for development
+	//[director_ pushScene:[BlankScene node]]; 
+	[director_ pushScene:[GameScene node]]; 
 
 	return YES;
 }

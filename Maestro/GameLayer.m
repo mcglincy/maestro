@@ -11,6 +11,7 @@
 #import "Maestro.h"
 #import "Note.h"
 #import "Person.h"
+#import "Physics.h"
 #import "Tear.h"
 
 
@@ -20,6 +21,9 @@
 {
     self = [super init];
     if (self) {
+        // poke the physics singleton, init physics
+		[Physics sharedInstance];
+
         CGSize winSize = [[CCDirector sharedDirector] winSize];
         Maestro *maestro = [Maestro node];
         maestro.position = ccp(maestro.contentSize.width / 2, 
@@ -40,13 +44,13 @@
         note.position = ccp(0 + note.contentSize.width / 2, 
                             0 + note.contentSize.height / 2);
         [self addChild:note z:1];
-        [self animateNode:note];
+        //[self animateNode:note];
 
         Tear *tear = [Tear node];
         tear.position = ccp(0 + note.contentSize.width / 2, 
                             winSize.height - 100);
         [self addChild:tear z:1];
-        [self animateNode:tear];
+        //[self animateNode:tear];
     }
     return self;
 }
