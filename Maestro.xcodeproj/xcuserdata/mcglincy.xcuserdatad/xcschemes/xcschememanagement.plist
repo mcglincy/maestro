@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>TheMaestro.xcscheme</key>
+		<key>Maestro.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0BE6F57A1526B6F500F5C88A</key>
+		<key>0B87A26C1527A020001A28E7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
