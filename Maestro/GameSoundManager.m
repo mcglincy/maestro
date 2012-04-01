@@ -164,6 +164,7 @@ static BOOL setupHasRun;
     NSString *filename = [NSString stringWithFormat:@"Maestro_%i.wav", self.nextMaestroTrack];
     NSLog(@"Playing song %@", filename);
     [leftChannel load:filename]; //The audio engine will just rewind the clip if it notices the filename here is the same, so we don't need to be smart about it
+    [leftChannel setVolume:1.0f];
     [leftChannel play];
 }
 

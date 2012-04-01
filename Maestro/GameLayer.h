@@ -11,6 +11,9 @@
 
 @interface GameLayer : CCLayer
 {
+    @private
+    NSTimeInterval _maestroAudioStartTime;   
+    BOOL _maestroAudioStarted;
 }
 
 + (GameLayer *)nodeWithLevelNum:(NSInteger)levelNum;

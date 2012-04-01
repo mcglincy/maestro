@@ -86,10 +86,14 @@
         [self addChild:tearBin z:1];
         [tearBin addToPhysics];
 
+        //Wait 3 seconds before playing music
+        _maestroAudioStarted = NO;
+        _maestroAudioStartTime = [[GameClock sharedInstance] currentTime] + 3;
+        
 #warning Make this a smooth audio fade
-        [[GameSoundManager sharedInstance].soundEngine stopBackgroundMusic];
-        //[[GameSoundManager sharedInstance] fadeOutMusic];
-        [[GameSoundManager sharedInstance] playMaestro];
+        //[[GameSoundManager sharedInstance].soundEngine stopBackgroundMusic];
+        [[GameSoundManager sharedInstance] fadeOutMusic];
+        //[[GameSoundManager sharedInstance] playMaestro];
         //[[GameSoundManager sharedInstance].soundEngine playBackgroundMusic:@"Maestro_1.wav"];
     }
     return self;    
@@ -104,6 +108,14 @@
 {
     [[GameClock sharedInstance] update:delta];
     [[Physics sharedInstance] update:delta];
+    
+    //Check timers
+    if (!_maestroAudioStarted &&
+        [[GameClock sharedInstance] currentTime] > _maestroAudioStartTime) {
+        NSLog(@"Starting Maestro music.");
+        [[GameSoundManager sharedInstance] playMaestro];
+        _maestroAudioStarted = YES;
+    }
 }
 
 -(void)addTearAtPosition:(CGPoint)pos
