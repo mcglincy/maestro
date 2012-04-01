@@ -11,11 +11,6 @@
 
 @interface GameLayer : CCLayer
 {
-	CCTexture2D *spriteTexture_; // weak ref
-	
 }
-
-// returns a CCScene that contains the HelloWorldLayer as the only child
-+(CCScene *) scene;
 
 @end

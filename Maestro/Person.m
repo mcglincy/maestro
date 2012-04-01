@@ -6,6 +6,7 @@
 //  Copyright (c) 2012 n/a. All rights reserved.
 //
 
+#import "GameUtils.h"
 #import "Person.h"
 #import "Tear.h"
 
@@ -36,10 +37,7 @@
 
 - (ccTime)jiggledTimeInterval
 {
-    ccTime min = 1.0;
-    ccTime max = 4.0;
-    float percent = arc4random() % 100;
-    return min + (percent / 100.0) * (max - min);
+    return [GameUtils randomTimeBetweenMin:2.0 max:5.0];
 }
 
 - (void)shedTear

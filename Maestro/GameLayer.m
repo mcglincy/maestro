@@ -18,17 +18,13 @@
 #import "PhysicsSprite.h"
 #import "Tear.h"
 
-enum {
-	kTagParentNode = 1,
-};
-
-
 @interface GameLayer()
 
 @property (nonatomic, retain) NSMutableArray *touchPoints;
 
--(void) addNewTearAtPosition:(CGPoint)pos;
+-(void) addTearAtPosition:(CGPoint)pos;
 -(void) initPhysics;
+
 @end
 
 
@@ -40,23 +36,6 @@ enum {
 {
     [_touchPoints release];
 	[super dealloc];
-	
-}
-
-// Helper class method that creates a Scene with the HelloWorldLayer as the only child.
-+(CCScene *) scene
-{
-	// 'scene' is an autorelease object.
-	CCScene *scene = [CCScene node];
-	
-	// 'layer' is an autorelease object.
-	GameLayer *layer = [GameLayer node];
-	
-	// add layer as a child to scene
-	[scene addChild: layer];
-	
-	// return the scene
-	return scene;
 }
 
 -(id) init

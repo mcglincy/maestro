@@ -73,6 +73,8 @@
 		0B1A49FA1527B66D0062DECC /* Physics.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1A49F91527B66D0062DECC /* Physics.m */; };
 		0B1A4A001527BE100062DECC /* grossini_dance_atlas.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B1A49FF1527BE100062DECC /* grossini_dance_atlas.png */; };
 		0B1A4A071527C5BA0062DECC /* GameLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1A4A061527C5BA0062DECC /* GameLayer.m */; };
+		0B1A4A601527DFE10062DECC /* GameClock.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1A4A5F1527DFE00062DECC /* GameClock.m */; };
+		0B1A4A631527E18C0062DECC /* GameUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1A4A621527E18C0062DECC /* GameUtils.m */; };
 		0B87A2721527A020001A28E7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B87A2711527A020001A28E7 /* QuartzCore.framework */; };
 		0B87A2741527A020001A28E7 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B87A2731527A020001A28E7 /* OpenGLES.framework */; };
 		0B87A2761527A020001A28E7 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B87A2751527A020001A28E7 /* OpenAL.framework */; };
@@ -319,6 +321,10 @@
 		0B1A49FF1527BE100062DECC /* grossini_dance_atlas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = grossini_dance_atlas.png; path = ../../../maestro/Assets/Graphics/grossini_dance_atlas.png; sourceTree = "<group>"; };
 		0B1A4A051527C5B90062DECC /* GameLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameLayer.h; path = ../../maestro/Maestro/GameLayer.h; sourceTree = "<group>"; };
 		0B1A4A061527C5BA0062DECC /* GameLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameLayer.m; path = ../../maestro/Maestro/GameLayer.m; sourceTree = "<group>"; };
+		0B1A4A5E1527DFE00062DECC /* GameClock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameClock.h; path = ../../maestro/Maestro/GameClock.h; sourceTree = "<group>"; };
+		0B1A4A5F1527DFE00062DECC /* GameClock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameClock.m; path = ../../maestro/Maestro/GameClock.m; sourceTree = "<group>"; };
+		0B1A4A611527E18B0062DECC /* GameUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameUtils.h; path = ../../maestro/Maestro/GameUtils.h; sourceTree = "<group>"; };
+		0B1A4A621527E18C0062DECC /* GameUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameUtils.m; path = ../../maestro/Maestro/GameUtils.m; sourceTree = "<group>"; };
 		0B87A26D1527A020001A28E7 /* Maestro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Maestro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B87A2711527A020001A28E7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		0B87A2731527A020001A28E7 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -801,6 +807,8 @@
 				0B1A46DD1527A0EC0062DECC /* BlankScene.m */,
 				0B1A46DE1527A0EC0062DECC /* Constants.h */,
 				0B1A46DF1527A0EC0062DECC /* Constants.m */,
+				0B1A4A5E1527DFE00062DECC /* GameClock.h */,
+				0B1A4A5F1527DFE00062DECC /* GameClock.m */,
 				0B1A4A051527C5B90062DECC /* GameLayer.h */,
 				0B1A4A061527C5BA0062DECC /* GameLayer.m */,
 				0B1A46E21527A0EC0062DECC /* GameObject.h */,
@@ -809,6 +817,8 @@
 				0B1A46E51527A0EC0062DECC /* GameScene.m */,
 				0B1A46E61527A0EC0062DECC /* GameSoundManager.h */,
 				0B1A46E71527A0EC0062DECC /* GameSoundManager.m */,
+				0B1A4A611527E18B0062DECC /* GameUtils.h */,
+				0B1A4A621527E18C0062DECC /* GameUtils.m */,
 				0B1A46E81527A0EC0062DECC /* Maestro.h */,
 				0B1A46E91527A0EC0062DECC /* Maestro.m */,
 				0B1A46EA1527A0EC0062DECC /* Note.h */,
@@ -1440,6 +1450,8 @@
 				0B1A49F71527B6330062DECC /* PhysicsSprite.m in Sources */,
 				0B1A49FA1527B66D0062DECC /* Physics.m in Sources */,
 				0B1A4A071527C5BA0062DECC /* GameLayer.m in Sources */,
+				0B1A4A601527DFE10062DECC /* GameClock.m in Sources */,
+				0B1A4A631527E18C0062DECC /* GameUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
