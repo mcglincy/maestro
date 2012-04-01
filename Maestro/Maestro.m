@@ -12,14 +12,15 @@
 
 - (id)init
 {
-    self = [super initWithFile:@"maestro_frame_0.png" rect:CGRectMake(0, 0, 384, 384)];
+    self = [super initWithFile:@"maestro-play-0.png" rect:CGRectMake(0, 0, 384, 384)];
     if (self) {
         CCAnimation *anim = [CCAnimation animation];
-        [anim addFrameWithFilename:@"maestro_frame_1.png"];
-        [anim addFrameWithFilename:@"maestro_frame_2.png"];
-        [anim addFrameWithFilename:@"maestro_frame_3.png"];
-        [anim addFrameWithFilename:@"maestro_frame_2.png"];
-        [anim addFrameWithFilename:@"maestro_frame_1.png"];
+        [anim addFrameWithFilename:@"maestro-play-1.png"];
+        [anim addFrameWithFilename:@"maestro-play-2.png"];
+        [anim addFrameWithFilename:@"maestro-play-3.png"];
+        [anim addFrameWithFilename:@"maestro-play-2.png"];
+        [anim addFrameWithFilename:@"maestro-play-1.png"];
+        [anim addFrameWithFilename:@"maestro-play-0.png"];
         
         id animationAction = [CCAnimate actionWithDuration:1.5f
                                                  animation:anim
