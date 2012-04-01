@@ -8,7 +8,7 @@
     self = [super init];                                           
     if (self != nil) {                                             
         CCSprite *backgroundImage;
-        backgroundImage = [CCSprite spriteWithFile:@"background.png"];
+        backgroundImage = [CCSprite spriteWithFile:@"background_rome.png"];
 
         CGSize screenSize = [[CCDirector sharedDirector] winSize];
         [backgroundImage setPosition:

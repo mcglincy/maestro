@@ -1,19 +1,16 @@
 //
-//  Tear.h
-//  TheMaestro
+//  TearBin.h
+//  Maestro
 //
 //  Created by Matthew McGlincy on 3/31/12.
 //  Copyright (c) 2012 n/a. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "GameObject.h"
+#import <Foundation/Foundation.h>
 #import "PhysicsSprite.h"
 
-@interface Tear : PhysicsSprite
+@interface TearBin : PhysicsSprite
+
 - (void)addToPhysics;
-- (void)randomPush;
-- (void)hitBin;
 
 @end
-

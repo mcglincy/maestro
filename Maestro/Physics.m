@@ -8,6 +8,7 @@
 
 #import "Physics.h"
 #import "PhysicsSprite.h"
+#import "Tear.h"
 
 @implementation Physics
 
@@ -16,8 +17,8 @@
 - (void)dealloc
 {
 	// manually Free rogue shapes
-	for( int i=0;i<4;i++) {
-		cpShapeFree( walls_[i] );
+	for(int i=0; i<4; i++) {
+		cpShapeFree(walls_[i]);
 	}
 	
 	cpSpaceFree(space_);
@@ -35,7 +36,7 @@
     return self;
 }
 
-+ (id)sharedInstance
++ (Physics *)sharedInstance
 {
     static Physics *sharedInstance;
     static dispatch_once_t onceToken;
@@ -61,7 +62,7 @@
 	
 #warning messing with gravity
 //	space_->gravity = ccp(0, -100);
-	space_->gravity = ccp(0, 50);
+	space_->gravity = ccp(0, -100);
 	
 	//
 	// rogue shapes
@@ -84,6 +85,9 @@
 		walls_[i]->u = 1.0f;
 		cpSpaceAddStaticShape(space_, walls_[i] );
 	}	
+    
+    // add collision handlers
+    cpSpaceAddCollisionHandler(space_, kCollisionTypeTear, kCollisionTypeTearBin, &tearHitTearBin, NULL, NULL, NULL, NULL);
 }
 
 - (void)update:(ccTime) delta
@@ -95,6 +99,16 @@
 	for(int i=0; i<steps; i++){
 		cpSpaceStep(space_, dt);
 	}
+}
+
+static int tearHitTearBin(cpArbiter *arb, cpSpace *space, void *data){
+	cpShape *a, *b; 
+    cpArbiterGetShapes(arb, &a, &b);
+    Tear *tear = (Tear *)a->data;
+    [tear hitBin];
+	//MyGame *game = (MyGame*) data;
+///	cpBodyApplyImpulse(a->body, cpv(1000,3000), cpv(0,0));
+	return 1;
 }
 
 @end

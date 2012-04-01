@@ -18,6 +18,7 @@
 #import "Physics.h"
 #import "PhysicsSprite.h"
 #import "Tear.h"
+#import "TearBin.h"
 
 @interface GameLayer()
 
@@ -70,7 +71,12 @@
         Person *p2 = [Person node];
         p2.position = ccp(winSize.width - p2.contentSize.width / 2 - 100, 
                           FLOOR_HEIGHT + p2.contentSize.height / 2);
-        [self addChild:p2 z:1];                                 
+        [self addChild:p2 z:1];   
+        
+        TearBin *tearBin = [TearBin node];
+        tearBin.position = ccp(284, FLOOR_HEIGHT + tearBin.contentSize.height / 2);
+        [self addChild:tearBin z:1];
+        [tearBin addToPhysics];
 	}
 	
 	return self;

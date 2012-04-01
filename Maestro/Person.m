@@ -10,6 +10,9 @@
 #import "Person.h"
 #import "Tear.h"
 
+#define CRY_TIME_MIN 1.0
+#define CRY_TIME_MAX 2.0
+
 @interface Person()
 
 @end
@@ -37,7 +40,7 @@
 
 - (ccTime)jiggledTimeInterval
 {
-    return [GameUtils randomTimeBetweenMin:2.0 max:5.0];
+    return [GameUtils randomTimeBetweenMin:CRY_TIME_MIN max:CRY_TIME_MAX];
 }
 
 - (void)shedTear
@@ -49,7 +52,8 @@
     [self.parent addChild:tear];
     tear.position = startPos;
     
-    [tear addToPhysics];        
+    [tear addToPhysics];   
+    [tear randomPush];
 }
 
 - (void)scheduleTear1
