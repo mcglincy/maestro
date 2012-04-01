@@ -11,6 +11,13 @@
 @implementation GameManager
 
 @synthesize tearsCollected = _tearsCollected;
+@synthesize purchasedItems = _purchasedItems;
+
+- (void)dealloc
+{
+    [_purchasedItems release];
+    [super dealloc];
+}
 
 - (id)init
 {
@@ -29,6 +36,5 @@
     });
     return sharedInstance;
 }
-
 
 @end

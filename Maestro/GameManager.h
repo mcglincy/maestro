@@ -11,6 +11,7 @@
 @interface GameManager : NSObject
 
 @property (nonatomic) NSInteger tearsCollected;
+@property (nonatomic, retain) NSMutableArray *purchasedItems;
 
 + (GameManager *)sharedInstance;
 

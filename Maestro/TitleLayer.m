@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 n/a. All rights reserved.
 //
 
-#import "GameScene.h"
-#import "TitleLayer.h"
 #import "GameSoundManager.h"
+#import "MapScene.h"
+#import "TitleLayer.h"
 
 @implementation TitleLayer
 
@@ -30,7 +30,7 @@
 
 - (void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    [[CCDirector sharedDirector] replaceScene:[CCTransitionCrossFade transitionWithDuration:0.5f scene:[GameScene node]]];
+    [[CCDirector sharedDirector] replaceScene:[CCTransitionCrossFade transitionWithDuration:0.5f scene:[MapScene node]]];
     //[[GameSoundManager sharedInstance] fadeOutMusic]; //Not sure how to get the audio back properly after the fade
 }
 
