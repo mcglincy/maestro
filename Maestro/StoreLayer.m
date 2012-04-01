@@ -6,6 +6,7 @@
 //  Copyright (c) 2012 n/a. All rights reserved.
 //
 
+#import "Devil.h"
 #import "GameManager.h"
 #import "GameScene.h"
 #import "Store.h"
@@ -13,13 +14,17 @@
 #import "StoreLayer.h"
 
 @interface StoreLayer()
+
 @property (nonatomic, retain) CCMenu *storeMenu;
 @property (nonatomic, retain) CCLabelTTF *tearsLabel;
+@property (nonatomic, retain) Devil *devil;
+
 @end
 
 @implementation StoreLayer
 
-@synthesize storeMenu;
+@synthesize devil = _devil;
+@synthesize storeMenu = _storeMenu;
 @synthesize tearsLabel = _tearsLabel;
 
 /*
@@ -35,6 +40,8 @@
 {
     [[GameManager sharedInstance] removeObserver:self forKeyPath:@"tearsCollectedTotal"];
 
+    [_devil release];
+    [_storeMenu release];
     [_tearsLabel release];
     [super dealloc];
 }
@@ -61,7 +68,7 @@
         [CCMenuItemFont setFontSize:28];
         self.storeMenu = [CCMenu menuWithItems:nil];
         [self updateMenu];
-        [storeMenu setPosition:ccp(200, 600)];        
+        [self.storeMenu setPosition:ccp(200, 600)];        
         [self addChild:self.storeMenu];
         
         // done/continue button
@@ -82,7 +89,9 @@
                          options:0
                          context:nil];
 
-        // TODO: add quit button
+        self.devil = [Devil node];
+        self.devil.position = ccp(500, 400);
+        [self addChild:self.devil z:1];
     }
     return self;
 }
@@ -118,6 +127,8 @@
         
         // TODO: play purchase sound
         [self updateMenu];
+        
+        [self.devil animateForPurchase];
     }
 }
 
@@ -138,7 +149,7 @@
         }
         [self.storeMenu addChild:menuItem];
     }
-    [storeMenu alignItemsVerticallyWithPadding:30];
+    [self.storeMenu alignItemsVerticallyWithPadding:30];
 }
 
 - (void)doneStore 
