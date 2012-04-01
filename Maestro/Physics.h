@@ -10,6 +10,11 @@
 #import "chipmunk.h"
 #import "cocos2d.h"
 
+typedef enum {
+    kCollisionTypeTear,
+    kCollisionTypeTearBin,
+} CollisionType;
+
 @interface Physics : NSObject
 {
     cpSpace *space_; // strong ref	
@@ -18,7 +23,9 @@
 
 @property (nonatomic, readonly) cpSpace *space;
 
-+ (id)sharedInstance;
++ (Physics *)sharedInstance;
 - (void)update:(ccTime) delta;
 
 @end
+
+static int tearHitTearBin(cpArbiter *arb, cpSpace *space, void *data);

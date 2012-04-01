@@ -13,7 +13,7 @@
 
 @property (nonatomic) NSTimeInterval currentTime;
 
-+ (id)sharedInstance;
++ (GameClock *)sharedInstance;
 
 - (void)update:(ccTime)delta;
 

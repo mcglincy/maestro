@@ -12,20 +12,20 @@
 #import "Constants.h"
 #import "GameClock.h"
 #import "GameLayer.h"
+#import "GameSoundManager.h"
 #import "Maestro.h"
 #import "Note.h"
 #import "Person.h"
 #import "Physics.h"
 #import "PhysicsSprite.h"
 #import "Tear.h"
-#import "GameSoundManager.h"
+#import "TearBin.h"
 
 @interface GameLayer()
 
 @property (nonatomic, retain) NSMutableArray *touchPoints;
 
--(void) addTearAtPosition:(CGPoint)pos;
--(void) initPhysics;
+- (void)addTearAtPosition:(CGPoint)pos;
 
 @end
 
@@ -71,7 +71,12 @@
         Person *p2 = [Person node];
         p2.position = ccp(winSize.width - p2.contentSize.width / 2 - 100, 
                           FLOOR_HEIGHT + p2.contentSize.height / 2);
-        [self addChild:p2 z:1];                                 
+        [self addChild:p2 z:1];   
+        
+        TearBin *tearBin = [TearBin node];
+        tearBin.position = ccp(284, FLOOR_HEIGHT + tearBin.contentSize.height / 2);
+        [self addChild:tearBin z:1];
+        [tearBin addToPhysics];
 	}
     
     #warning Make this a smooth audio fade

@@ -21,7 +21,7 @@
     return self;
 }
 
-+ (id)sharedInstance
++ (GameClock *)sharedInstance
 {
     static GameClock *sharedInstance;
     static dispatch_once_t onceToken;

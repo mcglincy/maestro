@@ -9,6 +9,7 @@
 #import "BackgroundLayer.h"
 #import "GameLayer.h"
 #import "GameScene.h"
+#import "HUDLayer.h"
 
 @implementation GameScene
 
@@ -17,13 +18,12 @@
     if (self != nil) {
         BackgroundLayer *backgroundLayer = [BackgroundLayer node];
         [self addChild:backgroundLayer z:0];  
-//        
-//        HUDLayer *hudLayer = [HUDLayer node];       
-//        [self addChild:hudLayer z:1];                         
         
-//        GameLayer *gameLayer = [GameLayer node];
-//        [self addChild:gameLayer z:0];                         
-        [self addChild:[GameLayer node]];
+        HUDLayer *hudLayer = [HUDLayer node];       
+        [self addChild:hudLayer z:1];                         
+        
+        GameLayer *gameLayer = [GameLayer node];
+        [self addChild:gameLayer z:0];                         
     }
     return self;
 }
