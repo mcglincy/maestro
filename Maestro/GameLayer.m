@@ -81,6 +81,7 @@
     
     #warning Make this a smooth audio fade
     [[GameSoundManager sharedInstance].soundEngine stopBackgroundMusic];
+    [[GameSoundManager sharedInstance] playMaestro];
     //[[GameSoundManager sharedInstance].soundEngine playBackgroundMusic:@"Maestro_1.wav"];
     
 	return self;

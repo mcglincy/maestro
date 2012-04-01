@@ -29,10 +29,12 @@
 
 -(void)cdAudioSourceDidFinishPlaying:(CDLongAudioSource *)audioSource {
     NSLog(@"sound finished");
-    [[self soundEngine] playBackgroundMusic:@"Maestro_2.wav"];
+    [self playMaestro]; //play the next segment
 }
 
 @synthesize state = state_;
+@synthesize nextMaestroTrack = nextMaestroTrack_;
+@synthesize numMaestroTracks = numMaestroTracks_;
 static GameSoundManager *sharedManager = nil;
 static BOOL setupHasRun;
 
@@ -51,6 +53,8 @@ static BOOL setupHasRun;
 		soundEngine_ = nil;
 		state_ = kGSUninitialised;
 		setupHasRun = NO;
+        nextMaestroTrack_ = 0;
+        numMaestroTracks_ = 4;
 	}
 	return self;
 }
@@ -104,9 +108,6 @@ static BOOL setupHasRun;
         rightChannel=[audioManager audioSourceForChannel:kASC_Right];
         rightChannel.delegate=self; 
         
-        [rightChannel load:@"Maestro_1.wav"];
-        [rightChannel play];
-        
 		state_ = kGSOkay;
 	}
 }
@@ -128,6 +129,17 @@ static BOOL setupHasRun;
 	[queue addOperation:asynchSetupOperation];
     [asynchSetupOperation autorelease];
 
+}
+
+-(void) playMaestro {
+    NSString *filename = [NSString stringWithFormat:@"Maestro_%i.wav", self.nextMaestroTrack];
+    NSLog(@"Playing song %@", filename);
+    [rightChannel load:filename];
+    [rightChannel play];
+    
+    //Increment the next track
+    self.nextMaestroTrack++;
+    self.nextMaestroTrack = self.nextMaestroTrack % self.numMaestroTracks;
 }
 
 -(SimpleAudioEngine *) soundEngine {
