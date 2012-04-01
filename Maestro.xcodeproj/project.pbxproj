@@ -80,6 +80,11 @@
 		0B1A4A6C1527FB780062DECC /* tear_bin.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B1A4A6B1527FB780062DECC /* tear_bin.png */; };
 		0B1A4A6F1528043B0062DECC /* GameManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1A4A6E1528043A0062DECC /* GameManager.m */; };
 		0B1A4A721528052F0062DECC /* HUDLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1A4A711528052E0062DECC /* HUDLayer.m */; };
+		0B1A4A8615280BDE0062DECC /* Maestro_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B1A4A8115280BDE0062DECC /* Maestro_1.wav */; };
+		0B1A4A8715280BDE0062DECC /* Maestro_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B1A4A8215280BDE0062DECC /* Maestro_2.wav */; };
+		0B1A4A8815280BDE0062DECC /* Maestro_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B1A4A8315280BDE0062DECC /* Maestro_3.wav */; };
+		0B1A4A8915280BDE0062DECC /* Maestro_4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B1A4A8415280BDE0062DECC /* Maestro_4.wav */; };
+		0B1A4A8A15280BDE0062DECC /* title.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B1A4A8515280BDE0062DECC /* title.wav */; };
 		0B87A2721527A020001A28E7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B87A2711527A020001A28E7 /* QuartzCore.framework */; };
 		0B87A2741527A020001A28E7 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B87A2731527A020001A28E7 /* OpenGLES.framework */; };
 		0B87A2761527A020001A28E7 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B87A2751527A020001A28E7 /* OpenAL.framework */; };
@@ -209,11 +214,6 @@
 		0B87A3EE1527A023001A28E7 /* vec4.c in Sources */ = {isa = PBXBuildFile; fileRef = 0B87A3ED1527A023001A28E7 /* vec4.c */; };
 		0B87A3F31527A023001A28E7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B87A3F21527A023001A28E7 /* main.m */; };
 		0B87A3F61527A023001A28E7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B87A3F51527A023001A28E7 /* AppDelegate.m */; };
-		735EF9E51527FC3E00CDD4D7 /* Maestro_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 735EF9E01527FC3E00CDD4D7 /* Maestro_1.wav */; };
-		735EF9E61527FC3E00CDD4D7 /* Maestro_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 735EF9E11527FC3E00CDD4D7 /* Maestro_2.wav */; };
-		735EF9E71527FC3E00CDD4D7 /* Maestro_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 735EF9E21527FC3E00CDD4D7 /* Maestro_3.wav */; };
-		735EF9E81527FC3E00CDD4D7 /* Maestro_4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 735EF9E31527FC3E00CDD4D7 /* Maestro_4.wav */; };
-		735EF9E91527FC3E00CDD4D7 /* title.wav in Resources */ = {isa = PBXBuildFile; fileRef = 735EF9E41527FC3E00CDD4D7 /* title.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -343,6 +343,11 @@
 		0B1A4A6E1528043A0062DECC /* GameManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameManager.m; path = ../../maestro/Maestro/GameManager.m; sourceTree = "<group>"; };
 		0B1A4A701528052D0062DECC /* HUDLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HUDLayer.h; path = ../../maestro/Maestro/HUDLayer.h; sourceTree = "<group>"; };
 		0B1A4A711528052E0062DECC /* HUDLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HUDLayer.m; path = ../../maestro/Maestro/HUDLayer.m; sourceTree = "<group>"; };
+		0B1A4A8115280BDE0062DECC /* Maestro_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Maestro_1.wav; sourceTree = "<group>"; };
+		0B1A4A8215280BDE0062DECC /* Maestro_2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Maestro_2.wav; sourceTree = "<group>"; };
+		0B1A4A8315280BDE0062DECC /* Maestro_3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Maestro_3.wav; sourceTree = "<group>"; };
+		0B1A4A8415280BDE0062DECC /* Maestro_4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Maestro_4.wav; sourceTree = "<group>"; };
+		0B1A4A8515280BDE0062DECC /* title.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = title.wav; sourceTree = "<group>"; };
 		0B87A26D1527A020001A28E7 /* Maestro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Maestro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B87A2711527A020001A28E7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		0B87A2731527A020001A28E7 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -588,11 +593,6 @@
 		0B87A3F21527A023001A28E7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0B87A3F41527A023001A28E7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0B87A3F51527A023001A28E7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		735EF9E01527FC3E00CDD4D7 /* Maestro_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Maestro_1.wav; sourceTree = "<group>"; };
-		735EF9E11527FC3E00CDD4D7 /* Maestro_2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Maestro_2.wav; sourceTree = "<group>"; };
-		735EF9E21527FC3E00CDD4D7 /* Maestro_3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Maestro_3.wav; sourceTree = "<group>"; };
-		735EF9E31527FC3E00CDD4D7 /* Maestro_4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Maestro_4.wav; sourceTree = "<group>"; };
-		735EF9E41527FC3E00CDD4D7 /* title.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = title.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -663,11 +663,11 @@
 		0B1A470B1527A0F70062DECC /* Music */ = {
 			isa = PBXGroup;
 			children = (
-				735EF9E01527FC3E00CDD4D7 /* Maestro_1.wav */,
-				735EF9E11527FC3E00CDD4D7 /* Maestro_2.wav */,
-				735EF9E21527FC3E00CDD4D7 /* Maestro_3.wav */,
-				735EF9E31527FC3E00CDD4D7 /* Maestro_4.wav */,
-				735EF9E41527FC3E00CDD4D7 /* title.wav */,
+				0B1A4A8115280BDE0062DECC /* Maestro_1.wav */,
+				0B1A4A8215280BDE0062DECC /* Maestro_2.wav */,
+				0B1A4A8315280BDE0062DECC /* Maestro_3.wav */,
+				0B1A4A8415280BDE0062DECC /* Maestro_4.wav */,
+				0B1A4A8515280BDE0062DECC /* title.wav */,
 				0B1A470C1527A0F70062DECC /* intro.mp3 */,
 			);
 			path = Music;
@@ -1332,17 +1332,14 @@
 				0B1A49D51527B5210062DECC /* CMakeLists.txt in Resources */,
 				0B1A49F41527B60E0062DECC /* LICENSE_Chipmunk.txt in Resources */,
 				0B1A4A001527BE100062DECC /* grossini_dance_atlas.png in Resources */,
-<<<<<<< HEAD
 				0B1A4A661527EE3F0062DECC /* background_city.png in Resources */,
 				0B1A4A671527EE3F0062DECC /* background_rome.png in Resources */,
 				0B1A4A6C1527FB780062DECC /* tear_bin.png in Resources */,
-=======
-				735EF9E51527FC3E00CDD4D7 /* Maestro_1.wav in Resources */,
-				735EF9E61527FC3E00CDD4D7 /* Maestro_2.wav in Resources */,
-				735EF9E71527FC3E00CDD4D7 /* Maestro_3.wav in Resources */,
-				735EF9E81527FC3E00CDD4D7 /* Maestro_4.wav in Resources */,
-				735EF9E91527FC3E00CDD4D7 /* title.wav in Resources */,
->>>>>>> 53b29cc9c2b2a00fc306c0abb1c19d9722a86799
+				0B1A4A8615280BDE0062DECC /* Maestro_1.wav in Resources */,
+				0B1A4A8715280BDE0062DECC /* Maestro_2.wav in Resources */,
+				0B1A4A8815280BDE0062DECC /* Maestro_3.wav in Resources */,
+				0B1A4A8915280BDE0062DECC /* Maestro_4.wav in Resources */,
+				0B1A4A8A15280BDE0062DECC /* title.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

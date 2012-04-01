@@ -18,8 +18,10 @@
         [anim addFrameWithFilename:@"maestro_frame_1.png"];
         [anim addFrameWithFilename:@"maestro_frame_2.png"];
         [anim addFrameWithFilename:@"maestro_frame_3.png"];
+        [anim addFrameWithFilename:@"maestro_frame_2.png"];
+        [anim addFrameWithFilename:@"maestro_frame_1.png"];
         
-        id animationAction = [CCAnimate actionWithDuration:0.5f
+        id animationAction = [CCAnimate actionWithDuration:1.5f
                                                  animation:anim
                                       restoreOriginalFrame:YES];
         id repeatAnimation = [CCRepeatForever actionWithAction:animationAction];
