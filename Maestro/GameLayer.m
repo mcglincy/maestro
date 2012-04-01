@@ -91,6 +91,18 @@
         [self addChild:tearBin z:1];
         [tearBin addToPhysics];
 
+<<<<<<< HEAD
+=======
+        //Wait 3 seconds before playing music
+        _maestroAudioStarted = NO;
+        _maestroAudioStartTime = [[GameClock sharedInstance] currentTime] + 3;
+        
+#warning Make this a smooth audio fade
+        //[[GameSoundManager sharedInstance].soundEngine stopBackgroundMusic];
+        [[GameSoundManager sharedInstance] fadeOutMusic];
+        //[[GameSoundManager sharedInstance] playMaestro];
+        //[[GameSoundManager sharedInstance].soundEngine playBackgroundMusic:@"Maestro_1.wav"];
+>>>>>>> 0ad9268999a1253dba094f3f7fd1e42eb3ce985c
     }
     return self;    
 }
@@ -108,6 +120,7 @@
     [gameManager update:delta];
     [[Physics sharedInstance] update:delta];
     
+<<<<<<< HEAD
     // check for level loss/victory
     if (gameManager.timeLeft <= 0) {
         // out of time!
@@ -120,6 +133,14 @@
         } else {
             [[CCDirector sharedDirector] replaceScene:[CCTransitionCrossFade transitionWithDuration:0.5f scene:[GameScene nodeWithLevelNum:0]]];            
         }
+=======
+    //Check timers
+    if (!_maestroAudioStarted &&
+        [[GameClock sharedInstance] currentTime] > _maestroAudioStartTime) {
+        NSLog(@"Starting Maestro music.");
+        [[GameSoundManager sharedInstance] playMaestro];
+        _maestroAudioStarted = YES;
+>>>>>>> 0ad9268999a1253dba094f3f7fd1e42eb3ce985c
     }
 }
 
