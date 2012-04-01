@@ -61,7 +61,7 @@
         [CCMenuItemFont setFontSize:28];
         self.storeMenu = [CCMenu menuWithItems:nil];
         [self updateMenu];
-        [storeMenu setPosition:ccp(winSize.width / 2, winSize.height / 2 + 200)];        
+        [storeMenu setPosition:ccp(200, 600)];        
         [self addChild:self.storeMenu];
         
         // done/continue button
@@ -73,10 +73,9 @@
         }];
         doneItem.fontSize = 60;
         CCMenu *doneMenu = [CCMenu menuWithItems:doneItem, nil];
-        doneMenu.position = ccp(winSize.width - doneItem.contentSize.width, 0 + doneItem.contentSize.height / 2);
+        doneMenu.position = ccp(200, 200);
         [self addChild:doneMenu];
         
-
         GameManager *gameManager = [GameManager sharedInstance];
         [gameManager addObserver:self
                       forKeyPath:@"tearsCollectedTotal"
