@@ -151,6 +151,23 @@
             }
         }
     }
+    
+    //Apply impulses from touches
+    if (nil != self.touchPoints) {
+        for (int i = 0, len = [self.touchPoints count]; i < len; i++) {
+            CGPoint point = [[self.touchPoints objectAtIndex:i] CGPointValue];
+            cpShape *shape = cpSpacePointQueryFirst([Physics sharedInstance].space, cpv(point.x, point.y), CP_ALL_LAYERS, CP_NO_GROUP);
+            
+            if ((NULL != shape)
+                && (NULL != shape->body)) {
+                CGFloat x = -200.0 + (arc4random() % 250);
+                CGFloat y = 50 + (arc4random() % 100);
+                cpVect j = cpv(x, y);
+                //j = cpvmult(j, 100);
+                cpBodyApplyImpulse(shape->body, j, cpvzero); 
+            }
+        }
+    }
 }
 
 -(void)addTearAtPosition:(CGPoint)pos
@@ -186,21 +203,28 @@
 - (void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     [self.touchPoints removeAllObjects];
-    [self addTouchPointWithTouches:touches];
+    for (UITouch *touch in touches) {
+        CGPoint location = [touch locationInView:[touch view]];
+        location = [[CCDirector sharedDirector] convertToGL:location];
+        [self.touchPoints addObject:[NSValue valueWithCGPoint:location]];    
+    }
 }
 
 - (void)addTouchPointWithTouches:(NSSet *)touches
 {
+    /*
     UITouch *touch = [touches anyObject];
     CGPoint location = [touch locationInView:[touch view]];
     location = [[CCDirector sharedDirector] convertToGL:location];
     
     [self.touchPoints addObject:[NSValue valueWithCGPoint:location]];    
+     */
 }
 
 - (void)ccTouchesMoved:(NSSet *)touches withEvent:(UIEvent *)event 
 {
-    [self addTouchPointWithTouches:touches];
+    //self.touchPoints = touches;
+    //[self addTouchPointWithTouches:touches];
 }
 
 - (void)ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
