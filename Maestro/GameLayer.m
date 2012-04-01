@@ -22,6 +22,7 @@
 #import "Person.h"
 #import "Physics.h"
 #import "PhysicsSprite.h"
+#import "StoreScene.h"
 #import "Tear.h"
 #import "TearBin.h"
 #import "VictoryScene.h"
@@ -146,7 +147,7 @@
             if (nextLevelNum > MAX_LEVEL_IDX) {
                 [[CCDirector sharedDirector] replaceScene:[CCTransitionCrossFade transitionWithDuration:0.5f scene:[VictoryScene node]]];                        
             } else {
-                [[CCDirector sharedDirector] replaceScene:[CCTransitionCrossFade transitionWithDuration:0.5f scene:[GameScene nodeWithLevelNum:nextLevelNum]]];            
+                [[CCDirector sharedDirector] replaceScene:[CCTransitionCrossFade transitionWithDuration:0.5f scene:[StoreScene node]]];            
             }
         }
     }

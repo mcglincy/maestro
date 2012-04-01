@@ -8,10 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+
 @class GameScene;
+@class Store;
 
 @interface GameManager : NSObject
 
+@property (nonatomic) NSInteger currentLevelNum;
 @property (nonatomic) NSInteger tearsCollectedTotal;
 @property (nonatomic) NSInteger tearsCollectedThisLevel;
 @property (nonatomic) NSInteger tearsNeededThisLevel;
@@ -19,6 +22,7 @@
 @property (nonatomic) NSInteger timeLeft;
 @property (nonatomic) NSTimeInterval nextTimerTick;
 @property (nonatomic) BOOL timerStarted;
+@property (nonatomic, retain) Store *store;
 
 + (GameManager *)sharedInstance;
 

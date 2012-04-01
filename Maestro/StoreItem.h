@@ -13,4 +13,7 @@
 @property (nonatomic, retain) NSString *name;
 @property (nonatomic) NSInteger price;
 
++ (StoreItem *)itemWithName:(NSString *)name price:(NSInteger)price;
+- (id)initWithName:(NSString *)name price:(NSInteger)price;
+
 @end

@@ -19,6 +19,12 @@
     [super dealloc];
 }
 
++ (StoreItem *)itemWithName:(NSString *)name price:(NSInteger)price
+{
+    StoreItem *item = [[StoreItem alloc] initWithName:name price:price];
+    return [item autorelease];
+}
+
 - (id)initWithName:(NSString *)name price:(NSInteger)price
 {
     self = [super init];

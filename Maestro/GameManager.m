@@ -9,6 +9,7 @@
 #import "GameClock.h"
 #import "GameManager.h"
 #import "GameScene.h"
+#import "Store.h"
 
 #define TICK_INTERVAL 1.0
 
@@ -18,6 +19,7 @@
 
 @implementation GameManager
 
+@synthesize currentLevelNum = _currentLevelNum;
 @synthesize tearsCollectedTotal = _tearsCollectedTotal;
 @synthesize tearsCollectedThisLevel = _tearsCollectedThisLevel;
 @synthesize tearsNeededThisLevel = _tearsNeededThisLevel;
@@ -25,10 +27,12 @@
 @synthesize timeLeft = _timeLeft;
 @synthesize nextTimerTick = _nextTimerTick;
 @synthesize timerStarted = _timerStarted;
+@synthesize store = _store;
 
 - (void)dealloc
 {
     [_purchasedItems release];
+    [_store release];
     [super dealloc];
 }
 
@@ -57,19 +61,23 @@
         if ([GameClock sharedInstance].currentTime > self.nextTimerTick) {
             self.timeLeft = MAX(0, self.timeLeft - 1);
             self.nextTimerTick = now + TICK_INTERVAL;
+            self.store = [[Store alloc] init];
         }
     }
 }
 
 - (void)reset
 {
+    self.currentLevelNum = 0;
     self.tearsCollectedTotal = 0;
     self.tearsCollectedThisLevel = 0;
     self.timerStarted = NO;
+    [self.purchasedItems removeAllObjects];
 }
 
 - (void)resetForGameScene:(GameScene *)scene
 {
+    self.currentLevelNum = scene.levelNum;
     self.tearsCollectedThisLevel = 0;
     // per level number?
     self.timeLeft = scene.maxTime;
