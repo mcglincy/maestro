@@ -29,7 +29,6 @@
 {
     self = [super initWithFile:@"tear.png" rect:CGRectMake(0, 0, 80, 58)];
     if (self) {
-        [[GameManager sharedInstance] playerCollectedTear];
         self.timeToDie = [[GameClock sharedInstance] currentTime] + [GameUtils randomTimeBetweenMin:MIN_LIFE max:MAX_LIFE];
         // receive updates so we can kill ourselves
         [self scheduleUpdate];

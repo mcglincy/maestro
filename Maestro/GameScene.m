@@ -69,20 +69,20 @@
         case 0:
             self.background = @"background_rome.png";
             self.music = @"maestro_0.wav";
-            self.maxTime = 20;
-            self.tearsNeeded = 10;
+            self.maxTime = 99;
+            self.tearsNeeded = 30;
             break;
         case 1:
             self.background = @"background_berlin.png";
             self.music = @"maestro_1.wav";
-            self.maxTime = 20;
-            self.tearsNeeded = 10;
+            self.maxTime = 99;
+            self.tearsNeeded = 30;
             break;
         case 2:
             self.background = @"background_city.png";
             self.music = @"maestro_2.wav";
-            self.maxTime = 20;
-            self.tearsNeeded = 10;
+            self.maxTime = 99;
+            self.tearsNeeded = 30;
             break;            
         default:
             break;
