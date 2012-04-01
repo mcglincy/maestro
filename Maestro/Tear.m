@@ -89,7 +89,7 @@
 {
     if (!self.isDead) {
         GameManager *manager = [GameManager sharedInstance];
-        [manager tearCollected];
+        [manager playerCollectedTear];
         [self die];
     }
 }

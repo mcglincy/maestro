@@ -18,11 +18,13 @@
 @property (nonatomic, retain) NSMutableArray *purchasedItems;
 @property (nonatomic) NSInteger timeLeft;
 @property (nonatomic) NSTimeInterval nextTimerTick;
+@property (nonatomic) BOOL timerStarted;
 
 + (GameManager *)sharedInstance;
 
 - (void)update:(ccTime)delta;
 - (void)resetForGameScene:(GameScene *)scene;
 - (void)playerCollectedTear;
+- (BOOL)outOfTime;
 
 @end

@@ -24,6 +24,7 @@
 @synthesize purchasedItems = _purchasedItems;
 @synthesize timeLeft = _timeLeft;
 @synthesize nextTimerTick = _nextTimerTick;
+@synthesize timerStarted = _timerStarted;
 
 - (void)dealloc
 {
@@ -51,10 +52,12 @@
 
 - (void)update:(ccTime)delta
 {
-    NSTimeInterval now = [GameClock sharedInstance].currentTime;
-    if ([GameClock sharedInstance].currentTime > self.nextTimerTick) {
-        self.timeLeft = MIN(0, self.timeLeft - 1);
-        self.nextTimerTick = now + TICK_INTERVAL;
+    if (self.timerStarted) {
+        NSTimeInterval now = [GameClock sharedInstance].currentTime;
+        if ([GameClock sharedInstance].currentTime > self.nextTimerTick) {
+            self.timeLeft = MAX(0, self.timeLeft - 1);
+            self.nextTimerTick = now + TICK_INTERVAL;
+        }
     }
 }
 
@@ -62,6 +65,7 @@
 {
     self.tearsCollectedTotal = 0;
     self.tearsCollectedThisLevel = 0;
+    self.timerStarted = NO;
 }
 
 - (void)resetForGameScene:(GameScene *)scene
@@ -70,12 +74,19 @@
     // per level number?
     self.timeLeft = scene.maxTime;
     self.tearsNeededThisLevel = scene.tearsNeeded;
+    self.timerStarted = YES;
+    self.nextTimerTick = [GameClock sharedInstance].currentTime + TICK_INTERVAL;
 }
 
 - (void)playerCollectedTear
 {
     self.tearsCollectedTotal = self.tearsCollectedTotal + 1;
     self.tearsCollectedThisLevel = self.tearsCollectedThisLevel + 1;
+}
+
+- (BOOL)outOfTime
+{
+    return self.timerStarted && (self.timeLeft <= 0);
 }
 
 @end

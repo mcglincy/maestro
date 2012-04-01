@@ -10,7 +10,7 @@
 #import "GameManager.h"
 
 #define MARGIN 20.0
-#define TEARS_COLLECTED_KEY_PATH @"tearsCollected"
+#define TEARS_COLLECTED_KEY_PATH @"tearsCollectedThisLevel"
 #define TIME_LEFT_KEY_PATH @"timeLeft"
 
 
@@ -45,7 +45,7 @@
         [self addChild:self.tearsCollectedLabel];
 
         self.timerLabel = [CCLabelTTF labelWithString:[self timerString] fontName:@"Marker Felt" fontSize:28.0];
-        self.timerLabel.position =  ccp(winSize.width/2 - self.timerLabel.contentSize.width / 2 - MARGIN, 
+        self.timerLabel.position =  ccp(winSize.width/2, 
                                                  winSize.height - self.tearsCollectedLabel.contentSize.height / 2 - MARGIN);
         [self addChild:self.timerLabel];
 
@@ -65,7 +65,8 @@
 
 - (NSString *)tearsCollectedString
 {
-    return [NSString stringWithFormat:@"%03d", [GameManager sharedInstance].tearsCollectedThisLevel];
+    GameManager *gameManager = [GameManager sharedInstance];
+    return [NSString stringWithFormat:@"%d / %d", gameManager.tearsCollectedThisLevel, gameManager.tearsNeededThisLevel];
 }
 
 - (NSString *)timerString

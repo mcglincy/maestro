@@ -91,6 +91,7 @@
 - (void)onEnter
 {
     [super onEnter];
+    
 #warning Make this a smooth audio fade
     [[GameSoundManager sharedInstance].soundEngine stopBackgroundMusic];
     //[[GameSoundManager sharedInstance] fadeOutMusic];
@@ -98,7 +99,8 @@
     [[GameSoundManager sharedInstance].soundEngine playBackgroundMusic:self.music];
     
     // set up the GameManager for this level
-    [[GameManager sharedInstance] resetForGameScene:self];
+    GameManager *gameManager = [GameManager sharedInstance];
+    [gameManager resetForGameScene:self];
 }
 
 @end

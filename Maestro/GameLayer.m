@@ -14,6 +14,7 @@
 #import "GameLayer.h"
 #import "GameManager.h"
 #import "GameOverScene.h"
+#import "GameScene.h"
 #import "GameSoundManager.h"
 #import "Maestro.h"
 #import "Note.h"
@@ -91,8 +92,6 @@
         [self addChild:tearBin z:1];
         [tearBin addToPhysics];
 
-<<<<<<< HEAD
-=======
         //Wait 3 seconds before playing music
         _maestroAudioStarted = NO;
         _maestroAudioStartTime = [[GameClock sharedInstance] currentTime] + 3;
@@ -102,7 +101,6 @@
         [[GameSoundManager sharedInstance] fadeOutMusic];
         //[[GameSoundManager sharedInstance] playMaestro];
         //[[GameSoundManager sharedInstance].soundEngine playBackgroundMusic:@"Maestro_1.wav"];
->>>>>>> 0ad9268999a1253dba094f3f7fd1e42eb3ce985c
     }
     return self;    
 }
@@ -119,10 +117,20 @@
     [[GameClock sharedInstance] update:delta];
     [gameManager update:delta];
     [[Physics sharedInstance] update:delta];
-    
-<<<<<<< HEAD
+
+    //Check timers
+    /*
+    if (!_maestroAudioStarted &&
+        [[GameClock sharedInstance] currentTime] > _maestroAudioStartTime) {
+        NSLog(@"Starting Maestro music.");
+        [[GameSoundManager sharedInstance] playMaestro];
+        _maestroAudioStarted = YES;
+    }
+     */
+
     // check for level loss/victory
-    if (gameManager.timeLeft <= 0) {
+    /* >>>>
+    if ([gameManager outOfTime]) {
         // out of time!
         [[CCDirector sharedDirector] replaceScene:[CCTransitionCrossFade transitionWithDuration:0.5f scene:[GameOverScene node]]];
     } else if (gameManager.tearsCollectedThisLevel >= gameManager.tearsNeededThisLevel) {
@@ -133,15 +141,8 @@
         } else {
             [[CCDirector sharedDirector] replaceScene:[CCTransitionCrossFade transitionWithDuration:0.5f scene:[GameScene nodeWithLevelNum:0]]];            
         }
-=======
-    //Check timers
-    if (!_maestroAudioStarted &&
-        [[GameClock sharedInstance] currentTime] > _maestroAudioStartTime) {
-        NSLog(@"Starting Maestro music.");
-        [[GameSoundManager sharedInstance] playMaestro];
-        _maestroAudioStarted = YES;
->>>>>>> 0ad9268999a1253dba094f3f7fd1e42eb3ce985c
     }
+     <<<< */
 }
 
 -(void)addTearAtPosition:(CGPoint)pos
