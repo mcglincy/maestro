@@ -61,7 +61,7 @@
 	
 #warning messing with gravity
 //	space_->gravity = ccp(0, -100);
-	space_->gravity = ccp(10, 100);
+	space_->gravity = ccp(0, 50);
 	
 	//
 	// rogue shapes

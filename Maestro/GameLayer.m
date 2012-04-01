@@ -12,6 +12,7 @@
 #import "Constants.h"
 #import "GameLayer.h"
 #import "Maestro.h"
+#import "Note.h"
 #import "Person.h"
 #import "Physics.h"
 #import "PhysicsSprite.h"
@@ -23,12 +24,24 @@ enum {
 
 
 @interface GameLayer()
--(void) addNewSpriteAtPosition:(CGPoint)pos;
+
+@property (nonatomic, retain) NSMutableArray *touchPoints;
+
+-(void) addNewTearAtPosition:(CGPoint)pos;
 -(void) initPhysics;
 @end
 
 
 @implementation GameLayer
+
+@synthesize touchPoints = _touchPoints;
+
+- (void)dealloc
+{
+    [_touchPoints release];
+	[super dealloc];
+	
+}
 
 // Helper class method that creates a Scene with the HelloWorldLayer as the only child.
 +(CCScene *) scene
@@ -50,6 +63,8 @@ enum {
 {
 	if( (self=[super init])) {
 		
+        self.touchPoints = [NSMutableArray array];
+
 		// enable events
 		self.isTouchEnabled = YES;
 		
@@ -83,18 +98,12 @@ enum {
     [Physics sharedInstance];
 }
 
-- (void)dealloc
-{
-	[super dealloc];
-	
-}
-
--(void) update:(ccTime) delta
+-(void)update:(ccTime) delta
 {
     [[Physics sharedInstance] update:delta];
 }
 
--(void) addNewSpriteAtPosition:(CGPoint)pos
+-(void)addTearAtPosition:(CGPoint)pos
 {
 	int posx, posy;
 	
@@ -105,12 +114,15 @@ enum {
 	posy = (posy % 3) * 121;
 	
 //	PhysicsSprite *sprite = [PhysicsSprite spriteWithTexture:spriteTexture_ rect:CGRectMake(posx, posy, 85, 121)];
-    PhysicsSprite *sprite = [Tear node];
+    Tear *sprite = [Tear node];
 	//[parent addChild: sprite];
     [self addChild:sprite];
 	
 	sprite.position = pos;
 	
+    [sprite addToPhysics];
+
+    /*
 	int num = 4;
 	CGPoint verts[] = {
 		ccp(-24,-54),
@@ -129,17 +141,69 @@ enum {
 	cpSpaceAddShape([[Physics sharedInstance] space], shape);
 	
 	[sprite setPhysicsBody:body];
+     */
+}
+
+- (void)addNoteAtPosition:(CGPoint)pos
+{
+    Note *note = [Note node];
+    note.position = ccp(260, 260);
+    [self addChild:note z:2];
+
+    CCMoveBy *moveBy = [CCMoveTo actionWithDuration:5.0 
+                        position:pos];
+    [note runAction:moveBy];   
+}
+
+- (void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self.touchPoints removeAllObjects];
+    [self addTouchPointWithTouches:touches];
+}
+
+- (void)addTouchPointWithTouches:(NSSet *)touches
+{
+    UITouch *touch = [touches anyObject];
+    CGPoint location = [touch locationInView:[touch view]];
+    location = [[CCDirector sharedDirector] convertToGL:location];
+    
+    [self.touchPoints addObject:[NSValue valueWithCGPoint:location]];    
+}
+
+- (void)ccTouchesMoved:(NSSet *)touches withEvent:(UIEvent *)event 
+{
+    [self addTouchPointWithTouches:touches];
 }
 
 - (void)ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-	for( UITouch *touch in touches ) {
+    [self.touchPoints removeAllObjects];
+
+    /*
+	for (UITouch *touch in touches) {
 		CGPoint location = [touch locationInView: [touch view]];
-		
 		location = [[CCDirector sharedDirector] convertToGL: location];
-		
-		[self addNewSpriteAtPosition: location];
+		//[self addTearAtPosition:location];
+        [self addNoteAtPosition:location];
 	}
+     */
+}
+
+- (void)ccTouchCancelled:(UITouch *)touch withEvent:(UIEvent *)event
+{
+    [self.touchPoints removeAllObjects];
+}
+
+- (void)draw
+{
+    [super draw];
+    CGPoint cgVertices[[self.touchPoints count]];
+    
+    for (int i = 0, len = [self.touchPoints count]; i < len; i++) {
+        CGPoint point = [[self.touchPoints objectAtIndex:i] CGPointValue];
+        cgVertices[i] = point;
+    }
+    ccDrawPoly(cgVertices, [self.touchPoints count], YES);
 }
 
 @end
