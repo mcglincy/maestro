@@ -27,9 +27,28 @@
 
 - (id)init
 {
-    self = [super initWithFile:@"tear.png" rect:CGRectMake(0, 0, 80, 58)];
+    self = [super initWithFile:@"tear0.png" rect:CGRectMake(0, 0, 32, 32)];
     if (self) {
         self.timeToDie = [[GameClock sharedInstance] currentTime] + [GameUtils randomTimeBetweenMin:MIN_LIFE max:MAX_LIFE];
+        
+        CCAnimation *anim = [CCAnimation animation];
+        [anim addFrameWithFilename:@"tear1.png"];
+        [anim addFrameWithFilename:@"tear2.png"];
+        [anim addFrameWithFilename:@"tear3.png"];
+        [anim addFrameWithFilename:@"tear4.png"];
+        [anim addFrameWithFilename:@"tear5.png"];
+        [anim addFrameWithFilename:@"tear6.png"];
+        [anim addFrameWithFilename:@"tear7.png"];
+        [anim addFrameWithFilename:@"tear8.png"];
+        [anim addFrameWithFilename:@"tear0.png"];
+        
+        id animationAction = [CCAnimate actionWithDuration:0.5f
+                                                 animation:anim
+                                      restoreOriginalFrame:YES];
+        id repeatAnimation = [CCRepeatForever actionWithAction:animationAction];
+        [self runAction:repeatAnimation];
+
+        
         // receive updates so we can kill ourselves
         [self scheduleUpdate];
     }

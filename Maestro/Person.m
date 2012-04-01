@@ -21,13 +21,13 @@
 
 - (id)init
 {
-    self = [super initWithFile:@"figure-blank-idle0.png" rect:CGRectMake(0, 0, 384, 384)];
+    self = [super initWithFile:@"figure-idle-0.png" rect:CGRectMake(0, 0, 384, 384)];
     if (self) {
         CCAnimation *anim = [CCAnimation animation];
-        [anim addFrameWithFilename:@"figure-blank-idle1.png"];
-        [anim addFrameWithFilename:@"figure-blank-idle0.png"];
+        [anim addFrameWithFilename:@"figure-idle-1.png"];
+        [anim addFrameWithFilename:@"figure-idle-0.png"];
         
-        id animationAction = [CCAnimate actionWithDuration:0.5f
+        id animationAction = [CCAnimate actionWithDuration:1.5f
                                                  animation:anim
                                       restoreOriginalFrame:YES];
         id repeatAnimation = [CCRepeatForever actionWithAction:animationAction];
