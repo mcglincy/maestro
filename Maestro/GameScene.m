@@ -69,7 +69,7 @@
         case 0:
             self.background = @"background_rome.png";
             self.music = @"maestro_0.wav";
-            self.maxTime = 99;
+            self.maxTime = 10;
             self.tearsNeeded = 30;
             break;
         case 1:

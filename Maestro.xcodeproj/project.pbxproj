@@ -93,6 +93,9 @@
 		0B1A4AB51528C4850062DECC /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1A4AB41528C4850062DECC /* Store.m */; };
 		0B1A4AB81528C4940062DECC /* StoreItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1A4AB71528C4940062DECC /* StoreItem.m */; };
 		0B1A4ABA1528EDE30062DECC /* background_berlin.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B1A4AB91528EDE30062DECC /* background_berlin.png */; };
+		0B1A4ABC152909EF0062DECC /* store_screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B1A4ABB152909EF0062DECC /* store_screen.png */; };
+		0B1A4ABE15290A940062DECC /* gameover_screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B1A4ABD15290A940062DECC /* gameover_screen.png */; };
+		0B1A4AC015290B7F0062DECC /* victory_screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B1A4ABF15290B7F0062DECC /* victory_screen.png */; };
 		0B87A2721527A020001A28E7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B87A2711527A020001A28E7 /* QuartzCore.framework */; };
 		0B87A2741527A020001A28E7 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B87A2731527A020001A28E7 /* OpenGLES.framework */; };
 		0B87A2761527A020001A28E7 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B87A2751527A020001A28E7 /* OpenAL.framework */; };
@@ -378,6 +381,9 @@
 		0B1A4AB61528C4930062DECC /* StoreItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreItem.h; sourceTree = "<group>"; };
 		0B1A4AB71528C4940062DECC /* StoreItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreItem.m; sourceTree = "<group>"; };
 		0B1A4AB91528EDE30062DECC /* background_berlin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_berlin.png; sourceTree = "<group>"; };
+		0B1A4ABB152909EF0062DECC /* store_screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = store_screen.png; sourceTree = "<group>"; };
+		0B1A4ABD15290A940062DECC /* gameover_screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gameover_screen.png; sourceTree = "<group>"; };
+		0B1A4ABF15290B7F0062DECC /* victory_screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = victory_screen.png; sourceTree = "<group>"; };
 		0B87A26D1527A020001A28E7 /* Maestro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Maestro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B87A2711527A020001A28E7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		0B87A2731527A020001A28E7 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -682,6 +688,7 @@
 				0B1A47061527A0F70062DECC /* gray_note.png */,
 				0B1A47161527A3A10062DECC /* figure-blank-idle0.png */,
 				0B1A47171527A3A10062DECC /* figure-blank-idle1.png */,
+				0B1A4ABD15290A940062DECC /* gameover_screen.png */,
 				0B1A47071527A0F70062DECC /* maestro.png */,
 				0B1A47181527A3A10062DECC /* maestro_frame_0.png */,
 				0B1A47191527A3A10062DECC /* maestro_frame_1.png */,
@@ -689,9 +696,11 @@
 				0B1A471B1527A3A10062DECC /* maestro_frame_3.png */,
 				0B1A4AB11528BFCD0062DECC /* map_screen.png */,
 				0B1A47081527A0F70062DECC /* person.png */,
+				0B1A4ABB152909EF0062DECC /* store_screen.png */,
 				0B1A47091527A0F70062DECC /* tear.png */,
 				0B1A4A6B1527FB780062DECC /* tear_bin.png */,
 				0B1A470A1527A0F70062DECC /* title_screen.png */,
+				0B1A4ABF15290B7F0062DECC /* victory_screen.png */,
 			);
 			path = Graphics;
 			sourceTree = "<group>";
@@ -1430,6 +1439,9 @@
 				73733C0C1528174500992747 /* Maestro_1.wav in Resources */,
 				0B1A4AB21528BFCD0062DECC /* map_screen.png in Resources */,
 				0B1A4ABA1528EDE30062DECC /* background_berlin.png in Resources */,
+				0B1A4ABC152909EF0062DECC /* store_screen.png in Resources */,
+				0B1A4ABE15290A940062DECC /* gameover_screen.png in Resources */,
+				0B1A4AC015290B7F0062DECC /* victory_screen.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

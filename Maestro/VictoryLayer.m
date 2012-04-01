@@ -18,6 +18,11 @@
         self.isTouchEnabled = YES;
         
 		CGSize winSize = [[CCDirector sharedDirector] winSize];
+        
+        CCSprite *backgroundImage = [CCSprite spriteWithFile:@"victory_screen.png"];
+        backgroundImage.position = CGPointMake(winSize.width/2, winSize.height/2);
+        [self addChild:backgroundImage z:-1 tag:0];
+
         CCLabelTTF *label = [CCLabelTTF labelWithString:@"Victory!!!" fontName:@"Marker Felt" fontSize:28.0];
         label.position = ccp(winSize.width / 2, winSize.height / 2);
         [self addChild:label];        
