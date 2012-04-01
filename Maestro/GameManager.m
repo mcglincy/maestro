@@ -10,6 +10,7 @@
 #import "GameManager.h"
 #import "GameScene.h"
 #import "Store.h"
+#import "StoreItem.h"
 
 #define TICK_INTERVAL 1.0
 
@@ -40,6 +41,7 @@
 {
     self = [super init];
     if (self) {
+        self.purchasedItems = [NSMutableArray array];
     }
     return self;
 }
@@ -95,6 +97,17 @@
 - (BOOL)outOfTime
 {
     return self.timerStarted && (self.timeLeft <= 0);
+}
+
+
+- (BOOL)hasAlreadyPurchasedStoreItem:(StoreItem *)item
+{
+    return [self.purchasedItems containsObject:item];
+}
+
+- (BOOL)canAffordStoreItem:(StoreItem *)item
+{
+    return self.tearsCollectedTotal >= item.price;
 }
 
 @end

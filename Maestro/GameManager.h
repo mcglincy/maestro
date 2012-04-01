@@ -11,6 +11,7 @@
 
 @class GameScene;
 @class Store;
+@class StoreItem;
 
 @interface GameManager : NSObject
 
@@ -30,5 +31,7 @@
 - (void)resetForGameScene:(GameScene *)scene;
 - (void)playerCollectedTear;
 - (BOOL)outOfTime;
+- (BOOL)hasAlreadyPurchasedStoreItem:(StoreItem *)item;
+- (BOOL)canAffordStoreItem:(StoreItem *)item;
 
 @end
