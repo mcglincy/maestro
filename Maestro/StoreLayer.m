@@ -45,7 +45,7 @@
         self.isTouchEnabled = YES;
         
         CCSprite *backgroundImage;
-        backgroundImage = [CCSprite spriteWithFile:@"map_screen.png"];        
+        backgroundImage = [CCSprite spriteWithFile:@"hell.png"];        
         CGSize winSize = [[CCDirector sharedDirector] winSize];
         [backgroundImage setPosition:
          CGPointMake(winSize.width/2, winSize.height/2)];

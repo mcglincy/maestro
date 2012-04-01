@@ -13,7 +13,7 @@
 
 - (id)init
 {
-    self = [super initWithFile:@"tear_bin.png" rect:CGRectMake(0, 0, 80, 58)];
+    self = [super initWithFile:@"case-alt-lo.png" rect:CGRectMake(0, 0, 128, 128)];
     if (self) {
     }
     return self;

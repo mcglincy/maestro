@@ -67,19 +67,19 @@
 {
     switch (self.levelNum) {
         case 0:
-            self.background = @"background_rome.png";
+            self.background = @"Level1-alt.png";
             self.music = @"maestro_0.wav";
-            self.maxTime = 10;
-            self.tearsNeeded = 30;
+            self.maxTime = 99;
+            self.tearsNeeded = 1;
             break;
         case 1:
-            self.background = @"background_berlin.png";
+            self.background = @"Level2-alt.png";
             self.music = @"maestro_1.wav";
             self.maxTime = 99;
-            self.tearsNeeded = 30;
+            self.tearsNeeded = 20;
             break;
         case 2:
-            self.background = @"background_city.png";
+            self.background = @"Level3-alt.png";
             self.music = @"maestro_2.wav";
             self.maxTime = 99;
             self.tearsNeeded = 30;
