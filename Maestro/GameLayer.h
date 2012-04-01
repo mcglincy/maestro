@@ -17,6 +17,7 @@
 }
 
 @property (nonatomic) NSInteger levelNum;
+@property (readwrite) int tapImpulsePower;
 
 + (GameLayer *)nodeWithLevelNum:(NSInteger)levelNum;
 - (id)initWithLevelNum:(NSInteger)levelNum;

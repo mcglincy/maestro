@@ -43,6 +43,7 @@
 
 @synthesize touchPoints = _touchPoints;
 @synthesize levelNum = _levelNum;
+@synthesize tapImpulsePower = _tapImpulsePower;
 @synthesize leavingScene = _leavingScene;
 
 - (void)dealloc
@@ -63,6 +64,8 @@
     if (self != nil) {
 
         self.levelNum = levelNum;
+        
+        self.tapImpulsePower = 10;
         
         self.touchPoints = [NSMutableArray array];
         
@@ -98,15 +101,12 @@
         [self addChild:tearBin z:1];
         [tearBin addToPhysics];
 
-        //Wait 3 seconds before playing music
+        //Fade out the intro music if it's playing
+        [[GameSoundManager sharedInstance] fadeOutMusic];
+        
+        //Wait 3 seconds before playing maestro music
         _maestroAudioStarted = NO;
         _maestroAudioStartTime = [[GameClock sharedInstance] currentTime] + 3;
-        
-#warning Make this a smooth audio fade
-        //[[GameSoundManager sharedInstance].soundEngine stopBackgroundMusic];
-        [[GameSoundManager sharedInstance] fadeOutMusic];
-        //[[GameSoundManager sharedInstance] playMaestro];
-        //[[GameSoundManager sharedInstance].soundEngine playBackgroundMusic:@"Maestro_1.wav"];
     }
     return self;    
 }
@@ -156,14 +156,13 @@
     if (nil != self.touchPoints) {
         for (int i = 0, len = [self.touchPoints count]; i < len; i++) {
             CGPoint point = [[self.touchPoints objectAtIndex:i] CGPointValue];
-            cpShape *shape = cpSpacePointQueryFirst([Physics sharedInstance].space, cpv(point.x, point.y), CP_ALL_LAYERS, CP_NO_GROUP);
+            cpVect vect = cpv(point.x, point.y);
+            cpShape *shape = cpSpacePointQueryFirst([Physics sharedInstance].space, vect, CP_ALL_LAYERS, CP_NO_GROUP);
             
-            if ((NULL != shape)
-                && (NULL != shape->body)) {
-                CGFloat x = -200.0 + (arc4random() % 250);
-                CGFloat y = 50 + (arc4random() % 100);
-                cpVect j = cpv(x, y);
-                //j = cpvmult(j, 100);
+            if ((NULL != shape) && (NULL != shape->body)) {
+                //Get a vector from the shape to the touch point and use that as the start for our physics impulse
+                cpVect j = cpvsub(cpBodyGetPos(shape->body), vect);
+                j = cpvmult(j, self.tapImpulsePower);
                 cpBodyApplyImpulse(shape->body, j, cpvzero); 
             }
         }
