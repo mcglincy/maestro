@@ -18,7 +18,11 @@
 #import "Physics.h"
 #import "PhysicsSprite.h"
 #import "Tear.h"
+<<<<<<< HEAD
 #import "TearBin.h"
+=======
+#import "GameSoundManager.h"
+>>>>>>> 53b29cc9c2b2a00fc306c0abb1c19d9722a86799
 
 @interface GameLayer()
 
@@ -78,7 +82,13 @@
         [self addChild:tearBin z:1];
         [tearBin addToPhysics];
 	}
-	
+    
+    static BOOL musicStarted = NO;
+    if (!musicStarted) {
+        [[GameSoundManager sharedInstance].soundEngine playBackgroundMusic:@"Maestro_1.wav"];
+        musicStarted = YES;
+    }
+    
 	return self;
 }
 

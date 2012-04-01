@@ -27,7 +27,7 @@
     [super onEnter];
     static BOOL musicStarted = NO;
     if (!musicStarted) {
-        [[GameSoundManager sharedInstance].soundEngine playBackgroundMusic:@"intro.mp3"];
+        [[GameSoundManager sharedInstance].soundEngine playBackgroundMusic:@"title.wav"];
         musicStarted = YES;
     }
     
