@@ -28,6 +28,7 @@
 @interface GameLayer()
 
 @property (nonatomic, retain) NSMutableArray *touchPoints;
+@property (nonatomic) BOOL leavingScene;
 
 - (void)addTearAtPosition:(CGPoint)pos;
 
@@ -38,6 +39,7 @@
 
 @synthesize touchPoints = _touchPoints;
 @synthesize levelNum = _levelNum;
+@synthesize leavingScene = _leavingScene;
 
 - (void)dealloc
 {
@@ -113,36 +115,38 @@
 -(void)update:(ccTime) delta
 {
     // update global singletons
-    GameManager *gameManager = [GameManager sharedInstance];
     [[GameClock sharedInstance] update:delta];
-    [gameManager update:delta];
-    [[Physics sharedInstance] update:delta];
 
     //Check timers
-    /*
     if (!_maestroAudioStarted &&
         [[GameClock sharedInstance] currentTime] > _maestroAudioStartTime) {
         NSLog(@"Starting Maestro music.");
         [[GameSoundManager sharedInstance] playMaestro];
         _maestroAudioStarted = YES;
     }
-     */
 
     // check for level loss/victory
-    /* >>>>
-    if ([gameManager outOfTime]) {
-        // out of time!
-        [[CCDirector sharedDirector] replaceScene:[CCTransitionCrossFade transitionWithDuration:0.5f scene:[GameOverScene node]]];
-    } else if (gameManager.tearsCollectedThisLevel >= gameManager.tearsNeededThisLevel) {
-        // got our requisite tears, so advance
-        NSInteger nextLevelNum = self.levelNum + 1;
-        if (nextLevelNum > 3) {
-            [[CCDirector sharedDirector] replaceScene:[CCTransitionCrossFade transitionWithDuration:0.5f scene:[VictoryScene node]]];                        
-        } else {
-            [[CCDirector sharedDirector] replaceScene:[CCTransitionCrossFade transitionWithDuration:0.5f scene:[GameScene nodeWithLevelNum:0]]];            
+    if (!self.leavingScene) {
+        
+        GameManager *gameManager = [GameManager sharedInstance];
+        [gameManager update:delta];
+        [[Physics sharedInstance] update:delta];
+
+        if ([gameManager outOfTime]) {
+            // out of time!
+            self.leavingScene = YES;
+            [[CCDirector sharedDirector] replaceScene:[CCTransitionCrossFade transitionWithDuration:0.5f scene:[GameOverScene node]]];
+        } else if (gameManager.tearsCollectedThisLevel >= gameManager.tearsNeededThisLevel) {
+            // got our requisite tears, so advance
+            self.leavingScene = YES;
+            NSInteger nextLevelNum = self.levelNum + 1;
+            if (nextLevelNum > 3) {
+                [[CCDirector sharedDirector] replaceScene:[CCTransitionCrossFade transitionWithDuration:0.5f scene:[VictoryScene node]]];                        
+            } else {
+                [[CCDirector sharedDirector] replaceScene:[CCTransitionCrossFade transitionWithDuration:0.5f scene:[GameScene nodeWithLevelNum:nextLevelNum]]];            
+            }
         }
     }
-     <<<< */
 }
 
 -(void)addTearAtPosition:(CGPoint)pos

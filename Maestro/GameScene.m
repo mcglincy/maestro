@@ -35,6 +35,7 @@
 
 + (GameScene *)nodeWithLevelNum:(NSInteger)levelNum
 {
+    NSLog(@"starting GameScene level num %d", levelNum);
     GameScene *scene = [[[GameScene alloc] initWithLevelNum:levelNum] autorelease];
     return scene;
 }

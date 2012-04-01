@@ -7,12 +7,17 @@
 //
 
 
+#import "Physics.h"
 #import "PhysicsSprite.h"
 
 // callback to remove Shapes from the Space
 void removeShape( cpBody *body, cpShape *shape, void *data )
 {
-	cpShapeFree( shape );
+    Physics *physics = [Physics sharedInstance];
+    if (cpSpaceContainsShape(physics.space, shape)) {
+        cpSpaceRemoveShape(physics.space, shape);
+    }
+	cpShapeFree( shape ); 
 }
 
 #pragma mark - PhysicsSprite
@@ -62,6 +67,10 @@ void removeShape( cpBody *body, cpShape *shape, void *data )
 -(void) dealloc
 {
 	cpBodyEachShape(body_, removeShape, NULL);
+    Physics *physics = [Physics sharedInstance];
+    if (cpSpaceContainsBody(physics.space, body_)) {
+        cpSpaceRemoveBody([Physics sharedInstance].space, body_);
+    }
 	cpBodyFree( body_ );
 	
 	[super dealloc];

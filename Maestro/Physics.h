@@ -24,7 +24,8 @@ typedef enum {
 @property (nonatomic, readonly) cpSpace *space;
 
 + (Physics *)sharedInstance;
-- (void)update:(ccTime) delta;
+- (void)update:(ccTime)delta;
+- (void)reset;
 
 @end
 
