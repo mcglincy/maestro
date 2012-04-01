@@ -12,9 +12,10 @@ typedef enum {
 	kGSFailed
 } tGameSoundState;
 
-@interface GameSoundManager : NSObject {
+@interface GameSoundManager : NSObject <CDLongAudioSourceDelegate> {
 	tGameSoundState state_;
 	SimpleAudioEngine *soundEngine_;
+    CDLongAudioSource *rightChannel;
 }
 
 @property (readonly) tGameSoundState state;

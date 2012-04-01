@@ -74,11 +74,9 @@
         [self addChild:p2 z:1];                                 
 	}
     
-    static BOOL musicStarted = NO;
-    if (!musicStarted) {
-        [[GameSoundManager sharedInstance].soundEngine playBackgroundMusic:@"Maestro_1.wav"];
-        musicStarted = YES;
-    }
+    #warning Make this a smooth audio fade
+    [[GameSoundManager sharedInstance].soundEngine stopBackgroundMusic];
+    //[[GameSoundManager sharedInstance].soundEngine playBackgroundMusic:@"Maestro_1.wav"];
     
 	return self;
 }

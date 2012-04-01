@@ -27,6 +27,11 @@
 	[CDXPropertyModifierAction fadeBackgroundMusic:2.0f finalVolume:0.0f curveType:kIT_SCurve shouldStop:YES];
 }
 
+-(void)cdAudioSourceDidFinishPlaying:(CDLongAudioSource *)audioSource {
+    NSLog(@"sound finished");
+    [[self soundEngine] playBackgroundMusic:@"Maestro_2.wav"];
+}
+
 @synthesize state = state_;
 static GameSoundManager *sharedManager = nil;
 static BOOL setupHasRun;
@@ -64,7 +69,6 @@ static BOOL setupHasRun;
 	//The FXPlusMusicIfNoOtherAudio mode will check if the user is playing music and disable background music playback if
 	//that is the case.
 	[CDAudioManager initAsynchronously:kAMM_FxPlusMusicIfNoOtherAudio];
-
 }
 
 -(void) asynchronousSetup {
@@ -96,9 +100,14 @@ static BOOL setupHasRun;
 		soundEngine_ = [SimpleAudioEngine sharedEngine];
 
 		[self preload];
-
+        
+        rightChannel=[audioManager audioSourceForChannel:kASC_Right];
+        rightChannel.delegate=self; 
+        
+        [rightChannel load:@"Maestro_1.wav"];
+        [rightChannel play];
+        
 		state_ = kGSOkay;
-
 	}
 }
 

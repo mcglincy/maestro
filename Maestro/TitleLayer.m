@@ -8,6 +8,7 @@
 
 #import "GameScene.h"
 #import "TitleLayer.h"
+#import "GameSoundManager.h"
 
 @implementation TitleLayer
 
@@ -30,6 +31,7 @@
 - (void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     [[CCDirector sharedDirector] replaceScene:[CCTransitionCrossFade transitionWithDuration:0.5f scene:[GameScene node]]];
+    //[[GameSoundManager sharedInstance] fadeOutMusic]; //Not sure how to get the audio back properly after the fade
 }
 
 - (void)ccTouchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
