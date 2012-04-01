@@ -58,7 +58,7 @@
                         change:(NSDictionary*)change
                        context:(void*)context
 {
-    GameManager *gameManager = [GameManager sharedInstance];
+    //GameManager *gameManager = [GameManager sharedInstance];
     if ([keyPath isEqualToString:TEARS_COLLECTED_KEY_PATH]) {
         self.tearsCollectedLabel.string = [self tearsCollectedString];
     } else {

@@ -1,0 +1,23 @@
+//
+//  MapScene.m
+//  Maestro
+//
+//  Created by Matthew McGlincy on 4/1/12.
+//  Copyright (c) 2012 n/a. All rights reserved.
+//
+
+#import "MapLayer.h"
+#import "MapScene.h"
+
+@implementation MapScene
+
+-(id)init {
+    self = [super init];
+    if (self != nil) {
+        MapLayer *mapLayer = [MapLayer node];
+        [self addChild:mapLayer];          
+    }
+    return self;
+}
+
+@end
