@@ -204,6 +204,11 @@
 		0B87A3EE1527A023001A28E7 /* vec4.c in Sources */ = {isa = PBXBuildFile; fileRef = 0B87A3ED1527A023001A28E7 /* vec4.c */; };
 		0B87A3F31527A023001A28E7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B87A3F21527A023001A28E7 /* main.m */; };
 		0B87A3F61527A023001A28E7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B87A3F51527A023001A28E7 /* AppDelegate.m */; };
+		735EF9E51527FC3E00CDD4D7 /* Maestro_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 735EF9E01527FC3E00CDD4D7 /* Maestro_1.wav */; };
+		735EF9E61527FC3E00CDD4D7 /* Maestro_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 735EF9E11527FC3E00CDD4D7 /* Maestro_2.wav */; };
+		735EF9E71527FC3E00CDD4D7 /* Maestro_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 735EF9E21527FC3E00CDD4D7 /* Maestro_3.wav */; };
+		735EF9E81527FC3E00CDD4D7 /* Maestro_4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 735EF9E31527FC3E00CDD4D7 /* Maestro_4.wav */; };
+		735EF9E91527FC3E00CDD4D7 /* title.wav in Resources */ = {isa = PBXBuildFile; fileRef = 735EF9E41527FC3E00CDD4D7 /* title.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -570,6 +575,11 @@
 		0B87A3F21527A023001A28E7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0B87A3F41527A023001A28E7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0B87A3F51527A023001A28E7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		735EF9E01527FC3E00CDD4D7 /* Maestro_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Maestro_1.wav; sourceTree = "<group>"; };
+		735EF9E11527FC3E00CDD4D7 /* Maestro_2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Maestro_2.wav; sourceTree = "<group>"; };
+		735EF9E21527FC3E00CDD4D7 /* Maestro_3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Maestro_3.wav; sourceTree = "<group>"; };
+		735EF9E31527FC3E00CDD4D7 /* Maestro_4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Maestro_4.wav; sourceTree = "<group>"; };
+		735EF9E41527FC3E00CDD4D7 /* title.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = title.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -638,6 +648,11 @@
 		0B1A470B1527A0F70062DECC /* Music */ = {
 			isa = PBXGroup;
 			children = (
+				735EF9E01527FC3E00CDD4D7 /* Maestro_1.wav */,
+				735EF9E11527FC3E00CDD4D7 /* Maestro_2.wav */,
+				735EF9E21527FC3E00CDD4D7 /* Maestro_3.wav */,
+				735EF9E31527FC3E00CDD4D7 /* Maestro_4.wav */,
+				735EF9E41527FC3E00CDD4D7 /* title.wav */,
 				0B1A470C1527A0F70062DECC /* intro.mp3 */,
 			);
 			path = Music;
@@ -1297,6 +1312,11 @@
 				0B1A49D51527B5210062DECC /* CMakeLists.txt in Resources */,
 				0B1A49F41527B60E0062DECC /* LICENSE_Chipmunk.txt in Resources */,
 				0B1A4A001527BE100062DECC /* grossini_dance_atlas.png in Resources */,
+				735EF9E51527FC3E00CDD4D7 /* Maestro_1.wav in Resources */,
+				735EF9E61527FC3E00CDD4D7 /* Maestro_2.wav in Resources */,
+				735EF9E71527FC3E00CDD4D7 /* Maestro_3.wav in Resources */,
+				735EF9E81527FC3E00CDD4D7 /* Maestro_4.wav in Resources */,
+				735EF9E91527FC3E00CDD4D7 /* title.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

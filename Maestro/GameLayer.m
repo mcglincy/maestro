@@ -18,6 +18,7 @@
 #import "Physics.h"
 #import "PhysicsSprite.h"
 #import "Tear.h"
+#import "GameSoundManager.h"
 
 @interface GameLayer()
 
@@ -72,7 +73,13 @@
                           FLOOR_HEIGHT + p2.contentSize.height / 2);
         [self addChild:p2 z:1];                                 
 	}
-	
+    
+    static BOOL musicStarted = NO;
+    if (!musicStarted) {
+        [[GameSoundManager sharedInstance].soundEngine playBackgroundMusic:@"Maestro_1.wav"];
+        musicStarted = YES;
+    }
+    
 	return self;
 }
 
