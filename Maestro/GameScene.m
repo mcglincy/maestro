@@ -13,7 +13,14 @@
 
 @implementation GameScene
 
--(id)init {
++ (GameScene *)nodeWithLevelNum:(NSInteger)levelNum
+{
+    GameScene *scene = [[[GameScene alloc] initWithLevelNum:levelNum] autorelease];
+    return scene;
+}
+
+- (id)initWithLevelNum:(NSInteger)levelNum
+{
     self = [super init];
     if (self != nil) {
         BackgroundLayer *backgroundLayer = [BackgroundLayer node];
@@ -22,10 +29,14 @@
         HUDLayer *hudLayer = [HUDLayer node];       
         [self addChild:hudLayer z:1];                         
         
-        GameLayer *gameLayer = [GameLayer node];
+        GameLayer *gameLayer = [GameLayer nodeWithLevelNum:levelNum];
         [self addChild:gameLayer z:0];                         
     }
-    return self;
+    return self;    
+}
+
+- (id)init {
+    return [self initWithLevelNum:1];
 }
 
 @end

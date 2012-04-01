@@ -40,21 +40,29 @@
 	[super dealloc];
 }
 
--(id) init
++ (GameLayer *)nodeWithLevelNum:(NSInteger)levelNum
 {
-	if( (self=[super init])) {
+    GameLayer *layer = [[[GameLayer alloc] initWithLevelNum:levelNum] autorelease];
+    return layer;
+}
+
+- (id)initWithLevelNum:(NSInteger)levelNum
+{
+    self = [super init];
+    if (self != nil) {
+#warning TODO: do something interesting with level num
 		
         self.touchPoints = [NSMutableArray array];
-
+        
 		// enable events
 		self.isTouchEnabled = YES;
-
+        
 		// init clock
         [GameClock sharedInstance];
-
+        
 		// init physics
         [Physics sharedInstance];
-						
+        
 		[self scheduleUpdate];
         
         CGSize winSize = [[CCDirector sharedDirector] winSize];
@@ -77,15 +85,19 @@
         tearBin.position = ccp(284, FLOOR_HEIGHT + tearBin.contentSize.height / 2);
         [self addChild:tearBin z:1];
         [tearBin addToPhysics];
-	}
-    
-    #warning Make this a smooth audio fade
-    [[GameSoundManager sharedInstance].soundEngine stopBackgroundMusic];
-    //[[GameSoundManager sharedInstance] fadeOutMusic];
-    [[GameSoundManager sharedInstance] playMaestro];
-    //[[GameSoundManager sharedInstance].soundEngine playBackgroundMusic:@"Maestro_1.wav"];
-    
-	return self;
+
+#warning Make this a smooth audio fade
+        [[GameSoundManager sharedInstance].soundEngine stopBackgroundMusic];
+        //[[GameSoundManager sharedInstance] fadeOutMusic];
+        [[GameSoundManager sharedInstance] playMaestro];
+        //[[GameSoundManager sharedInstance].soundEngine playBackgroundMusic:@"Maestro_1.wav"];
+    }
+    return self;    
+}
+
+- (id)init 
+{
+    return [self initWithLevelNum:1];
 }
 
 -(void)update:(ccTime) delta

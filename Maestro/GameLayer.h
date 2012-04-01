@@ -13,4 +13,7 @@
 {
 }
 
++ (GameLayer *)nodeWithLevelNum:(NSInteger)levelNum;
+- (id)initWithLevelNum:(NSInteger)levelNum;
+
 @end

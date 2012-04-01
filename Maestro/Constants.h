@@ -9,3 +9,4 @@
 #import <Foundation/Foundation.h>
 
 #define FLOOR_HEIGHT 40.0
+#define SCENE_TRANSITION_TIME 0.5

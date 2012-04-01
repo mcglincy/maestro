@@ -11,4 +11,7 @@
 
 @interface GameScene : CCScene
 
++ (GameScene *)nodeWithLevelNum:(NSInteger)levelNum;
+- (id)initWithLevelNum:(NSInteger)levelNum;
+
 @end
