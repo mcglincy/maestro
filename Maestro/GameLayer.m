@@ -12,24 +12,20 @@
 #import "Constants.h"
 #import "GameClock.h"
 #import "GameLayer.h"
+#import "GameSoundManager.h"
 #import "Maestro.h"
 #import "Note.h"
 #import "Person.h"
 #import "Physics.h"
 #import "PhysicsSprite.h"
 #import "Tear.h"
-<<<<<<< HEAD
 #import "TearBin.h"
-=======
-#import "GameSoundManager.h"
->>>>>>> 53b29cc9c2b2a00fc306c0abb1c19d9722a86799
 
 @interface GameLayer()
 
 @property (nonatomic, retain) NSMutableArray *touchPoints;
 
--(void) addTearAtPosition:(CGPoint)pos;
--(void) initPhysics;
+- (void)addTearAtPosition:(CGPoint)pos;
 
 @end
 
