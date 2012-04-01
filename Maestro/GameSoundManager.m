@@ -19,7 +19,7 @@
 
 	//Preload the background music too but there is no point in preloading multiple background music files so only
 	//preload the first one you will play
-	[soundEngine_ preloadBackgroundMusic:@"intro.mp3"];
+	[soundEngine_ preloadBackgroundMusic:@"title.wav"];
 }
 
 //TODO: modify these parameters to your own taste, e.g you may want a longer fade out or a different type of curve
@@ -28,12 +28,24 @@
 }
 
 -(void)cdAudioSourceDidFinishPlaying:(CDLongAudioSource *)audioSource {
-    NSLog(@"sound finished");
-    [self playMaestro]; //play the next segment
+    NSMutableString *logMessage = [NSMutableString stringWithString:@"sound finished. loop="];
+    [logMessage appendString: (self.loopMaestroTrack) ? @"YES" : @"NO"];
+    [logMessage appendString:@" stopMaestroAfterNextLoop_="];
+    [logMessage appendString: (stopMaestroAfterNextLoop_) ? @"YES" : @"NO"];
+    NSLog(logMessage);
+    if (self.loopMaestroTrack) {
+        [self playMaestro]; //play the next segment
+    }
+    
+    if (stopMaestroAfterNextLoop_) {
+        self.loopMaestroTrack = NO;
+        stopMaestroAfterNextLoop_ = NO;
+    }
 }
 
 @synthesize state = state_;
 @synthesize nextMaestroTrack = nextMaestroTrack_;
+@synthesize loopMaestroTrack = loopMaestroTrack_;
 @synthesize numMaestroTracks = numMaestroTracks_;
 static GameSoundManager *sharedManager = nil;
 static BOOL setupHasRun;
@@ -54,6 +66,8 @@ static BOOL setupHasRun;
 		state_ = kGSUninitialised;
 		setupHasRun = NO;
         nextMaestroTrack_ = 0;
+        loopMaestroTrack_ = YES;
+        stopMaestroAfterNextLoop_ = NO;
         numMaestroTracks_ = 4;
 	}
 	return self;
@@ -134,12 +148,17 @@ static BOOL setupHasRun;
 -(void) playMaestro {
     NSString *filename = [NSString stringWithFormat:@"Maestro_%i.wav", self.nextMaestroTrack];
     NSLog(@"Playing song %@", filename);
-    [rightChannel load:filename];
+    [rightChannel load:filename]; //The audio engine will just rewind the clip if it notices the filename here is the same, so we don't need to be smart about it
     [rightChannel play];
     
     //Increment the next track
-    self.nextMaestroTrack++;
-    self.nextMaestroTrack = self.nextMaestroTrack % self.numMaestroTracks;
+    //self.nextMaestroTrack++;
+    //self.nextMaestroTrack = self.nextMaestroTrack % self.numMaestroTracks;
+}
+
+-(void) stopMaestroAfterNextLoop {
+    stopMaestroAfterNextLoop_ = YES;
+    NSLog(@"STOP MAESTRO.");
 }
 
 -(SimpleAudioEngine *) soundEngine {

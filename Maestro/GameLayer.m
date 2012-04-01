@@ -153,6 +153,14 @@
         [self addNoteAtPosition:location];
 	}
      */
+    
+    //Assuming we roped in some tears, let's change the music on the next loop
+    if ([GameSoundManager sharedInstance].nextMaestroTrack < ([GameSoundManager sharedInstance].numMaestroTracks - 1)) {
+        [GameSoundManager sharedInstance].nextMaestroTrack++;
+    } else {
+        //This is the last track, stop looping
+        [[GameSoundManager sharedInstance] stopMaestroAfterNextLoop];
+    }
 }
 
 - (void)ccTouchCancelled:(UITouch *)touch withEvent:(UIEvent *)event

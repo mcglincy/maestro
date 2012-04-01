@@ -16,16 +16,19 @@ typedef enum {
 	tGameSoundState state_;
 	SimpleAudioEngine *soundEngine_;
     CDLongAudioSource *rightChannel;
+    BOOL stopMaestroAfterNextLoop_;
 }
 
 @property (readonly) tGameSoundState state;
 @property (readonly) SimpleAudioEngine *soundEngine;
 @property (readwrite) int nextMaestroTrack;
+@property (readwrite) BOOL loopMaestroTrack;
 @property (readonly) int numMaestroTracks;
 
 + (GameSoundManager*)sharedInstance;
 -(void) setup;
 -(void) fadeOutMusic;
 -(void) playMaestro;
+-(void) stopMaestroAfterNextLoop;
 
 @end
