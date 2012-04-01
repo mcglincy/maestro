@@ -81,6 +81,7 @@
     
     #warning Make this a smooth audio fade
     [[GameSoundManager sharedInstance].soundEngine stopBackgroundMusic];
+    //[[GameSoundManager sharedInstance] fadeOutMusic];
     [[GameSoundManager sharedInstance] playMaestro];
     //[[GameSoundManager sharedInstance].soundEngine playBackgroundMusic:@"Maestro_1.wav"];
     
@@ -157,9 +158,10 @@
     //Assuming we roped in some tears, let's change the music on the next loop
     if ([GameSoundManager sharedInstance].nextMaestroTrack < ([GameSoundManager sharedInstance].numMaestroTracks - 1)) {
         [GameSoundManager sharedInstance].nextMaestroTrack++;
-    } else {
-        //This is the last track, stop looping
-        [[GameSoundManager sharedInstance] stopMaestroAfterNextLoop];
+        if ([GameSoundManager sharedInstance].nextMaestroTrack == [GameSoundManager sharedInstance].numMaestroTracks - 1) {
+            //This is the last track, stop looping
+            [[GameSoundManager sharedInstance] stopMaestroAfterNextLoop];
+        }
     }
 }
 

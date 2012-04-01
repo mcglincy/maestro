@@ -24,11 +24,13 @@ typedef enum {
 @property (readwrite) int nextMaestroTrack;
 @property (readwrite) BOOL loopMaestroTrack;
 @property (readonly) int numMaestroTracks;
+@property (readwrite) float maestroStartDelay;
 
 + (GameSoundManager*)sharedInstance;
 -(void) setup;
 -(void) fadeOutMusic;
 -(void) playMaestro;
+-(void) playMaestroWithDelay : (float) delay ;
 -(void) stopMaestroAfterNextLoop;
 
 @end

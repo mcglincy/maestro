@@ -1,6 +1,7 @@
 
 #import "GameSoundManager.h"
 #import "CDXPropertyModifierAction.h"
+#import "GameClock.h"
 
 @interface GameSoundManager (PrivateMethods)
 -(void) asynchronousSetup;
@@ -24,7 +25,9 @@
 
 //TODO: modify these parameters to your own taste, e.g you may want a longer fade out or a different type of curve
 -(void) fadeOutMusic {
-	[CDXPropertyModifierAction fadeBackgroundMusic:2.0f finalVolume:0.0f curveType:kIT_SCurve shouldStop:YES];
+    //if([self.soundEngine isBackgroundMusicPlaying]) {
+    [CDXPropertyModifierAction fadeBackgroundMusic:2.0f finalVolume:0.0f curveType:kIT_SCurve shouldStop:YES];
+    //}
 }
 
 -(void)cdAudioSourceDidFinishPlaying:(CDLongAudioSource *)audioSource {
@@ -47,6 +50,7 @@
 @synthesize nextMaestroTrack = nextMaestroTrack_;
 @synthesize loopMaestroTrack = loopMaestroTrack_;
 @synthesize numMaestroTracks = numMaestroTracks_;
+@synthesize maestroStartDelay = maestroStartDelay_;
 static GameSoundManager *sharedManager = nil;
 static BOOL setupHasRun;
 
@@ -145,20 +149,26 @@ static BOOL setupHasRun;
 
 }
 
+- (void)update:(ccTime)delay
+{
+    if ([[GameClock sharedInstance] currentTime] > self.maestroStartDelay) {
+        [self playMaestro];
+    }
+}
+
 -(void) playMaestro {
     NSString *filename = [NSString stringWithFormat:@"Maestro_%i.wav", self.nextMaestroTrack];
     NSLog(@"Playing song %@", filename);
     [rightChannel load:filename]; //The audio engine will just rewind the clip if it notices the filename here is the same, so we don't need to be smart about it
     [rightChannel play];
-    
-    //Increment the next track
-    //self.nextMaestroTrack++;
-    //self.nextMaestroTrack = self.nextMaestroTrack % self.numMaestroTracks;
 }
 
 -(void) stopMaestroAfterNextLoop {
     stopMaestroAfterNextLoop_ = YES;
     NSLog(@"STOP MAESTRO.");
+}
+
+-(void) playMaestroWithDelay: (float) delay {
 }
 
 -(SimpleAudioEngine *) soundEngine {
