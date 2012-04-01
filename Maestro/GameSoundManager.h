@@ -15,6 +15,7 @@ typedef enum {
 @interface GameSoundManager : NSObject <CDLongAudioSourceDelegate> {
 	tGameSoundState state_;
 	SimpleAudioEngine *soundEngine_;
+    CDLongAudioSource *leftChannel;
     CDLongAudioSource *rightChannel;
     BOOL stopMaestroAfterNextLoop_;
 }
