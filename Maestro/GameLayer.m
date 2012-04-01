@@ -113,35 +113,11 @@ enum {
 	posx = (posx % 4) * 85;
 	posy = (posy % 3) * 121;
 	
-//	PhysicsSprite *sprite = [PhysicsSprite spriteWithTexture:spriteTexture_ rect:CGRectMake(posx, posy, 85, 121)];
-    Tear *sprite = [Tear node];
-	//[parent addChild: sprite];
-    [self addChild:sprite];
+    Tear *tear = [Tear node];
+    [self addChild:tear];
+	tear.position = pos;
 	
-	sprite.position = pos;
-	
-    [sprite addToPhysics];
-
-    /*
-	int num = 4;
-	CGPoint verts[] = {
-		ccp(-24,-54),
-		ccp(-24, 54),
-		ccp( 24, 54),
-		ccp( 24,-54),
-	};
-	
-	cpBody *body = cpBodyNew(1.0f, cpMomentForPoly(1.0f, num, verts, CGPointZero));
-	
-	body->p = pos;
-	cpSpaceAddBody([[Physics sharedInstance] space], body);
-	
-	cpShape* shape = cpPolyShapeNew(body, num, verts, CGPointZero);
-	shape->e = 0.5f; shape->u = 0.5f;
-	cpSpaceAddShape([[Physics sharedInstance] space], shape);
-	
-	[sprite setPhysicsBody:body];
-     */
+    [tear addToPhysics];
 }
 
 - (void)addNoteAtPosition:(CGPoint)pos
