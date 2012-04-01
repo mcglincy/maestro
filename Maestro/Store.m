@@ -24,9 +24,11 @@
     self = [super init];
     if (self) {
         self.items = [NSArray arrayWithObjects:
-                      [StoreItem itemWithName:@"Poison rosin" price:1],
-                      [StoreItem itemWithName:@"Flaming bow" price:50],
-                      [StoreItem itemWithName:@"Strativarius" price:100], 
+                      [StoreItem itemWithName:@"Flaming Hat" price:10],
+                      [StoreItem itemWithName:@"Sinisterly Skinny Jeans" price:20],
+                      [StoreItem itemWithName:@"Hellcatgut Strings" price:30],
+                      [StoreItem itemWithName:@"Demonbow Bone" price:40],
+                      [StoreItem itemWithName:@"Bloodwood Violin" price:50],
                       nil];
     }
     return self;
