@@ -12,8 +12,8 @@
 #import "Physics.h"
 #import "Tear.h"
 
-#define MIN_LIFE 10.0
-#define MAX_LIFE 20.0
+#define MIN_LIFE 4.0
+#define MAX_LIFE 10.0
 
 @interface Tear()
 @property (nonatomic) NSTimeInterval timeToDie;
