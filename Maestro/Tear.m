@@ -82,8 +82,7 @@
 {
     self.isDead = YES;
     // have use cleanup:NO or chipmunk will crash
-#warning removing a PhysicsSprite seems broken
-    [self.parent removeChild:self cleanup:NO];    
+    [self.parent removeChild:self cleanup:YES];    
 }
 
 - (void)hitBin

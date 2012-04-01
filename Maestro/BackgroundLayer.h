@@ -5,4 +5,7 @@
     
 }
 
++ (BackgroundLayer *)nodeWithBackground:(NSString *)background;
+- (id)initWithBackground:(NSString *)background;
+
 @end

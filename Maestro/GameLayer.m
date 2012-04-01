@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 
+
 // Import the interfaces
 #import "Constants.h"
 #import "GameClock.h"
@@ -24,6 +25,8 @@
 #import "Tear.h"
 #import "TearBin.h"
 #import "VictoryScene.h"
+
+#define MAX_LEVEL_IDX 2
 
 @interface GameLayer()
 
@@ -140,7 +143,7 @@
             // got our requisite tears, so advance
             self.leavingScene = YES;
             NSInteger nextLevelNum = self.levelNum + 1;
-            if (nextLevelNum > 3) {
+            if (nextLevelNum > MAX_LEVEL_IDX) {
                 [[CCDirector sharedDirector] replaceScene:[CCTransitionCrossFade transitionWithDuration:0.5f scene:[VictoryScene node]]];                        
             } else {
                 [[CCDirector sharedDirector] replaceScene:[CCTransitionCrossFade transitionWithDuration:0.5f scene:[GameScene nodeWithLevelNum:nextLevelNum]]];            

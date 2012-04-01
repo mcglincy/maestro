@@ -47,7 +47,7 @@
         self.levelNum = levelNum;
         [self configureForLevelNum];
         
-        BackgroundLayer *backgroundLayer = [BackgroundLayer node];
+        BackgroundLayer *backgroundLayer = [BackgroundLayer nodeWithBackground:self.background];
         [self addChild:backgroundLayer z:0];  
         
         HUDLayer *hudLayer = [HUDLayer node];       
@@ -66,19 +66,19 @@
 - (void)configureForLevelNum
 {
     switch (self.levelNum) {
-        case 1:
+        case 0:
             self.background = @"background_rome.png";
             self.music = @"maestro_0.wav";
             self.maxTime = 20;
             self.tearsNeeded = 10;
             break;
-        case 2:
+        case 1:
             self.background = @"background_berlin.png";
             self.music = @"maestro_1.wav";
             self.maxTime = 20;
             self.tearsNeeded = 10;
             break;
-        case 3:
+        case 2:
             self.background = @"background_city.png";
             self.music = @"maestro_2.wav";
             self.maxTime = 20;
