@@ -38,21 +38,13 @@
 
 - (void)addToPhysics
 {
-    int num = 4;
-    CGPoint verts[] = {
-        ccp(-1 * self.contentSize.width / 2, -1 * self.contentSize.height / 2),
-        ccp(-1 * self.contentSize.width / 2, self.contentSize.height / 2),
-        ccp(self.contentSize.width / 2, self.contentSize.height / 2),
-        ccp(self.contentSize.width / 2, -1 * self.contentSize.height / 2),
-    };
-    
-    cpBody *body = cpBodyNew(1.0f, cpMomentForPoly(1.0f, num, verts, CGPointZero));
+    cpBody *body = cpBodyNew(1.0f, cpMomentForCircle(1.0f, 0, 100.0f, cpvzero)); //Tear diameter = 100. Using defines was causing compiler errors here :(
 
     body->p = self.position;
     Physics *physics = [Physics sharedInstance];
     cpSpaceAddBody(physics.space, body);
     
-    cpShape* shape = cpPolyShapeNew(body, num, verts, CGPointZero);
+    cpShape* shape = cpCircleShapeNew(body, 50.0f, CGPointZero); //Tear radius = 50
     shape->e = 0.5f; shape->u = 0.5f;
     shape->collision_type = kCollisionTypeTear;
     shape->data = self;
