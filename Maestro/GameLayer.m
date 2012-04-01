@@ -12,6 +12,8 @@
 #import "Constants.h"
 #import "GameClock.h"
 #import "GameLayer.h"
+#import "GameManager.h"
+#import "GameOverScene.h"
 #import "GameSoundManager.h"
 #import "Maestro.h"
 #import "Note.h"
@@ -20,6 +22,7 @@
 #import "PhysicsSprite.h"
 #import "Tear.h"
 #import "TearBin.h"
+#import "VictoryScene.h"
 
 @interface GameLayer()
 
@@ -33,6 +36,7 @@
 @implementation GameLayer
 
 @synthesize touchPoints = _touchPoints;
+@synthesize levelNum = _levelNum;
 
 - (void)dealloc
 {
@@ -50,8 +54,9 @@
 {
     self = [super init];
     if (self != nil) {
-#warning TODO: do something interesting with level num
-		
+
+        self.levelNum = levelNum;
+        
         self.touchPoints = [NSMutableArray array];
         
 		// enable events
@@ -86,11 +91,6 @@
         [self addChild:tearBin z:1];
         [tearBin addToPhysics];
 
-#warning Make this a smooth audio fade
-        [[GameSoundManager sharedInstance].soundEngine stopBackgroundMusic];
-        //[[GameSoundManager sharedInstance] fadeOutMusic];
-        [[GameSoundManager sharedInstance] playMaestro];
-        //[[GameSoundManager sharedInstance].soundEngine playBackgroundMusic:@"Maestro_1.wav"];
     }
     return self;    
 }
@@ -102,8 +102,25 @@
 
 -(void)update:(ccTime) delta
 {
+    // update global singletons
+    GameManager *gameManager = [GameManager sharedInstance];
     [[GameClock sharedInstance] update:delta];
+    [gameManager update:delta];
     [[Physics sharedInstance] update:delta];
+    
+    // check for level loss/victory
+    if (gameManager.timeLeft <= 0) {
+        // out of time!
+        [[CCDirector sharedDirector] replaceScene:[CCTransitionCrossFade transitionWithDuration:0.5f scene:[GameOverScene node]]];
+    } else if (gameManager.tearsCollectedThisLevel >= gameManager.tearsNeededThisLevel) {
+        // got our requisite tears, so advance
+        NSInteger nextLevelNum = self.levelNum + 1;
+        if (nextLevelNum > 3) {
+            [[CCDirector sharedDirector] replaceScene:[CCTransitionCrossFade transitionWithDuration:0.5f scene:[VictoryScene node]]];                        
+        } else {
+            [[CCDirector sharedDirector] replaceScene:[CCTransitionCrossFade transitionWithDuration:0.5f scene:[GameScene nodeWithLevelNum:0]]];            
+        }
+    }
 }
 
 -(void)addTearAtPosition:(CGPoint)pos
@@ -133,6 +150,8 @@
                         position:pos];
     [note runAction:moveBy];   
 }
+
+#pragma mark - touch handling
 
 - (void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
@@ -182,6 +201,7 @@
     [self.touchPoints removeAllObjects];
 }
 
+/* >>>>
 - (void)draw
 {
     [super draw];
@@ -193,5 +213,6 @@
     }
     ccDrawPoly(cgVertices, [self.touchPoints count], YES);
 }
+ <<<< */
 
 @end

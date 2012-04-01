@@ -29,9 +29,7 @@
     if (!musicStarted) {
         [[GameSoundManager sharedInstance].soundEngine playBackgroundMusic:@"title.wav" loop:NO];
         musicStarted = YES;
-    }
-    
-    [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:4.0 scene:[TitleScene node]]];
+    }    
 }
 
 @end

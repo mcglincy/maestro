@@ -11,6 +11,10 @@
 
 @interface GameScene : CCScene
 
+@property (nonatomic) NSInteger levelNum;
+@property (nonatomic) NSInteger maxTime;
+@property (nonatomic) NSInteger tearsNeeded;
+
 + (GameScene *)nodeWithLevelNum:(NSInteger)levelNum;
 - (id)initWithLevelNum:(NSInteger)levelNum;
 

@@ -7,6 +7,7 @@
 //
 
 #import "BlankLayer.h"
+#import "TitleScene.h"
 
 @implementation BlankLayer
 
@@ -24,4 +25,22 @@
     return self;
 }
 
+- (void)onEnter
+{
+    [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:4.0 scene:[TitleScene node]]];
+}
+
+- (void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [[CCDirector sharedDirector] replaceScene:[TitleScene node]];
+}
+
+- (void)ccTouchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{
+}
+
+- (void)ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    
+}
 @end

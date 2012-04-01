@@ -13,6 +13,8 @@
 {
 }
 
+@property (nonatomic) NSInteger levelNum;
+
 + (GameLayer *)nodeWithLevelNum:(NSInteger)levelNum;
 - (id)initWithLevelNum:(NSInteger)levelNum;
 
