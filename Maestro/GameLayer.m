@@ -10,6 +10,7 @@
 
 // Import the interfaces
 #import "Constants.h"
+#import "GameClock.h"
 #import "GameLayer.h"
 #import "Maestro.h"
 #import "Note.h"
@@ -46,9 +47,12 @@
 
 		// enable events
 		self.isTouchEnabled = YES;
-		
+
+		// init clock
+        [GameClock sharedInstance];
+
 		// init physics
-		[self initPhysics];
+        [Physics sharedInstance];
 						
 		[self scheduleUpdate];
         
@@ -72,13 +76,9 @@
 	return self;
 }
 
--(void) initPhysics
-{
-    [Physics sharedInstance];
-}
-
 -(void)update:(ccTime) delta
 {
+    [[GameClock sharedInstance] update:delta];
     [[Physics sharedInstance] update:delta];
 }
 

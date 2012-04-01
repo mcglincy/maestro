@@ -6,15 +6,26 @@
 //  Copyright (c) 2012 n/a. All rights reserved.
 //
 
+#import "GameClock.h"
+#import "GameUtils.h"
 #import "Physics.h"
 #import "Tear.h"
 
+@interface Tear()
+@property (nonatomic) NSTimeInterval timeToDie;
+@end
+
 @implementation Tear
+
+@synthesize timeToDie = _timeToDie;
 
 - (id)init
 {
     self = [super initWithFile:@"tear.png" rect:CGRectMake(0, 0, 80, 58)];
     if (self) {
+        self.timeToDie = [[GameClock sharedInstance] currentTime] + [GameUtils randomTimeBetweenMin:4.0 max:10.0];
+        // receive updates so we can kill ourselves
+        [self scheduleUpdate];
     }
     return self;
 }
@@ -40,6 +51,14 @@
     cpSpaceAddShape(physics.space, shape);
     
     [self setPhysicsBody:body];    
+}
+
+- (void)update:(ccTime)delay
+{
+    if ([[GameClock sharedInstance] currentTime] > self.timeToDie) {
+        // have use cleanup:NO or chipmunk will crash
+        [self.parent removeChild:self cleanup:NO];
+    }
 }
 
 @end
