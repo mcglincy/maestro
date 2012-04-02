@@ -88,7 +88,6 @@
 		0B1A4AC615290E190062DECC /* Level1-alt.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B1A4AC315290E190062DECC /* Level1-alt.png */; };
 		0B1A4AC715290E190062DECC /* Level2-alt.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B1A4AC415290E190062DECC /* Level2-alt.png */; };
 		0B1A4AC815290E190062DECC /* Level3-alt.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B1A4AC515290E190062DECC /* Level3-alt.png */; };
-		0B1A4ACA15290F3D0062DECC /* hell.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B1A4AC915290F3D0062DECC /* hell.png */; };
 		0B1A4ACD152910A50062DECC /* Devil.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1A4ACC152910A50062DECC /* Devil.m */; };
 		0B1A4AD11529111B0062DECC /* shopkeep_frame_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B1A4ACE1529111A0062DECC /* shopkeep_frame_0.png */; };
 		0B1A4AD21529111B0062DECC /* shopkeep_frame_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B1A4ACF1529111B0062DECC /* shopkeep_frame_1.png */; };
@@ -108,6 +107,11 @@
 		0B1A4AEF152920150062DECC /* tear6.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B1A4AE6152920150062DECC /* tear6.png */; };
 		0B1A4AF0152920150062DECC /* tear7.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B1A4AE7152920150062DECC /* tear7.png */; };
 		0B1A4AF1152920150062DECC /* tear8.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B1A4AE8152920150062DECC /* tear8.png */; };
+		0B1A4AF5152923510062DECC /* shop_sign_frame_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B1A4AF2152923500062DECC /* shop_sign_frame_0.png */; };
+		0B1A4AF6152923510062DECC /* shop_sign_frame_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B1A4AF3152923500062DECC /* shop_sign_frame_1.png */; };
+		0B1A4AF7152923510062DECC /* shop_sign_frame_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B1A4AF4152923500062DECC /* shop_sign_frame_2.png */; };
+		0B1A4AFA152923790062DECC /* ShopSign.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1A4AF9152923790062DECC /* ShopSign.m */; };
+		0B1A4AFC152924E00062DECC /* shop-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B1A4AFB152924E00062DECC /* shop-background.png */; };
 		0B87A2721527A020001A28E7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B87A2711527A020001A28E7 /* QuartzCore.framework */; };
 		0B87A2741527A020001A28E7 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B87A2731527A020001A28E7 /* OpenGLES.framework */; };
 		0B87A2761527A020001A28E7 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B87A2751527A020001A28E7 /* OpenAL.framework */; };
@@ -386,7 +390,6 @@
 		0B1A4AC315290E190062DECC /* Level1-alt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Level1-alt.png"; sourceTree = "<group>"; };
 		0B1A4AC415290E190062DECC /* Level2-alt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Level2-alt.png"; sourceTree = "<group>"; };
 		0B1A4AC515290E190062DECC /* Level3-alt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Level3-alt.png"; sourceTree = "<group>"; };
-		0B1A4AC915290F3D0062DECC /* hell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hell.png; sourceTree = "<group>"; };
 		0B1A4ACB152910A50062DECC /* Devil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Devil.h; sourceTree = "<group>"; };
 		0B1A4ACC152910A50062DECC /* Devil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Devil.m; sourceTree = "<group>"; };
 		0B1A4ACE1529111A0062DECC /* shopkeep_frame_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shopkeep_frame_0.png; sourceTree = "<group>"; };
@@ -407,6 +410,12 @@
 		0B1A4AE6152920150062DECC /* tear6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tear6.png; sourceTree = "<group>"; };
 		0B1A4AE7152920150062DECC /* tear7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tear7.png; sourceTree = "<group>"; };
 		0B1A4AE8152920150062DECC /* tear8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tear8.png; sourceTree = "<group>"; };
+		0B1A4AF2152923500062DECC /* shop_sign_frame_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shop_sign_frame_0.png; sourceTree = "<group>"; };
+		0B1A4AF3152923500062DECC /* shop_sign_frame_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shop_sign_frame_1.png; sourceTree = "<group>"; };
+		0B1A4AF4152923500062DECC /* shop_sign_frame_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shop_sign_frame_2.png; sourceTree = "<group>"; };
+		0B1A4AF8152923780062DECC /* ShopSign.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopSign.h; sourceTree = "<group>"; };
+		0B1A4AF9152923790062DECC /* ShopSign.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopSign.m; sourceTree = "<group>"; };
+		0B1A4AFB152924E00062DECC /* shop-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shop-background.png"; sourceTree = "<group>"; };
 		0B87A26D1527A020001A28E7 /* Maestro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Maestro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B87A2711527A020001A28E7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		0B87A2731527A020001A28E7 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -712,7 +721,6 @@
 				0B1A4ADD15291F220062DECC /* figure-idle-1.png */,
 				0B1A4ABD15290A940062DECC /* gameover_screen.png */,
 				0B1A47061527A0F70062DECC /* gray_note.png */,
-				0B1A4AC915290F3D0062DECC /* hell.png */,
 				0B1A4AD415291DE80062DECC /* maestro-play-0.png */,
 				0B1A4AD515291DE80062DECC /* maestro-play-1.png */,
 				0B1A4AD615291DE80062DECC /* maestro-play-2.png */,
@@ -724,6 +732,10 @@
 				0B1A4ACE1529111A0062DECC /* shopkeep_frame_0.png */,
 				0B1A4ACF1529111B0062DECC /* shopkeep_frame_1.png */,
 				0B1A4AD01529111B0062DECC /* shopkeep_frame_2.png */,
+				0B1A4AFB152924E00062DECC /* shop-background.png */,
+				0B1A4AF2152923500062DECC /* shop_sign_frame_0.png */,
+				0B1A4AF3152923500062DECC /* shop_sign_frame_1.png */,
+				0B1A4AF4152923500062DECC /* shop_sign_frame_2.png */,
 				0B1A4ABB152909EF0062DECC /* store_screen.png */,
 				0B1A4AE0152920130062DECC /* tear0.png */,
 				0B1A4AE1152920130062DECC /* tear1.png */,
@@ -919,6 +931,8 @@
 				0B1A46EB1527A0EC0062DECC /* Note.m */,
 				0B1A46EC1527A0EC0062DECC /* Person.h */,
 				0B1A46ED1527A0EC0062DECC /* Person.m */,
+				0B1A4AF8152923780062DECC /* ShopSign.h */,
+				0B1A4AF9152923790062DECC /* ShopSign.m */,
 				0B1A46EE1527A0EC0062DECC /* Tear.h */,
 				0B1A46EF1527A0EC0062DECC /* Tear.m */,
 				0B1A4A681527F97A0062DECC /* TearBin.h */,
@@ -1470,7 +1484,6 @@
 				0B1A4AC615290E190062DECC /* Level1-alt.png in Resources */,
 				0B1A4AC715290E190062DECC /* Level2-alt.png in Resources */,
 				0B1A4AC815290E190062DECC /* Level3-alt.png in Resources */,
-				0B1A4ACA15290F3D0062DECC /* hell.png in Resources */,
 				0B1A4AD11529111B0062DECC /* shopkeep_frame_0.png in Resources */,
 				0B1A4AD21529111B0062DECC /* shopkeep_frame_1.png in Resources */,
 				0B1A4AD31529111B0062DECC /* shopkeep_frame_2.png in Resources */,
@@ -1489,6 +1502,10 @@
 				0B1A4AEF152920150062DECC /* tear6.png in Resources */,
 				0B1A4AF0152920150062DECC /* tear7.png in Resources */,
 				0B1A4AF1152920150062DECC /* tear8.png in Resources */,
+				0B1A4AF5152923510062DECC /* shop_sign_frame_0.png in Resources */,
+				0B1A4AF6152923510062DECC /* shop_sign_frame_1.png in Resources */,
+				0B1A4AF7152923510062DECC /* shop_sign_frame_2.png in Resources */,
+				0B1A4AFC152924E00062DECC /* shop-background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1656,6 +1673,7 @@
 				0B1A4AB51528C4850062DECC /* Store.m in Sources */,
 				0B1A4AB81528C4940062DECC /* StoreItem.m in Sources */,
 				0B1A4ACD152910A50062DECC /* Devil.m in Sources */,
+				0B1A4AFA152923790062DECC /* ShopSign.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

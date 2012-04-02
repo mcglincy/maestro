@@ -9,6 +9,7 @@
 #import "Devil.h"
 #import "GameManager.h"
 #import "GameScene.h"
+#import "ShopSign.h"
 #import "Store.h"
 #import "StoreItem.h"
 #import "StoreLayer.h"
@@ -52,7 +53,7 @@
         self.isTouchEnabled = YES;
         
         CCSprite *backgroundImage;
-        backgroundImage = [CCSprite spriteWithFile:@"hell.png"];        
+        backgroundImage = [CCSprite spriteWithFile:@"shop-background.png"];        
         CGSize winSize = [[CCDirector sharedDirector] winSize];
         [backgroundImage setPosition:
          CGPointMake(winSize.width/2, winSize.height/2)];
@@ -64,23 +65,30 @@
                                         winSize.height - self.tearsLabel.contentSize.height / 2 - 10);
         [self addChild:self.tearsLabel];
 
+        // store sign
+        ShopSign *shopSign = [ShopSign node];
+        shopSign.position = ccp(250, 620);
+        [self addChild:shopSign];
+        
         // store menu
-        [CCMenuItemFont setFontSize:28];
+        [CCMenuItemFont setFontName:@"Courier New"];
+        [CCMenuItemFont setFontSize:24];
         self.storeMenu = [CCMenu menuWithItems:nil];
         [self updateMenu];
-        [self.storeMenu setPosition:ccp(200, 600)];        
+        [self.storeMenu setPosition:ccp(250, 380)];        
         [self addChild:self.storeMenu];
         
         // done/continue button
 //        CCMenuItem *doneItem = [CCMenuItemImage 
 //                                    itemFromNormalImage:@"ButtonStar.png" selectedImage:@"ButtonStarSel.png" 
 //                                    target:self selector:@selector(starButtonTapped:)];
-        CCMenuItemFont *doneItem = [CCMenuItemFont itemWithString:@"Done" block:^(id sender) {
+        CCMenuItemFont *doneItem = [CCMenuItemFont itemWithString:@"Continue" block:^(id sender) {
             [self doneStore];
         }];
         doneItem.fontSize = 60;
+        [doneItem setColor:ccc3(255, 255, 255)];
         CCMenu *doneMenu = [CCMenu menuWithItems:doneItem, nil];
-        doneMenu.position = ccp(200, 200);
+        doneMenu.position = ccp(250, 92);
         [self addChild:doneMenu];
         
         GameManager *gameManager = [GameManager sharedInstance];
@@ -90,7 +98,7 @@
                          context:nil];
 
         self.devil = [Devil node];
-        self.devil.position = ccp(500, 400);
+        self.devil.position = ccp(900, 40 + self.devil.contentSize.height / 2);
         [self addChild:self.devil z:1];
     }
     return self;
@@ -139,11 +147,13 @@
     for (StoreItem *storeItem in gameManager.store.items) {
         BOOL canAfford = [gameManager canAffordStoreItem:storeItem];
         BOOL alreadyPurchased = [gameManager hasAlreadyPurchasedStoreItem:storeItem];
-        NSString *checkmark = alreadyPurchased ? @"X ": @"  ";
-        NSString *itemString = [NSString stringWithFormat:@"%@%@ - %d", checkmark, storeItem.name, storeItem.price];
+        //NSString *checkmark = alreadyPurchased ? @"X ": @"  ";
+        NSString *checkmark = @"";
+        NSString *itemString = [NSString stringWithFormat:@"%@ %d - %@", checkmark, storeItem.price, storeItem.name];
         CCMenuItemFont *menuItem = [CCMenuItemFont itemWithString:itemString block:^(id sender) {
             [self buyStoreItem:storeItem];
         }];
+        [menuItem setColor:ccc3(255, 255, 255)];
         if (!canAfford || alreadyPurchased) {
             menuItem.isEnabled = NO;
         }
