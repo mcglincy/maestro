@@ -51,6 +51,10 @@
         self.levelNum = levelNum;
         [self configureForLevelNum];
         
+        // set up the GameManager for this level
+        GameManager *gameManager = [GameManager sharedInstance];
+        [gameManager resetForGameScene:self];
+
         BackgroundLayer *backgroundLayer = [BackgroundLayer nodeWithBackground:self.background];
         [self addChild:backgroundLayer z:0];  
         
@@ -109,9 +113,6 @@
     _maestroAudioStarted = NO;
     _maestroAudioStartTime = [[GameClock sharedInstance] currentTime] + 3;
     
-    // set up the GameManager for this level
-    GameManager *gameManager = [GameManager sharedInstance];
-    [gameManager resetForGameScene:self];
     [self scheduleUpdate];
 }
 

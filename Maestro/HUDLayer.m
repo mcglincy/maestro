@@ -12,6 +12,7 @@
 
 #define MARGIN 20.0
 #define TEARS_COLLECTED_KEY_PATH @"tearsCollectedThisLevel"
+#define TEARS_COLLECTED_TOTAL_KEY_PATH @"tearsCollectedTotal"
 #define TIME_LEFT_KEY_PATH @"timeLeft"
 
 
@@ -67,7 +68,8 @@
 - (NSString *)tearsCollectedString
 {
     GameManager *gameManager = [GameManager sharedInstance];
-    return [NSString stringWithFormat:@"%d / %d", gameManager.tearsCollectedThisLevel, gameManager.tearsNeededThisLevel];
+    NSString *str = [NSString stringWithFormat:@"%d / %d", gameManager.tearsCollectedThisLevel, gameManager.tearsNeededThisLevel];
+    return str;
 }
 
 - (NSString *)timerString
@@ -81,7 +83,8 @@
                        context:(void*)context
 {
     //GameManager *gameManager = [GameManager sharedInstance];
-    if ([keyPath isEqualToString:TEARS_COLLECTED_KEY_PATH]) {
+    if ([keyPath isEqualToString:TEARS_COLLECTED_KEY_PATH] ||
+        [keyPath isEqualToString:TEARS_COLLECTED_TOTAL_KEY_PATH]) {
         self.tearsCollectedLabel.string = [self tearsCollectedString];
     } else if ([keyPath isEqualToString:TIME_LEFT_KEY_PATH]) {
         self.timerLabel.string = [self timerString];
