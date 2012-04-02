@@ -4,6 +4,9 @@
 
 Our molydeux tweet: "You are man with violin. You go around playing sad music sucking in peoples tears which can be used as a currency for weapons."
 
+# Molyjam page
+http://whatwouldmolydeux.com/display.php?GameID=194
+
 # Game demo vid
 http://www.youtube.com/watch?v=I9n0uloXIHI&context=C4358069ADvjVQa1PpcFOfb_rTckc63F6PhFb2a_0KoKQZdlWgNl4=
 
