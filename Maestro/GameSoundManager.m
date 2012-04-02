@@ -21,6 +21,7 @@
 	//Preload the background music too but there is no point in preloading multiple background music files so only
 	//preload the first one you will play
 	[soundEngine_ preloadBackgroundMusic:@"title.wav"];
+    [soundEngine_ preloadEffect:@"teardrop_1.wav"];
 }
 
 //TODO: modify these parameters to your own taste, e.g you may want a longer fade out or a different type of curve

@@ -124,7 +124,7 @@
     if (!_maestroAudioStarted &&
         [[GameClock sharedInstance] currentTime] > _maestroAudioStartTime) {
         NSLog(@"Starting Maestro music.");
-        [[GameSoundManager sharedInstance] playMaestro];
+        //[[GameSoundManager sharedInstance] playMaestro];
         _maestroAudioStarted = YES;
     }
 }
