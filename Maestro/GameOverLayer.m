@@ -32,6 +32,7 @@
         [self addChild:label];          
     }
     
+    [[GameSoundManager sharedInstance] stopMaestro];
     [[GameSoundManager sharedInstance].soundEngine playBackgroundMusic:@"Death_Theme.wav" loop:NO];
     return self;
 }
