@@ -147,7 +147,14 @@
             cpShape *shape = cpSpacePointQueryFirst([Physics sharedInstance].space, vect, CP_ALL_LAYERS, CP_NO_GROUP);
             
             if ((NULL != shape) && (NULL != shape->body)) {
-                [[GameSoundManager sharedInstance].soundEngine playEffect:SOUND_TEAR1];                
+                int percent = arc4random() % 100;
+                NSString *tearSound;
+                if (percent < 50) {
+                    tearSound = SOUND_TEAR1;
+                } else {
+                    tearSound = SOUND_TEAR2;
+                }
+                [[GameSoundManager sharedInstance].soundEngine playEffect:tearSound];                
                 
                 //Get a vector from the shape to the touch point and use that as the start for our physics impulse
                 cpVect j = cpvsub(cpBodyGetPos(shape->body), vect);
