@@ -6,6 +6,7 @@
 //  Copyright (c) 2012 n/a. All rights reserved.
 //
 
+#import "Constants.h"
 #import "Physics.h"
 #import "PhysicsSprite.h"
 #import "Tear.h"
@@ -69,7 +70,7 @@
 	// We have to free them manually
 	//
 	// bottom
-	walls_[0] = cpSegmentShapeNew( space_->staticBody, ccp(0,0), ccp(s.width,0), 0.0f);
+	walls_[0] = cpSegmentShapeNew( space_->staticBody, ccp(0,FLOOR_HEIGHT), ccp(s.width,0), 0.0f);
 	
 	// top
 	walls_[1] = cpSegmentShapeNew( space_->staticBody, ccp(0,s.height), ccp(s.width,s.height), 0.0f);

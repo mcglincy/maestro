@@ -251,6 +251,8 @@
 		0B87A3F31527A023001A28E7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B87A3F21527A023001A28E7 /* main.m */; };
 		0B87A3F61527A023001A28E7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B87A3F51527A023001A28E7 /* AppDelegate.m */; };
 		0B8911471529303100067C96 /* gameover.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B8911461529303100067C96 /* gameover.png */; };
+		0B89114A152932BE00067C96 /* floor.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B891149152932BE00067C96 /* floor.png */; };
+		0B89114D1529335200067C96 /* Floor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B89114C1529335200067C96 /* Floor.m */; };
 		73733C091528174500992747 /* Maestro_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73733C051528174500992747 /* Maestro_2.wav */; };
 		73733C0A1528174500992747 /* Maestro_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73733C061528174500992747 /* Maestro_3.wav */; };
 		73733C0B1528174500992747 /* Maestro_0.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73733C071528174500992747 /* Maestro_0.wav */; };
@@ -694,6 +696,9 @@
 		0B87A3F41527A023001A28E7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0B87A3F51527A023001A28E7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0B8911461529303100067C96 /* gameover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gameover.png; sourceTree = "<group>"; };
+		0B891149152932BE00067C96 /* floor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = floor.png; sourceTree = "<group>"; };
+		0B89114B1529335200067C96 /* Floor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Floor.h; sourceTree = "<group>"; };
+		0B89114C1529335200067C96 /* Floor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Floor.m; sourceTree = "<group>"; };
 		73733C051528174500992747 /* Maestro_2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Maestro_2.wav; sourceTree = "<group>"; };
 		73733C061528174500992747 /* Maestro_3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Maestro_3.wav; sourceTree = "<group>"; };
 		73733C071528174500992747 /* Maestro_0.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Maestro_0.wav; sourceTree = "<group>"; };
@@ -773,6 +778,7 @@
 				0B1A4B0215292A6B0062DECC /* ending.png */,
 				0B1A4ADC15291F210062DECC /* figure-idle-0.png */,
 				0B1A4ADD15291F220062DECC /* figure-idle-1.png */,
+				0B891149152932BE00067C96 /* floor.png */,
 				0B8911461529303100067C96 /* gameover.png */,
 				0B1A47061527A0F70062DECC /* gray_note.png */,
 				0B1A4AD415291DE80062DECC /* maestro-play-0.png */,
@@ -991,6 +997,8 @@
 				0B1A4ACC152910A50062DECC /* Devil.m */,
 				0B1A46E21527A0EC0062DECC /* GameObject.h */,
 				0B1A46E31527A0EC0062DECC /* GameObject.m */,
+				0B89114B1529335200067C96 /* Floor.h */,
+				0B89114C1529335200067C96 /* Floor.m */,
 				0B1A46E81527A0EC0062DECC /* Maestro.h */,
 				0B1A46E91527A0EC0062DECC /* Maestro.m */,
 				0B1A46EA1527A0EC0062DECC /* Note.h */,
@@ -1595,6 +1603,7 @@
 				73733C5C15292D3800992747 /* Death_Theme.wav in Resources */,
 				73733C5D15292D3800992747 /* win_theme.wav in Resources */,
 				0B8911471529303100067C96 /* gameover.png in Resources */,
+				0B89114A152932BE00067C96 /* floor.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1764,6 +1773,7 @@
 				0B1A4ACD152910A50062DECC /* Devil.m in Sources */,
 				0B1A4AFA152923790062DECC /* ShopSign.m in Sources */,
 				0B1A4B0615292ABB0062DECC /* VictoryMaestro.m in Sources */,
+				0B89114D1529335200067C96 /* Floor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

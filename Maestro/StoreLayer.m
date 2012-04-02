@@ -90,7 +90,7 @@
         doneItem.fontSize = 60;
         [doneItem setColor:ccc3(255, 255, 255)];
         CCMenu *doneMenu = [CCMenu menuWithItems:doneItem, nil];
-        doneMenu.position = ccp(250, 92);
+        doneMenu.position = ccp(250, 95);
         [self addChild:doneMenu];
         
         GameManager *gameManager = [GameManager sharedInstance];

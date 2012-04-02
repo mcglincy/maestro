@@ -17,6 +17,7 @@
 #import "GameOverScene.h"
 #import "GameScene.h"
 #import "GameSoundManager.h"
+#import "Floor.h"
 #import "Maestro.h"
 #import "Note.h"
 #import "Person.h"
@@ -97,6 +98,10 @@
         tearBin.position = ccp(284, FLOOR_HEIGHT + tearBin.contentSize.height / 2);
         [self addChild:tearBin z:1];
         [tearBin addToPhysics];
+        
+        Floor *floor = [Floor node];
+        floor.position = ccp(winSize.width / 2, 0 + floor.contentSize.height / 2);
+        [self addChild:floor];
     }
     return self;    
 }
