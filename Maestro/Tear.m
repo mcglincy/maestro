@@ -11,6 +11,7 @@
 #import "GameUtils.h"
 #import "Physics.h"
 #import "Tear.h"
+#import "GameSoundManager.h"
 
 #define MIN_LIFE 4.0
 #define MAX_LIFE 10.0
@@ -98,6 +99,7 @@
 - (void)hitBin
 {
     if (!self.isDead) {
+        [[GameSoundManager sharedInstance].soundEngine playEffect:SOUND_TEAR_CASE];
         GameManager *manager = [GameManager sharedInstance];
         [manager playerCollectedTear];
         [self die];

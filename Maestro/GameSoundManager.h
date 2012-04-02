@@ -2,6 +2,11 @@
 
 //#define SOUND_CRASH @"crash.wav"
 //#define SOUND_DEFEAT @"defeat.wav"
+#define SOUND_TEAR1 @"teardrop_1.wav"
+#define SOUND_TEAR2 @"teardrop_2.wav"
+#define SOUND_TEAR_CASE @"tear_in_case.wav"
+#define SOUND_STORE_REGISTER @"store_register.wav"
+#define SOUND_MENU_1 @"menu_1.wav"
 
 typedef enum {
 	kGSUninitialised,

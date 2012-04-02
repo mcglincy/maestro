@@ -14,14 +14,15 @@
 //If you don't preload your sounds there will be a delay before they are played the first time while the sound data
 //is loaded to the playback buffer
 -(void) preload {
-
-//    [soundEngine_ preloadEffect:SOUND_CRASH];
-//	[soundEngine_ preloadEffect:SOUND_DEFEAT];
-
+    [soundEngine_ preloadEffect:SOUND_TEAR1];
+    [soundEngine_ preloadEffect:SOUND_TEAR2];
+    [soundEngine_ preloadEffect:SOUND_TEAR_CASE];
+    [soundEngine_ preloadEffect:SOUND_STORE_REGISTER];
+    [soundEngine_ preloadEffect:SOUND_MENU_1];
+    
 	//Preload the background music too but there is no point in preloading multiple background music files so only
 	//preload the first one you will play
 	[soundEngine_ preloadBackgroundMusic:@"title.wav"];
-    [soundEngine_ preloadEffect:@"teardrop_1.wav"];
 }
 
 //TODO: modify these parameters to your own taste, e.g you may want a longer fade out or a different type of curve
