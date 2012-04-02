@@ -250,6 +250,7 @@
 		0B87A3EE1527A023001A28E7 /* vec4.c in Sources */ = {isa = PBXBuildFile; fileRef = 0B87A3ED1527A023001A28E7 /* vec4.c */; };
 		0B87A3F31527A023001A28E7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B87A3F21527A023001A28E7 /* main.m */; };
 		0B87A3F61527A023001A28E7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B87A3F51527A023001A28E7 /* AppDelegate.m */; };
+		0B8911471529303100067C96 /* gameover.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B8911461529303100067C96 /* gameover.png */; };
 		73733C091528174500992747 /* Maestro_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73733C051528174500992747 /* Maestro_2.wav */; };
 		73733C0A1528174500992747 /* Maestro_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73733C061528174500992747 /* Maestro_3.wav */; };
 		73733C0B1528174500992747 /* Maestro_0.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73733C071528174500992747 /* Maestro_0.wav */; };
@@ -692,6 +693,7 @@
 		0B87A3F21527A023001A28E7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0B87A3F41527A023001A28E7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0B87A3F51527A023001A28E7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0B8911461529303100067C96 /* gameover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gameover.png; sourceTree = "<group>"; };
 		73733C051528174500992747 /* Maestro_2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Maestro_2.wav; sourceTree = "<group>"; };
 		73733C061528174500992747 /* Maestro_3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Maestro_3.wav; sourceTree = "<group>"; };
 		73733C071528174500992747 /* Maestro_0.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Maestro_0.wav; sourceTree = "<group>"; };
@@ -771,6 +773,7 @@
 				0B1A4B0215292A6B0062DECC /* ending.png */,
 				0B1A4ADC15291F210062DECC /* figure-idle-0.png */,
 				0B1A4ADD15291F220062DECC /* figure-idle-1.png */,
+				0B8911461529303100067C96 /* gameover.png */,
 				0B1A47061527A0F70062DECC /* gray_note.png */,
 				0B1A4AD415291DE80062DECC /* maestro-play-0.png */,
 				0B1A4AD515291DE80062DECC /* maestro-play-1.png */,
@@ -1591,6 +1594,7 @@
 				73733C5815292D3000992747 /* teardrop_2.wav in Resources */,
 				73733C5C15292D3800992747 /* Death_Theme.wav in Resources */,
 				73733C5D15292D3800992747 /* win_theme.wav in Resources */,
+				0B8911471529303100067C96 /* gameover.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
