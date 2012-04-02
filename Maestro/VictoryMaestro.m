@@ -12,21 +12,21 @@
 
 - (id)init
 {
-    self = [super initWithFile:@"maestro-play-0.png" rect:CGRectMake(0, 0, 384, 384)];
+    self = [super initWithFile:@"end_anim_frame0.png" rect:CGRectMake(0, 0, 512, 384)];
     if (self) {
         CCAnimation *anim = [CCAnimation animation];
-        [anim addFrameWithFilename:@"maestro-play-1.png"];
-        [anim addFrameWithFilename:@"maestro-play-2.png"];
-        [anim addFrameWithFilename:@"maestro-play-3.png"];
-        [anim addFrameWithFilename:@"maestro-play-2.png"];
-        [anim addFrameWithFilename:@"maestro-play-1.png"];
-        [anim addFrameWithFilename:@"maestro-play-0.png"];
+        [anim addFrameWithFilename:@"end_anim_frame1.png"];
+        [anim addFrameWithFilename:@"end_anim_frame2.png"];
+        [anim addFrameWithFilename:@"end_anim_frame3.png"];
+        [anim addFrameWithFilename:@"end_anim_frame4.png"];
+        [anim addFrameWithFilename:@"end_anim_frame5.png"];
+        [anim addFrameWithFilename:@"end_anim_frame6.png"];
+        [anim addFrameWithFilename:@"end_anim_frame7.png"];
         
-        id animationAction = [CCAnimate actionWithDuration:1.5f
+        id animationAction = [CCAnimate actionWithDuration:2.5f
                                                  animation:anim
-                                      restoreOriginalFrame:YES];
-        id repeatAnimation = [CCRepeatForever actionWithAction:animationAction];
-        [self runAction:repeatAnimation];
+                                      restoreOriginalFrame:NO];
+        [self runAction:animationAction];
     }
     return self;
 }

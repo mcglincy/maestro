@@ -77,19 +77,19 @@
         case 0:
             self.background = @"Level1-alt.png";
             self.music = 0;
-            self.maxTime = 20;
-            self.tearsNeeded = 1;
+            self.maxTime = 99;
+            self.tearsNeeded = 10;
             break;
         case 1:
             self.background = @"Level2-alt.png";
             self.music = 1;
-            self.maxTime = 99;
+            self.maxTime = 75;
             self.tearsNeeded = 20;
             break;
         case 2:
             self.background = @"Level3-alt.png";
             self.music = 2;
-            self.maxTime = 99;
+            self.maxTime = 50;
             self.tearsNeeded = 30;
             break;            
         default:

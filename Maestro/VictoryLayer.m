@@ -27,11 +27,12 @@
         [self addChild:backgroundImage z:-1 tag:0];
 
         CCLabelTTF *label = [CCLabelTTF labelWithString:@"Victory!!!" fontName:FONT_NAME fontSize:60.0];
-        label.position = ccp(winSize.width / 2, winSize.height / 2 + 100);
+        label.position = ccp(winSize.width / 2, winSize.height / 2 + 200);
         [self addChild:label];   
         
         VictoryMaestro *maestro = [VictoryMaestro node];
-        maestro.position = ccp(winSize.width / 2, winSize.height / 2 - 100);
+        maestro.position = ccp(winSize.width / 2, winSize.height / 2);
+        [self addChild:maestro];
         
         [[GameSoundManager sharedInstance].soundEngine playBackgroundMusic:@"win_theme.wav"];
     }
