@@ -10,11 +10,6 @@
 #import "chipmunk.h"
 
 @interface GameLayer : CCLayer
-{
-    @private
-    NSTimeInterval _maestroAudioStartTime;   
-    BOOL _maestroAudioStarted;
-}
 
 @property (nonatomic) NSInteger levelNum;
 @property (readwrite) int tapImpulsePower;
