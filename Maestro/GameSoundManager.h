@@ -33,5 +33,6 @@ typedef enum {
 -(void) playMaestro;
 -(void) playMaestroWithDelay : (float) delay ;
 -(void) stopMaestroAfterNextLoop;
+-(void) stopMaestro;
 
 @end

@@ -173,6 +173,10 @@ static BOOL setupHasRun;
     NSLog(@"STOP MAESTRO.");
 }
 
+-(void) stopMaestro {
+    [leftChannel stop];
+}
+
 -(void) playMaestroWithDelay: (float) delay {
 }
 

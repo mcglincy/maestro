@@ -245,6 +245,7 @@
 		73733C0A1528174500992747 /* Maestro_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73733C061528174500992747 /* Maestro_3.wav */; };
 		73733C0B1528174500992747 /* Maestro_0.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73733C071528174500992747 /* Maestro_0.wav */; };
 		73733C0C1528174500992747 /* Maestro_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73733C081528174500992747 /* Maestro_1.wav */; };
+		73733C26152929D100992747 /* Shop_Theme.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73733C25152929D100992747 /* Shop_Theme.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -665,6 +666,7 @@
 		73733C061528174500992747 /* Maestro_3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Maestro_3.wav; sourceTree = "<group>"; };
 		73733C071528174500992747 /* Maestro_0.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Maestro_0.wav; sourceTree = "<group>"; };
 		73733C081528174500992747 /* Maestro_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Maestro_1.wav; sourceTree = "<group>"; };
+		73733C25152929D100992747 /* Shop_Theme.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Shop_Theme.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -756,6 +758,7 @@
 		0B1A470B1527A0F70062DECC /* Music */ = {
 			isa = PBXGroup;
 			children = (
+				73733C25152929D100992747 /* Shop_Theme.wav */,
 				73733C051528174500992747 /* Maestro_2.wav */,
 				73733C061528174500992747 /* Maestro_3.wav */,
 				73733C071528174500992747 /* Maestro_0.wav */,
@@ -1506,6 +1509,7 @@
 				0B1A4AF6152923510062DECC /* shop_sign_frame_1.png in Resources */,
 				0B1A4AF7152923510062DECC /* shop_sign_frame_2.png in Resources */,
 				0B1A4AFC152924E00062DECC /* shop-background.png in Resources */,
+				73733C26152929D100992747 /* Shop_Theme.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

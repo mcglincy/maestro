@@ -13,6 +13,7 @@
 #import "Store.h"
 #import "StoreItem.h"
 #import "StoreLayer.h"
+#import "GameSoundManager.h"
 
 @interface StoreLayer()
 
@@ -100,6 +101,11 @@
         self.devil = [Devil node];
         self.devil.position = ccp(900, 40 + self.devil.contentSize.height / 2);
         [self addChild:self.devil z:1];
+        
+        //Reset music 
+        [[GameSoundManager sharedInstance] stopMaestro];
+        
+        [[GameSoundManager sharedInstance].soundEngine playBackgroundMusic:@"Shop_Theme.wav"];
     }
     return self;
 }

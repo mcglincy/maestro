@@ -101,6 +101,7 @@
     //currently buggy, disabling
     //[[GameSoundManager sharedInstance] fadeOutMusic];
     [[GameSoundManager sharedInstance].soundEngine stopBackgroundMusic];
+    [[GameSoundManager sharedInstance] stopMaestro];
     
     [GameSoundManager sharedInstance].nextMaestroTrack = self.music;
     [GameSoundManager sharedInstance].loopMaestroTrack = YES;
