@@ -145,7 +145,8 @@
         gameManager.tearsCollectedTotal = gameManager.tearsCollectedTotal - item.price;
         [gameManager.purchasedItems addObject:item];
         
-        // TODO: play purchase sound
+        [[GameSoundManager sharedInstance].soundEngine playEffect:@"store_register.wav"];
+        
         [self updateMenu];
         
         [self.devil animateForPurchase];

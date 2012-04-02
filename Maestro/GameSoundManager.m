@@ -17,6 +17,7 @@
 
 //    [soundEngine_ preloadEffect:SOUND_CRASH];
 //	[soundEngine_ preloadEffect:SOUND_DEFEAT];
+    [soundEngine_ preloadEffect:@"store_register.wav"];
 
 	//Preload the background music too but there is no point in preloading multiple background music files so only
 	//preload the first one you will play
