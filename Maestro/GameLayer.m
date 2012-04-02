@@ -147,9 +147,7 @@
             cpShape *shape = cpSpacePointQueryFirst([Physics sharedInstance].space, vect, CP_ALL_LAYERS, CP_NO_GROUP);
             
             if ((NULL != shape) && (NULL != shape->body)) {
-#warning test sound play
-                //[[GameSoundManager sharedInstance].soundEngine playEffect:@"zap.wav"];                
-                [[GameSoundManager sharedInstance].soundEngine playEffect:@"teardrop_1.wav"];                
+                [[GameSoundManager sharedInstance].soundEngine playEffect:SOUND_TEAR1];                
                 
                 //Get a vector from the shape to the touch point and use that as the start for our physics impulse
                 cpVect j = cpvsub(cpBodyGetPos(shape->body), vect);
