@@ -6,6 +6,7 @@
 //  Copyright (c) 2012 n/a. All rights reserved.
 //
 
+#import "BackstoryScene.h"
 #import "GameManager.h"
 #import "GameSoundManager.h"
 #import "GameScene.h"
@@ -34,9 +35,7 @@
 
 - (void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    [[GameManager sharedInstance] reset];
-    [[CCDirector sharedDirector] replaceScene:[CCTransitionCrossFade transitionWithDuration:0.5f scene:[GameScene nodeWithLevelNum:0]]];
-    //[[GameSoundManager sharedInstance] fadeOutMusic]; //Not sure how to get the audio back properly after the fade
+    [[CCDirector sharedDirector] replaceScene:[CCTransitionCrossFade transitionWithDuration:0.5f scene:[BackstoryScene node]]];
 }
 
 - (void)ccTouchesMoved:(NSSet *)touches withEvent:(UIEvent *)event

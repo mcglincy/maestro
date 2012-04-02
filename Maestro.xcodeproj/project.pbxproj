@@ -254,6 +254,9 @@
 		0B89114D1529335200067C96 /* Floor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B89114C1529335200067C96 /* Floor.m */; };
 		0B8911531529385100067C96 /* Title-Card.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B8911521529385100067C96 /* Title-Card.png */; };
 		0B89115715293C3900067C96 /* teardrop_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B89115615293C3900067C96 /* teardrop_1.wav */; };
+		0B89116215293F5700067C96 /* BackstoryScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B89116115293F5700067C96 /* BackstoryScene.m */; };
+		0B89116615293F6900067C96 /* BackstoryLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B89116515293F6900067C96 /* BackstoryLayer.m */; };
+		0B89116815293FE600067C96 /* Intro-Card.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B89116715293FE600067C96 /* Intro-Card.png */; };
 		73733C091528174500992747 /* Maestro_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73733C051528174500992747 /* Maestro_2.wav */; };
 		73733C0A1528174500992747 /* Maestro_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73733C061528174500992747 /* Maestro_3.wav */; };
 		73733C0B1528174500992747 /* Maestro_0.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73733C071528174500992747 /* Maestro_0.wav */; };
@@ -700,6 +703,11 @@
 		0B89114C1529335200067C96 /* Floor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Floor.m; sourceTree = "<group>"; };
 		0B8911521529385100067C96 /* Title-Card.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Title-Card.png"; sourceTree = "<group>"; };
 		0B89115615293C3900067C96 /* teardrop_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = teardrop_1.wav; sourceTree = "<group>"; };
+		0B89116015293F5700067C96 /* BackstoryScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackstoryScene.h; sourceTree = "<group>"; };
+		0B89116115293F5700067C96 /* BackstoryScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackstoryScene.m; sourceTree = "<group>"; };
+		0B89116415293F6900067C96 /* BackstoryLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackstoryLayer.h; sourceTree = "<group>"; };
+		0B89116515293F6900067C96 /* BackstoryLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackstoryLayer.m; sourceTree = "<group>"; };
+		0B89116715293FE600067C96 /* Intro-Card.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Intro-Card.png"; sourceTree = "<group>"; };
 		73733C051528174500992747 /* Maestro_2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Maestro_2.wav; sourceTree = "<group>"; };
 		73733C061528174500992747 /* Maestro_3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Maestro_3.wav; sourceTree = "<group>"; };
 		73733C071528174500992747 /* Maestro_0.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Maestro_0.wav; sourceTree = "<group>"; };
@@ -781,6 +789,7 @@
 				0B891149152932BE00067C96 /* floor.png */,
 				0B8911461529303100067C96 /* gameover.png */,
 				0B1A47061527A0F70062DECC /* gray_note.png */,
+				0B89116715293FE600067C96 /* Intro-Card.png */,
 				0B1A4AD415291DE80062DECC /* maestro-play-0.png */,
 				0B1A4AD515291DE80062DECC /* maestro-play-1.png */,
 				0B1A4AD615291DE80062DECC /* maestro-play-2.png */,
@@ -960,6 +969,10 @@
 			children = (
 				0B1A46D81527A0EC0062DECC /* BackgroundLayer.h */,
 				0B1A46D91527A0EC0062DECC /* BackgroundLayer.m */,
+				0B89116015293F5700067C96 /* BackstoryScene.h */,
+				0B89116115293F5700067C96 /* BackstoryScene.m */,
+				0B89116415293F6900067C96 /* BackstoryLayer.h */,
+				0B89116515293F6900067C96 /* BackstoryLayer.m */,
 				0B1A46DA1527A0EC0062DECC /* BlankLayer.h */,
 				0B1A46DB1527A0EC0062DECC /* BlankLayer.m */,
 				0B1A46DC1527A0EC0062DECC /* BlankScene.h */,
@@ -1604,6 +1617,7 @@
 				0B89114A152932BE00067C96 /* floor.png in Resources */,
 				0B8911531529385100067C96 /* Title-Card.png in Resources */,
 				0B89115715293C3900067C96 /* teardrop_1.wav in Resources */,
+				0B89116815293FE600067C96 /* Intro-Card.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1774,6 +1788,8 @@
 				0B1A4AFA152923790062DECC /* ShopSign.m in Sources */,
 				0B1A4B0615292ABB0062DECC /* VictoryMaestro.m in Sources */,
 				0B89114D1529335200067C96 /* Floor.m in Sources */,
+				0B89116215293F5700067C96 /* BackstoryScene.m in Sources */,
+				0B89116615293F6900067C96 /* BackstoryLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
