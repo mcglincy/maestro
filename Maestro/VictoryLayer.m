@@ -8,6 +8,7 @@
 
 #import "TitleScene.h"
 #import "VictoryLayer.h"
+#import "VictoryMaestro.h"
 
 @implementation VictoryLayer
 
@@ -19,13 +20,16 @@
         
 		CGSize winSize = [[CCDirector sharedDirector] winSize];
         
-        CCSprite *backgroundImage = [CCSprite spriteWithFile:@"victory_screen.png"];
+        CCSprite *backgroundImage = [CCSprite spriteWithFile:@"ending.png"];
         backgroundImage.position = CGPointMake(winSize.width/2, winSize.height/2);
         [self addChild:backgroundImage z:-1 tag:0];
 
-        CCLabelTTF *label = [CCLabelTTF labelWithString:@"Victory!!!" fontName:@"Marker Felt" fontSize:28.0];
-        label.position = ccp(winSize.width / 2, winSize.height / 2);
-        [self addChild:label];        
+        CCLabelTTF *label = [CCLabelTTF labelWithString:@"Victory!!!" fontName:@"Courier New" fontSize:60.0];
+        label.position = ccp(winSize.width / 2, winSize.height / 2 + 100);
+        [self addChild:label];   
+        
+        VictoryMaestro *maestro = [VictoryMaestro node];
+        maestro.position = ccp(winSize.width / 2, winSize.height / 2 - 100);
     }
     return self;
 }
