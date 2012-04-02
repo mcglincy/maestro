@@ -10,6 +10,7 @@
 #import "Devil.h"
 #import "GameManager.h"
 #import "GameScene.h"
+#import "Floor.h"
 #import "ShopSign.h"
 #import "Store.h"
 #import "StoreItem.h"
@@ -59,7 +60,7 @@
         CGSize winSize = [[CCDirector sharedDirector] winSize];
         [backgroundImage setPosition:
          CGPointMake(winSize.width/2, winSize.height/2)];
-        [self addChild:backgroundImage z:0 tag:0];
+        [self addChild:backgroundImage z:-1 tag:0];
 
         // tears remaining
         self.tearsLabel = [CCLabelTTF labelWithString:[self tearsString] fontName:FONT_NAME fontSize:28.0];
@@ -77,7 +78,7 @@
         [CCMenuItemFont setFontSize:24];
         self.storeMenu = [CCMenu menuWithItems:nil];
         [self updateMenu];
-        [self.storeMenu setPosition:ccp(250, 380)];        
+        [self.storeMenu setPosition:ccp(250, 378)];        
         [self addChild:self.storeMenu];
         
         // done/continue button
@@ -90,7 +91,7 @@
         doneItem.fontSize = 60;
         [doneItem setColor:ccc3(255, 255, 255)];
         CCMenu *doneMenu = [CCMenu menuWithItems:doneItem, nil];
-        doneMenu.position = ccp(250, 95);
+        doneMenu.position = ccp(250, 98);
         [self addChild:doneMenu];
         
         GameManager *gameManager = [GameManager sharedInstance];
@@ -103,6 +104,10 @@
         self.devil.position = ccp(900, 40 + self.devil.contentSize.height / 2);
         [self addChild:self.devil z:1];
         
+        Floor *floor = [Floor node];
+        floor.position = ccp(winSize.width / 2, 0 + floor.contentSize.height / 2);
+        [self addChild:floor];
+
         //Reset music 
         [[GameSoundManager sharedInstance] stopMaestro];
         

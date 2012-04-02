@@ -42,13 +42,13 @@
 
         self.tearsCollectedLabel = [CCLabelTTF labelWithString:[self tearsCollectedString] fontName:FONT_NAME fontSize:28.0];
         self.tearsCollectedLabel.position =  ccp(winSize.width - self.tearsCollectedLabel.contentSize.width / 2 - MARGIN, 
-                                         winSize.height - self.tearsCollectedLabel.contentSize.height / 2 - MARGIN);
-        [self addChild:self.tearsCollectedLabel];
+                                         0 + self.tearsCollectedLabel.contentSize.height / 2 + 5);
+        [self addChild:self.tearsCollectedLabel z:2];
 
         self.timerLabel = [CCLabelTTF labelWithString:[self timerString] fontName:FONT_NAME fontSize:28.0];
         self.timerLabel.position =  ccp(winSize.width/2, 
-                                                 winSize.height - self.tearsCollectedLabel.contentSize.height / 2 - MARGIN);
-        [self addChild:self.timerLabel];
+                                                 0 + self.tearsCollectedLabel.contentSize.height / 2 + 5);
+        [self addChild:self.timerLabel z:2];
 
         //
         GameManager *gameManager = [GameManager sharedInstance];
