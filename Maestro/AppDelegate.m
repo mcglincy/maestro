@@ -12,6 +12,7 @@
 #import "BlankScene.h"
 #import "GameScene.h"
 #import "GameSoundManager.h"
+#import "GameClock.h"
 
 @implementation AppController
 
@@ -82,7 +83,10 @@
 
 	// Assume that PVR images have premultiplied alpha
 	[CCTexture2D PVRImagesHavePremultipliedAlpha:YES];
-
+    
+    // init clock
+    [GameClock sharedInstance];
+    
 	// and add the scene to the stack. The director will run it when it automatically when the view is displayed.
 #warning TODO: go straight to GameScene for development
 	//[director_ pushScene:[BlankScene node]]; 

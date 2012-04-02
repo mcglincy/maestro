@@ -72,9 +72,6 @@
 		// enable events
 		self.isTouchEnabled = YES;
         
-		// init clock
-        [GameClock sharedInstance];
-        
 		// init physics
         [Physics sharedInstance];
         
@@ -100,13 +97,6 @@
         tearBin.position = ccp(284, FLOOR_HEIGHT + tearBin.contentSize.height / 2);
         [self addChild:tearBin z:1];
         [tearBin addToPhysics];
-
-        //Fade out the intro music if it's playing
-        [[GameSoundManager sharedInstance] fadeOutMusic];
-        
-        //Wait 3 seconds before playing maestro music
-        _maestroAudioStarted = NO;
-        _maestroAudioStartTime = [[GameClock sharedInstance] currentTime] + 3;
     }
     return self;    
 }
@@ -120,14 +110,6 @@
 {
     // update global singletons
     [[GameClock sharedInstance] update:delta];
-
-    //Check timers
-    if (!_maestroAudioStarted &&
-        [[GameClock sharedInstance] currentTime] > _maestroAudioStartTime) {
-        NSLog(@"Starting Maestro music.");
-        [[GameSoundManager sharedInstance] playMaestro];
-        _maestroAudioStarted = YES;
-    }
 
     // check for level loss/victory
     if (!self.leavingScene) {
@@ -240,13 +222,13 @@
      */
     
     //Assuming we roped in some tears, let's change the music on the next loop
-    if ([GameSoundManager sharedInstance].nextMaestroTrack < ([GameSoundManager sharedInstance].numMaestroTracks - 1)) {
-        [GameSoundManager sharedInstance].nextMaestroTrack++;
-        if ([GameSoundManager sharedInstance].nextMaestroTrack == [GameSoundManager sharedInstance].numMaestroTracks - 1) {
-            //This is the last track, stop looping
-            [[GameSoundManager sharedInstance] stopMaestroAfterNextLoop];
-        }
-    }
+//    if ([GameSoundManager sharedInstance].nextMaestroTrack < ([GameSoundManager sharedInstance].numMaestroTracks - 1)) {
+//        [GameSoundManager sharedInstance].nextMaestroTrack++;
+//        if ([GameSoundManager sharedInstance].nextMaestroTrack == [GameSoundManager sharedInstance].numMaestroTracks - 1) {
+//            //This is the last track, stop looping
+//            [[GameSoundManager sharedInstance] stopMaestroAfterNextLoop];
+//        }
+//    }
 }
 
 - (void)ccTouchCancelled:(UITouch *)touch withEvent:(UIEvent *)event
