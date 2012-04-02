@@ -8,6 +8,7 @@
 
 #import "BackstoryLayer.h"
 #import "GameScene.h"
+#import "GameSoundManager.h"
 
 @implementation BackstoryLayer
 
@@ -33,6 +34,7 @@
 
 - (void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    [[GameSoundManager sharedInstance].soundEngine playEffect:SOUND_MENU_1];
     [[CCDirector sharedDirector] replaceScene:[CCTransitionCrossFade transitionWithDuration:0.5f scene:[GameScene nodeWithLevelNum:0]]];
 }
 

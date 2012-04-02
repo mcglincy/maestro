@@ -42,6 +42,7 @@
 - (void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
 //    [[GameManager sharedInstance] reset];
+    //[[GameSoundManager sharedInstance].soundEngine playEffect:SOUND_STAB3]; //This overlaps with the splash screen music unfortunately
     [[CCDirector sharedDirector] replaceScene:[CCTransitionCrossFade transitionWithDuration:0.5f scene:[TitleScene node]]];
 }
 
