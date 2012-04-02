@@ -89,8 +89,8 @@
     
 	// and add the scene to the stack. The director will run it when it automatically when the view is displayed.
 #warning TODO: go straight to GameScene for development
-	//[director_ pushScene:[BlankScene node]]; 
-	[director_ pushScene:[GameScene nodeWithLevelNum:0]]; 
+	[director_ pushScene:[BlankScene node]]; 
+	//[director_ pushScene:[GameScene nodeWithLevelNum:0]]; 
 
 	return YES;
 }

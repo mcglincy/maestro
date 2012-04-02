@@ -64,9 +64,9 @@
 
         // tears remaining
         self.tearsLabel = [CCLabelTTF labelWithString:[self tearsString] fontName:FONT_NAME fontSize:28.0];
-        self.tearsLabel.position =  ccp(winSize.width / 2 - self.tearsLabel.contentSize.width / 2, 
-                                        winSize.height - self.tearsLabel.contentSize.height / 2 - 10);
-        [self addChild:self.tearsLabel];
+        self.tearsLabel.position =  ccp(winSize.width - self.tearsLabel.contentSize.width / 2 - 20.0, 
+                                        0 + self.tearsLabel.contentSize.height / 2 + 5);
+        [self addChild:self.tearsLabel z:2];
 
         // store sign
         ShopSign *shopSign = [ShopSign node];
@@ -118,7 +118,7 @@
 
 - (NSString *)tearsString
 {
-    return [NSString stringWithFormat:@"Tears left: %d", [GameManager sharedInstance].tearsCollectedTotal];
+    return [NSString stringWithFormat:@"%d", [GameManager sharedInstance].tearsCollectedTotal];
 }
 
 - (void)observeValueForKeyPath:(NSString*)keyPath
