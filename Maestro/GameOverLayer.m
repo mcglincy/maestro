@@ -10,6 +10,7 @@
 #import "GameManager.h"
 #import "GameOverLayer.h"
 #import "TitleScene.h"
+#import "GameSoundManager.h"
 
 @implementation GameOverLayer
 
@@ -30,6 +31,8 @@
         label.color = ccc3(0, 0, 0);
         [self addChild:label];          
     }
+    
+    [[GameSoundManager sharedInstance].soundEngine playBackgroundMusic:@"Death_Theme.wav" loop:NO];
     return self;
 }
 

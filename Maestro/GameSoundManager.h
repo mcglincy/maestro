@@ -18,6 +18,7 @@ typedef enum {
     CDLongAudioSource *leftChannel;
     CDLongAudioSource *rightChannel;
     BOOL stopMaestroAfterNextLoop_;
+    BOOL maestroPlaying_;
 }
 
 @property (readonly) tGameSoundState state;
