@@ -6,6 +6,7 @@
 //  Copyright (c) 2012 n/a. All rights reserved.
 //
 
+#import "Constants.h"
 #import "GameManager.h"
 #import "GameOverLayer.h"
 #import "TitleScene.h"
@@ -24,7 +25,7 @@
         backgroundImage.position = CGPointMake(winSize.width/2, winSize.height/2);
         [self addChild:backgroundImage z:-1 tag:0];
 
-        CCLabelTTF *label = [CCLabelTTF labelWithString:@"Game Over" fontName:@"Courier New" fontSize:60.0];
+        CCLabelTTF *label = [CCLabelTTF labelWithString:@"Game Over" fontName:FONT_NAME fontSize:60.0];
         label.position = ccp(winSize.width / 2, winSize.height / 2);
         label.color = ccc3(0, 0, 0);
         [self addChild:label];          

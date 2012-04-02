@@ -6,6 +6,7 @@
 //  Copyright (c) 2012 n/a. All rights reserved.
 //
 
+#import "Constants.h"
 #import "Devil.h"
 #import "GameManager.h"
 #import "GameScene.h"
@@ -61,7 +62,7 @@
         [self addChild:backgroundImage z:0 tag:0];
 
         // tears remaining
-        self.tearsLabel = [CCLabelTTF labelWithString:[self tearsString] fontName:@"Marker Felt" fontSize:28.0];
+        self.tearsLabel = [CCLabelTTF labelWithString:[self tearsString] fontName:FONT_NAME fontSize:28.0];
         self.tearsLabel.position =  ccp(winSize.width / 2 - self.tearsLabel.contentSize.width / 2, 
                                         winSize.height - self.tearsLabel.contentSize.height / 2 - 10);
         [self addChild:self.tearsLabel];
@@ -72,7 +73,7 @@
         [self addChild:shopSign];
         
         // store menu
-        [CCMenuItemFont setFontName:@"Courier New"];
+        [CCMenuItemFont setFontName:FONT_NAME];
         [CCMenuItemFont setFontSize:24];
         self.storeMenu = [CCMenu menuWithItems:nil];
         [self updateMenu];

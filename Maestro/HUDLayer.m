@@ -6,6 +6,7 @@
 //  Copyright (c) 2012 n/a. All rights reserved.
 //
 
+#import "Constants.h"
 #import "HUDLayer.h"
 #import "GameManager.h"
 
@@ -39,12 +40,12 @@
 	if (self) {
 		CGSize winSize = [[CCDirector sharedDirector] winSize];
 
-        self.tearsCollectedLabel = [CCLabelTTF labelWithString:[self tearsCollectedString] fontName:@"Marker Felt" fontSize:28.0];
+        self.tearsCollectedLabel = [CCLabelTTF labelWithString:[self tearsCollectedString] fontName:FONT_NAME fontSize:28.0];
         self.tearsCollectedLabel.position =  ccp(winSize.width - self.tearsCollectedLabel.contentSize.width / 2 - MARGIN, 
                                          winSize.height - self.tearsCollectedLabel.contentSize.height / 2 - MARGIN);
         [self addChild:self.tearsCollectedLabel];
 
-        self.timerLabel = [CCLabelTTF labelWithString:[self timerString] fontName:@"Marker Felt" fontSize:28.0];
+        self.timerLabel = [CCLabelTTF labelWithString:[self timerString] fontName:FONT_NAME fontSize:28.0];
         self.timerLabel.position =  ccp(winSize.width/2, 
                                                  winSize.height - self.tearsCollectedLabel.contentSize.height / 2 - MARGIN);
         [self addChild:self.timerLabel];
