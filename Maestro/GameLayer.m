@@ -28,7 +28,7 @@
 #import "TearBin.h"
 #import "VictoryScene.h"
 
-#define MAX_LEVEL_IDX 0
+#define MAX_LEVEL_IDX 2
 
 @interface GameLayer()
 
