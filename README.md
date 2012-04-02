@@ -14,6 +14,6 @@ http://www.youtube.com/watch?v=I9n0uloXIHI&context=C4358069ADvjVQa1PpcFOfb_rTckc
    * Matthew R.F. Balousek ([@mrfb](https://twitter.com/#!/mrfb))
    * Mauricio Balvanera ([@maubrowncow](https://twitter.com/#!/maubrowncow))
    * James Hofmann ([@triplefox](https://twitter.com/#!/triplefox))
-   * Eliot Lash ([@eliot_L](https://twitter.com/#!/Eliot_L))
+   * Eliot Lash ([@Eliot_L](https://twitter.com/#!/Eliot_L))
    * Matt McGlincy ([@mcglincy](https://twitter.com/#!/mcglincy))
    * Damian Sol ([@rock_violinist](https://twitter.com/#!/rock_violinist))
