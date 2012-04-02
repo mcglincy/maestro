@@ -9,6 +9,7 @@
 #import "TitleScene.h"
 #import "VictoryLayer.h"
 #import "VictoryMaestro.h"
+#import "GameSoundManager.h"
 
 @implementation VictoryLayer
 
@@ -30,6 +31,8 @@
         
         VictoryMaestro *maestro = [VictoryMaestro node];
         maestro.position = ccp(winSize.width / 2, winSize.height / 2 - 100);
+        
+        [[GameSoundManager sharedInstance].soundEngine playBackgroundMusic:@"win_theme.wav"];
     }
     return self;
 }
