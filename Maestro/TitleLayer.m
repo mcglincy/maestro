@@ -24,6 +24,9 @@
         [self addChild:backgroundImage z:0 tag:0];
         
     }
+    
+    [[GameSoundManager sharedInstance].soundEngine playBackgroundMusic:@"title.wav" loop:NO];
+    
     return self;
 }
 

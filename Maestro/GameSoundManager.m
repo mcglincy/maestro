@@ -36,7 +36,7 @@
     [logMessage appendString:@" stopMaestroAfterNextLoop_="];
     [logMessage appendString: (stopMaestroAfterNextLoop_) ? @"YES" : @"NO"];
     NSLog(logMessage);
-    if (self.loopMaestroTrack) {
+    if (maestroPlaying_ && self.loopMaestroTrack) {
         [self playMaestro]; //play the next segment
     }
     
@@ -73,6 +73,7 @@ static BOOL setupHasRun;
         loopMaestroTrack_ = YES;
         stopMaestroAfterNextLoop_ = NO;
         numMaestroTracks_ = 4;
+        maestroPlaying_ = NO;
 	}
 	return self;
 }
@@ -161,6 +162,7 @@ static BOOL setupHasRun;
 }
 
 -(void) playMaestro {
+    maestroPlaying_ = YES;
     NSString *filename = [NSString stringWithFormat:@"Maestro_%i.wav", self.nextMaestroTrack];
     NSLog(@"Playing song %@", filename);
     [leftChannel load:filename]; //The audio engine will just rewind the clip if it notices the filename here is the same, so we don't need to be smart about it
@@ -174,6 +176,7 @@ static BOOL setupHasRun;
 }
 
 -(void) stopMaestro {
+    maestroPlaying_ = NO;
     [leftChannel stop];
 }
 
