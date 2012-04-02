@@ -113,6 +113,8 @@
     _maestroAudioStarted = NO;
     _maestroAudioStartTime = [[GameClock sharedInstance] currentTime] + 3;
     
+    [[GameSoundManager sharedInstance].soundEngine playEffect:SOUND_CRYING pitch:1.0f pan:0.0f gain:1.0f];
+    
     [self scheduleUpdate];
 }
 

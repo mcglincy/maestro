@@ -273,6 +273,7 @@
 		73733C5C15292D3800992747 /* Death_Theme.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73733C5A15292D3800992747 /* Death_Theme.wav */; };
 		73733C5D15292D3800992747 /* win_theme.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73733C5B15292D3800992747 /* win_theme.wav */; };
 		73733C8A1529429200992747 /* tear_in_case.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73733C891529429200992747 /* tear_in_case.wav */; };
+		73733C901529459200992747 /* crying_4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73733C8F1529459200992747 /* crying_4.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -725,6 +726,7 @@
 		73733C5A15292D3800992747 /* Death_Theme.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Death_Theme.wav; sourceTree = "<group>"; };
 		73733C5B15292D3800992747 /* win_theme.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = win_theme.wav; sourceTree = "<group>"; };
 		73733C891529429200992747 /* tear_in_case.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tear_in_case.wav; sourceTree = "<group>"; };
+		73733C8F1529459200992747 /* crying_4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = crying_4.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -843,6 +845,7 @@
 		0B1A470D1527A0F70062DECC /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				73733C8F1529459200992747 /* crying_4.wav */,
 				73733C891529429200992747 /* tear_in_case.wav */,
 				0B89115615293C3900067C96 /* teardrop_1.wav */,
 				73733C4715292D3000992747 /* menu_1.wav */,
@@ -1622,6 +1625,7 @@
 				0B89115715293C3900067C96 /* teardrop_1.wav in Resources */,
 				0B89116815293FE600067C96 /* Intro-Card.png in Resources */,
 				73733C8A1529429200992747 /* tear_in_case.wav in Resources */,
+				73733C901529459200992747 /* crying_4.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
