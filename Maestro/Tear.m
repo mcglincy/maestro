@@ -13,8 +13,8 @@
 #import "Tear.h"
 #import "GameSoundManager.h"
 
-#define MIN_LIFE 4.0
-#define MAX_LIFE 10.0
+#define MIN_LIFE 5.0
+#define MAX_LIFE 15.0
 
 @interface Tear()
 @property (nonatomic) NSTimeInterval timeToDie;
