@@ -20,10 +20,6 @@
     [soundEngine_ preloadEffect:SOUND_STORE_REGISTER];
     [soundEngine_ preloadEffect:SOUND_MENU_1];
     [soundEngine_ preloadEffect:SOUND_CRYING];
-    [soundEngine_ preloadEffect:SOUND_STAB1];
-    [soundEngine_ preloadEffect:SOUND_STAB2];
-    [soundEngine_ preloadEffect:SOUND_STAB3];
-    [soundEngine_ preloadEffect:SOUND_STAB4];
     
 	//Preload the background music too but there is no point in preloading multiple background music files so only
 	//preload the first one you will play

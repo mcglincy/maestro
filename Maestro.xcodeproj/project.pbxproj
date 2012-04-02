@@ -263,11 +263,6 @@
 		73733C0C1528174500992747 /* Maestro_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73733C081528174500992747 /* Maestro_1.wav */; };
 		73733C26152929D100992747 /* Shop_Theme.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73733C25152929D100992747 /* Shop_Theme.wav */; };
 		73733C5015292D3000992747 /* menu_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73733C4715292D3000992747 /* menu_1.wav */; };
-		73733C5115292D3000992747 /* menu_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73733C4815292D3000992747 /* menu_2.wav */; };
-		73733C5215292D3000992747 /* Stab_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73733C4915292D3000992747 /* Stab_1.wav */; };
-		73733C5315292D3000992747 /* Stab_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73733C4A15292D3000992747 /* Stab_2.wav */; };
-		73733C5415292D3000992747 /* Stab_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73733C4B15292D3000992747 /* Stab_3.wav */; };
-		73733C5515292D3000992747 /* Stab_4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73733C4C15292D3000992747 /* Stab_4.wav */; };
 		73733C5615292D3000992747 /* store_register.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73733C4D15292D3000992747 /* store_register.wav */; };
 		73733C5815292D3000992747 /* teardrop_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73733C4F15292D3000992747 /* teardrop_2.wav */; };
 		73733C5C15292D3800992747 /* Death_Theme.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73733C5A15292D3800992747 /* Death_Theme.wav */; };
@@ -716,11 +711,6 @@
 		73733C081528174500992747 /* Maestro_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Maestro_1.wav; sourceTree = "<group>"; };
 		73733C25152929D100992747 /* Shop_Theme.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Shop_Theme.wav; sourceTree = "<group>"; };
 		73733C4715292D3000992747 /* menu_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = menu_1.wav; sourceTree = "<group>"; };
-		73733C4815292D3000992747 /* menu_2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = menu_2.wav; sourceTree = "<group>"; };
-		73733C4915292D3000992747 /* Stab_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Stab_1.wav; sourceTree = "<group>"; };
-		73733C4A15292D3000992747 /* Stab_2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Stab_2.wav; sourceTree = "<group>"; };
-		73733C4B15292D3000992747 /* Stab_3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Stab_3.wav; sourceTree = "<group>"; };
-		73733C4C15292D3000992747 /* Stab_4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Stab_4.wav; sourceTree = "<group>"; };
 		73733C4D15292D3000992747 /* store_register.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = store_register.wav; sourceTree = "<group>"; };
 		73733C4F15292D3000992747 /* teardrop_2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = teardrop_2.wav; sourceTree = "<group>"; };
 		73733C5A15292D3800992747 /* Death_Theme.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Death_Theme.wav; sourceTree = "<group>"; };
@@ -849,11 +839,6 @@
 				73733C891529429200992747 /* tear_in_case.wav */,
 				0B89115615293C3900067C96 /* teardrop_1.wav */,
 				73733C4715292D3000992747 /* menu_1.wav */,
-				73733C4815292D3000992747 /* menu_2.wav */,
-				73733C4915292D3000992747 /* Stab_1.wav */,
-				73733C4A15292D3000992747 /* Stab_2.wav */,
-				73733C4B15292D3000992747 /* Stab_3.wav */,
-				73733C4C15292D3000992747 /* Stab_4.wav */,
 				73733C4D15292D3000992747 /* store_register.wav */,
 				73733C4F15292D3000992747 /* teardrop_2.wav */,
 			);
@@ -1610,11 +1595,6 @@
 				0B1A4B1515292BA00062DECC /* end_anim_frame6.png in Resources */,
 				0B1A4B1615292BA00062DECC /* end_anim_frame7.png in Resources */,
 				73733C5015292D3000992747 /* menu_1.wav in Resources */,
-				73733C5115292D3000992747 /* menu_2.wav in Resources */,
-				73733C5215292D3000992747 /* Stab_1.wav in Resources */,
-				73733C5315292D3000992747 /* Stab_2.wav in Resources */,
-				73733C5415292D3000992747 /* Stab_3.wav in Resources */,
-				73733C5515292D3000992747 /* Stab_4.wav in Resources */,
 				73733C5615292D3000992747 /* store_register.wav in Resources */,
 				73733C5815292D3000992747 /* teardrop_2.wav in Resources */,
 				73733C5C15292D3800992747 /* Death_Theme.wav in Resources */,
