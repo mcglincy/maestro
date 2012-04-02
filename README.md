@@ -11,9 +11,9 @@ http://whatwouldmolydeux.com/display.php?GameID=194
 http://www.youtube.com/watch?v=I9n0uloXIHI&context=C4358069ADvjVQa1PpcFOfb_rTckc63F6PhFb2a_0KoKQZdlWgNl4=
 
 # Team members
-   * Matthew R.F. Balousek ([@mrfb](https://twitter.com/#!/mrfb))
-   * Mauricio Balvanera ([@maubrowncow](https://twitter.com/#!/maubrowncow))
-   * James Hofmann ([@triplefox](https://twitter.com/#!/triplefox))
-   * Eliot Lash ([@Eliot_L](https://twitter.com/#!/Eliot_L))
-   * Matt McGlincy ([@mcglincy](https://twitter.com/#!/mcglincy))
-   * Damian Sol ([@rock_violinist](https://twitter.com/#!/rock_violinist))
+   * Matthew R.F. Balousek ([@mrfb](https://twitter.com/#!/mrfb)) - art, design
+   * Mauricio Balvanera ([@maubrowncow](https://twitter.com/#!/maubrowncow)) - sound, design
+   * James Hofmann ([@triplefox](https://twitter.com/#!/triplefox)) - art, design
+   * Eliot Lash ([@Eliot_L](https://twitter.com/#!/Eliot_L)) - coding, design
+   * Matt McGlincy ([@mcglincy](https://twitter.com/#!/mcglincy)) - coding, design
+   * Damian Sol ([@rock_violinist](https://twitter.com/#!/rock_violinist)) - sound, design
