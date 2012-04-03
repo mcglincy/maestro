@@ -99,10 +99,17 @@
     return self.timerStarted && (self.timeLeft <= 0);
 }
 
-
 - (BOOL)hasAlreadyPurchasedStoreItem:(StoreItem *)item
 {
-    return [self.purchasedItems containsObject:item];
+    // check for the same name in our purchased items
+    // Avoid checking [purchasedItems containsObject], 
+    // in case it's a different item instance.
+    for (StoreItem *purchasedItem in self.purchasedItems) {
+        if ([purchasedItem.name isEqualToString:item.name]) {
+            return YES;
+        }
+    }
+    return NO;
 }
 
 - (BOOL)canAffordStoreItem:(StoreItem *)item

@@ -46,6 +46,7 @@
     if (self != nil) {       
         self.isTouchEnabled = YES;
         
+        // background
         CCSprite *backgroundImage;
         backgroundImage = [CCSprite spriteWithFile:@"store_background.png"];        
         CGSize winSize = [[CCDirector sharedDirector] winSize];
@@ -88,17 +89,18 @@
                          options:0
                          context:nil];
 
+        // the devil
         self.devil = [Devil node];
         self.devil.position = ccp(900, 40 + self.devil.contentSize.height / 2);
         [self addChild:self.devil z:1];
         
+        // floor
         Floor *floor = [Floor node];
         floor.position = ccp(winSize.width / 2, 0 + floor.contentSize.height / 2);
         [self addChild:floor];
 
-        //Reset music 
+        // reset music 
         [[GameSoundManager sharedInstance] stopMaestro];
-        
         [[GameSoundManager sharedInstance].soundEngine playBackgroundMusic:@"shop_theme.mp3"];
     }
     return self;
@@ -141,9 +143,10 @@
 }
 
 - (void)updateMenu
-{
+{    
     [self.storeMenu removeAllChildrenWithCleanup:YES];
     GameManager *gameManager = [GameManager sharedInstance];
+    
     for (StoreItem *storeItem in gameManager.store.items) {
         BOOL canAfford = [gameManager canAffordStoreItem:storeItem];
         BOOL alreadyPurchased = [gameManager hasAlreadyPurchasedStoreItem:storeItem];
