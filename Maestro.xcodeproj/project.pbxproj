@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B048911152A83A50012F575 /* gameover_theme.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0B048909152A83A50012F575 /* gameover_theme.mp3 */; };
+		0B048912152A83A50012F575 /* maestro_0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0B04890A152A83A50012F575 /* maestro_0.mp3 */; };
+		0B048913152A83A50012F575 /* maestro_1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0B04890B152A83A50012F575 /* maestro_1.mp3 */; };
+		0B048914152A83A50012F575 /* maestro_2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0B04890C152A83A50012F575 /* maestro_2.mp3 */; };
+		0B048915152A83A50012F575 /* maestro_3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0B04890D152A83A50012F575 /* maestro_3.mp3 */; };
+		0B048916152A83A50012F575 /* shop_theme.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0B04890E152A83A50012F575 /* shop_theme.mp3 */; };
+		0B048917152A83A50012F575 /* title_theme.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0B04890F152A83A50012F575 /* title_theme.mp3 */; };
+		0B048918152A83A50012F575 /* victory_theme.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0B048910152A83A50012F575 /* victory_theme.mp3 */; };
 		0B1A46D51527A0D70062DECC /* CDXMacOSXSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1A46D21527A0D70062DECC /* CDXMacOSXSupport.m */; };
 		0B1A46D61527A0D70062DECC /* CDXPropertyModifierAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1A46D41527A0D70062DECC /* CDXPropertyModifierAction.m */; };
 		0B1A46F41527A0EC0062DECC /* BackgroundLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1A46D91527A0EC0062DECC /* BackgroundLayer.m */; };
@@ -23,7 +31,6 @@
 		0B1A47001527A0EC0062DECC /* TitleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1A46F11527A0EC0062DECC /* TitleLayer.m */; };
 		0B1A47011527A0EC0062DECC /* TitleScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1A46F31527A0EC0062DECC /* TitleScene.m */; };
 		0B1A470F1527A0F70062DECC /* blank_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B1A47051527A0F70062DECC /* blank_background.png */; };
-		0B1A47151527A0F70062DECC /* intro.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0B1A470C1527A0F70062DECC /* intro.mp3 */; };
 		0B1A49D21527B5210062DECC /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0B1A49AF1527B5210062DECC /* LICENSE.txt */; };
 		0B1A49D31527B5210062DECC /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0B1A49B01527B5210062DECC /* README.txt */; };
 		0B1A49D41527B5210062DECC /* chipmunk.c in Sources */ = {isa = PBXBuildFile; fileRef = 0B1A49B21527B5210062DECC /* chipmunk.c */; };
@@ -65,7 +72,6 @@
 		0B1A4A6A1527F97B0062DECC /* ViolinCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1A4A691527F97A0062DECC /* ViolinCase.m */; };
 		0B1A4A6F1528043B0062DECC /* GameManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1A4A6E1528043A0062DECC /* GameManager.m */; };
 		0B1A4A721528052F0062DECC /* HUDLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1A4A711528052E0062DECC /* HUDLayer.m */; };
-		0B1A4A8A15280BDE0062DECC /* title.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B1A4A8515280BDE0062DECC /* title.wav */; };
 		0B1A4A9D1528BAB60062DECC /* StoreScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1A4A9C1528BAB60062DECC /* StoreScene.m */; };
 		0B1A4AA01528BAC20062DECC /* StoreLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1A4A9F1528BAC20062DECC /* StoreLayer.m */; };
 		0B1A4AA51528BAE10062DECC /* GameOverLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1A4AA21528BAE10062DECC /* GameOverLayer.m */; };
@@ -249,21 +255,22 @@
 		0B89116215293F5700067C96 /* BackstoryScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B89116115293F5700067C96 /* BackstoryScene.m */; };
 		0B89116615293F6900067C96 /* BackstoryLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B89116515293F6900067C96 /* BackstoryLayer.m */; };
 		0B89116815293FE600067C96 /* backstory_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B89116715293FE600067C96 /* backstory_background.png */; };
-		73733C091528174500992747 /* Maestro_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73733C051528174500992747 /* Maestro_2.wav */; };
-		73733C0A1528174500992747 /* Maestro_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73733C061528174500992747 /* Maestro_3.wav */; };
-		73733C0B1528174500992747 /* Maestro_0.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73733C071528174500992747 /* Maestro_0.wav */; };
-		73733C0C1528174500992747 /* Maestro_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73733C081528174500992747 /* Maestro_1.wav */; };
-		73733C26152929D100992747 /* Shop_Theme.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73733C25152929D100992747 /* Shop_Theme.wav */; };
 		73733C5015292D3000992747 /* menu_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73733C4715292D3000992747 /* menu_1.wav */; };
 		73733C5615292D3000992747 /* store_register.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73733C4D15292D3000992747 /* store_register.wav */; };
 		73733C5815292D3000992747 /* teardrop_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73733C4F15292D3000992747 /* teardrop_2.wav */; };
-		73733C5C15292D3800992747 /* Death_Theme.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73733C5A15292D3800992747 /* Death_Theme.wav */; };
-		73733C5D15292D3800992747 /* win_theme.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73733C5B15292D3800992747 /* win_theme.wav */; };
 		73733C8A1529429200992747 /* tear_in_case.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73733C891529429200992747 /* tear_in_case.wav */; };
 		73733C901529459200992747 /* crying_4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73733C8F1529459200992747 /* crying_4.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B048909152A83A50012F575 /* gameover_theme.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gameover_theme.mp3; sourceTree = "<group>"; };
+		0B04890A152A83A50012F575 /* maestro_0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = maestro_0.mp3; sourceTree = "<group>"; };
+		0B04890B152A83A50012F575 /* maestro_1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = maestro_1.mp3; sourceTree = "<group>"; };
+		0B04890C152A83A50012F575 /* maestro_2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = maestro_2.mp3; sourceTree = "<group>"; };
+		0B04890D152A83A50012F575 /* maestro_3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = maestro_3.mp3; sourceTree = "<group>"; };
+		0B04890E152A83A50012F575 /* shop_theme.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = shop_theme.mp3; sourceTree = "<group>"; };
+		0B04890F152A83A50012F575 /* title_theme.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = title_theme.mp3; sourceTree = "<group>"; };
+		0B048910152A83A50012F575 /* victory_theme.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = victory_theme.mp3; sourceTree = "<group>"; };
 		0B1A46D11527A0D70062DECC /* CDXMacOSXSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDXMacOSXSupport.h; sourceTree = "<group>"; };
 		0B1A46D21527A0D70062DECC /* CDXMacOSXSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDXMacOSXSupport.m; sourceTree = "<group>"; };
 		0B1A46D31527A0D70062DECC /* CDXPropertyModifierAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDXPropertyModifierAction.h; sourceTree = "<group>"; };
@@ -295,7 +302,6 @@
 		0B1A46F21527A0EC0062DECC /* TitleScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleScene.h; sourceTree = "<group>"; };
 		0B1A46F31527A0EC0062DECC /* TitleScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleScene.m; sourceTree = "<group>"; };
 		0B1A47051527A0F70062DECC /* blank_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blank_background.png; sourceTree = "<group>"; };
-		0B1A470C1527A0F70062DECC /* intro.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = intro.mp3; sourceTree = "<group>"; };
 		0B1A49911527B5210062DECC /* chipmunk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chipmunk.h; sourceTree = "<group>"; };
 		0B1A49921527B5210062DECC /* chipmunk_ffi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chipmunk_ffi.h; sourceTree = "<group>"; };
 		0B1A49931527B5210062DECC /* chipmunk_private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chipmunk_private.h; sourceTree = "<group>"; };
@@ -369,13 +375,12 @@
 		0B1A4A5F1527DFE00062DECC /* GameClock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameClock.m; sourceTree = "<group>"; };
 		0B1A4A611527E18B0062DECC /* GameUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameUtils.h; sourceTree = "<group>"; };
 		0B1A4A621527E18C0062DECC /* GameUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameUtils.m; sourceTree = "<group>"; };
-		0B1A4A681527F97A0062DECC /* ViolinCase.h */ = {isa = PBXFileReference; fileEncoding = 4; path = ViolinCase.h; sourceTree = "<group>"; };
+		0B1A4A681527F97A0062DECC /* ViolinCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViolinCase.h; sourceTree = "<group>"; };
 		0B1A4A691527F97A0062DECC /* ViolinCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViolinCase.m; sourceTree = "<group>"; };
 		0B1A4A6D152804390062DECC /* GameManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameManager.h; sourceTree = "<group>"; };
 		0B1A4A6E1528043A0062DECC /* GameManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameManager.m; sourceTree = "<group>"; };
 		0B1A4A701528052D0062DECC /* HUDLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUDLayer.h; sourceTree = "<group>"; };
 		0B1A4A711528052E0062DECC /* HUDLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUDLayer.m; sourceTree = "<group>"; };
-		0B1A4A8515280BDE0062DECC /* title.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = title.wav; sourceTree = "<group>"; };
 		0B1A4A9B1528BAB60062DECC /* StoreScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreScene.h; sourceTree = "<group>"; };
 		0B1A4A9C1528BAB60062DECC /* StoreScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreScene.m; sourceTree = "<group>"; };
 		0B1A4A9E1528BAC20062DECC /* StoreLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreLayer.h; sourceTree = "<group>"; };
@@ -689,16 +694,9 @@
 		0B89116415293F6900067C96 /* BackstoryLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackstoryLayer.h; sourceTree = "<group>"; };
 		0B89116515293F6900067C96 /* BackstoryLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackstoryLayer.m; sourceTree = "<group>"; };
 		0B89116715293FE600067C96 /* backstory_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backstory_background.png; sourceTree = "<group>"; };
-		73733C051528174500992747 /* Maestro_2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Maestro_2.wav; sourceTree = "<group>"; };
-		73733C061528174500992747 /* Maestro_3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Maestro_3.wav; sourceTree = "<group>"; };
-		73733C071528174500992747 /* Maestro_0.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Maestro_0.wav; sourceTree = "<group>"; };
-		73733C081528174500992747 /* Maestro_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Maestro_1.wav; sourceTree = "<group>"; };
-		73733C25152929D100992747 /* Shop_Theme.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Shop_Theme.wav; sourceTree = "<group>"; };
 		73733C4715292D3000992747 /* menu_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = menu_1.wav; sourceTree = "<group>"; };
 		73733C4D15292D3000992747 /* store_register.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = store_register.wav; sourceTree = "<group>"; };
 		73733C4F15292D3000992747 /* teardrop_2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = teardrop_2.wav; sourceTree = "<group>"; };
-		73733C5A15292D3800992747 /* Death_Theme.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Death_Theme.wav; sourceTree = "<group>"; };
-		73733C5B15292D3800992747 /* win_theme.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = win_theme.wav; sourceTree = "<group>"; };
 		73733C891529429200992747 /* tear_in_case.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tear_in_case.wav; sourceTree = "<group>"; };
 		73733C8F1529459200992747 /* crying_4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = crying_4.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -811,15 +809,14 @@
 		0B1A470B1527A0F70062DECC /* Music */ = {
 			isa = PBXGroup;
 			children = (
-				73733C5A15292D3800992747 /* Death_Theme.wav */,
-				73733C5B15292D3800992747 /* win_theme.wav */,
-				73733C25152929D100992747 /* Shop_Theme.wav */,
-				73733C051528174500992747 /* Maestro_2.wav */,
-				73733C061528174500992747 /* Maestro_3.wav */,
-				73733C071528174500992747 /* Maestro_0.wav */,
-				73733C081528174500992747 /* Maestro_1.wav */,
-				0B1A4A8515280BDE0062DECC /* title.wav */,
-				0B1A470C1527A0F70062DECC /* intro.mp3 */,
+				0B048909152A83A50012F575 /* gameover_theme.mp3 */,
+				0B04890A152A83A50012F575 /* maestro_0.mp3 */,
+				0B04890B152A83A50012F575 /* maestro_1.mp3 */,
+				0B04890C152A83A50012F575 /* maestro_2.mp3 */,
+				0B04890D152A83A50012F575 /* maestro_3.mp3 */,
+				0B04890E152A83A50012F575 /* shop_theme.mp3 */,
+				0B04890F152A83A50012F575 /* title_theme.mp3 */,
+				0B048910152A83A50012F575 /* victory_theme.mp3 */,
 			);
 			path = Music;
 			sourceTree = "<group>";
@@ -1532,16 +1529,10 @@
 				0B87A2B41527A021001A28E7 /* PositionTextureColorAlphaTest.fsh in Resources */,
 				0B87A3D41527A023001A28E7 /* ChangeLog in Resources */,
 				0B1A470F1527A0F70062DECC /* blank_background.png in Resources */,
-				0B1A47151527A0F70062DECC /* intro.mp3 in Resources */,
 				0B1A49D21527B5210062DECC /* LICENSE.txt in Resources */,
 				0B1A49D31527B5210062DECC /* README.txt in Resources */,
 				0B1A49D51527B5210062DECC /* CMakeLists.txt in Resources */,
 				0B1A49F41527B60E0062DECC /* LICENSE_Chipmunk.txt in Resources */,
-				0B1A4A8A15280BDE0062DECC /* title.wav in Resources */,
-				73733C091528174500992747 /* Maestro_2.wav in Resources */,
-				73733C0A1528174500992747 /* Maestro_3.wav in Resources */,
-				73733C0B1528174500992747 /* Maestro_0.wav in Resources */,
-				73733C0C1528174500992747 /* Maestro_1.wav in Resources */,
 				0B1A4AC215290D430062DECC /* violin_case.png in Resources */,
 				0B1A4AC615290E190062DECC /* level1_background.png in Resources */,
 				0B1A4AC715290E190062DECC /* level2_background.png in Resources */,
@@ -1568,7 +1559,6 @@
 				0B1A4AF6152923510062DECC /* shop_sign_1.png in Resources */,
 				0B1A4AF7152923510062DECC /* shop_sign_2.png in Resources */,
 				0B1A4AFC152924E00062DECC /* store_background.png in Resources */,
-				73733C26152929D100992747 /* Shop_Theme.wav in Resources */,
 				0B1A4B0315292A6B0062DECC /* victory_background.png in Resources */,
 				0B1A4B0F15292BA00062DECC /* victory_maestro_0.png in Resources */,
 				0B1A4B1015292BA00062DECC /* victory_maestro_1.png in Resources */,
@@ -1581,8 +1571,6 @@
 				73733C5015292D3000992747 /* menu_1.wav in Resources */,
 				73733C5615292D3000992747 /* store_register.wav in Resources */,
 				73733C5815292D3000992747 /* teardrop_2.wav in Resources */,
-				73733C5C15292D3800992747 /* Death_Theme.wav in Resources */,
-				73733C5D15292D3800992747 /* win_theme.wav in Resources */,
 				0B8911471529303100067C96 /* gameover_background.png in Resources */,
 				0B89114A152932BE00067C96 /* floor.png in Resources */,
 				0B8911531529385100067C96 /* title_background.png in Resources */,
@@ -1590,6 +1578,14 @@
 				0B89116815293FE600067C96 /* backstory_background.png in Resources */,
 				73733C8A1529429200992747 /* tear_in_case.wav in Resources */,
 				73733C901529459200992747 /* crying_4.wav in Resources */,
+				0B048911152A83A50012F575 /* gameover_theme.mp3 in Resources */,
+				0B048912152A83A50012F575 /* maestro_0.mp3 in Resources */,
+				0B048913152A83A50012F575 /* maestro_1.mp3 in Resources */,
+				0B048914152A83A50012F575 /* maestro_2.mp3 in Resources */,
+				0B048915152A83A50012F575 /* maestro_3.mp3 in Resources */,
+				0B048916152A83A50012F575 /* shop_theme.mp3 in Resources */,
+				0B048917152A83A50012F575 /* title_theme.mp3 in Resources */,
+				0B048918152A83A50012F575 /* victory_theme.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

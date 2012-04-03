@@ -10,6 +10,12 @@
 
 @implementation GameSoundManager
 
+@synthesize state = state_;
+@synthesize nextMaestroTrack = nextMaestroTrack_;
+@synthesize loopMaestroTrack = loopMaestroTrack_;
+@synthesize numMaestroTracks = numMaestroTracks_;
+@synthesize maestroStartDelay = maestroStartDelay_;
+
 //TODO: modify this method to load the sounds for your game that you want preloaded at start up.
 //If you don't preload your sounds there will be a delay before they are played the first time while the sound data
 //is loaded to the playback buffer
@@ -23,7 +29,7 @@
     
 	//Preload the background music too but there is no point in preloading multiple background music files so only
 	//preload the first one you will play
-	[soundEngine_ preloadBackgroundMusic:@"title.wav"];
+	[soundEngine_ preloadBackgroundMusic:@"title_theme.mp3"];
 }
 
 //TODO: modify these parameters to your own taste, e.g you may want a longer fade out or a different type of curve
@@ -34,11 +40,6 @@
 }
 
 -(void)cdAudioSourceDidFinishPlaying:(CDLongAudioSource *)audioSource {
-    NSMutableString *logMessage = [NSMutableString stringWithString:@"sound finished. loop="];
-    [logMessage appendString: (self.loopMaestroTrack) ? @"YES" : @"NO"];
-    [logMessage appendString:@" stopMaestroAfterNextLoop_="];
-    [logMessage appendString: (stopMaestroAfterNextLoop_) ? @"YES" : @"NO"];
-    NSLog(logMessage);
     if (maestroPlaying_ && self.loopMaestroTrack) {
         [self playMaestro]; //play the next segment
     }
@@ -49,11 +50,6 @@
     }
 }
 
-@synthesize state = state_;
-@synthesize nextMaestroTrack = nextMaestroTrack_;
-@synthesize loopMaestroTrack = loopMaestroTrack_;
-@synthesize numMaestroTracks = numMaestroTracks_;
-@synthesize maestroStartDelay = maestroStartDelay_;
 static GameSoundManager *sharedManager = nil;
 static BOOL setupHasRun;
 
@@ -166,8 +162,7 @@ static BOOL setupHasRun;
 
 -(void) playMaestro {
     maestroPlaying_ = YES;
-    NSString *filename = [NSString stringWithFormat:@"Maestro_%i.wav", self.nextMaestroTrack];
-    NSLog(@"Playing song %@", filename);
+    NSString *filename = [NSString stringWithFormat:@"maestro_%i.mp3", self.nextMaestroTrack];
     [leftChannel load:filename]; //The audio engine will just rewind the clip if it notices the filename here is the same, so we don't need to be smart about it
     [leftChannel setVolume:1.0f];
     [leftChannel play];
@@ -175,7 +170,6 @@ static BOOL setupHasRun;
 
 -(void) stopMaestroAfterNextLoop {
     stopMaestroAfterNextLoop_ = YES;
-    NSLog(@"STOP MAESTRO.");
 }
 
 -(void) stopMaestro {
@@ -187,7 +181,6 @@ static BOOL setupHasRun;
 }
 
 -(SimpleAudioEngine *) soundEngine {
-
 	if (self.state != kGSOkay && self.state != kGSFailed) {
 		//The sound engine is still initialising, wait for it to finish up to a max of 10 seconds
 		int waitCount = 0;
@@ -204,7 +197,6 @@ static BOOL setupHasRun;
 		//State wasn't okay, so we return nil
 		return nil;
 	}
-
 }
 
 

@@ -34,7 +34,7 @@
         maestro.position = ccp(winSize.width / 2, winSize.height / 2);
         [self addChild:maestro];
         
-        [[GameSoundManager sharedInstance].soundEngine playBackgroundMusic:@"win_theme.wav"];
+        [[GameSoundManager sharedInstance].soundEngine playBackgroundMusic:@"victory_theme.mp3"];
     }
     return self;
 }

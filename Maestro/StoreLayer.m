@@ -108,7 +108,7 @@
         //Reset music 
         [[GameSoundManager sharedInstance] stopMaestro];
         
-        [[GameSoundManager sharedInstance].soundEngine playBackgroundMusic:@"Shop_Theme.wav"];
+        [[GameSoundManager sharedInstance].soundEngine playBackgroundMusic:@"shop_theme.mp3"];
     }
     return self;
 }

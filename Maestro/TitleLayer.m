@@ -26,7 +26,7 @@
         
     }
     
-    [[GameSoundManager sharedInstance].soundEngine playBackgroundMusic:@"title.wav" loop:NO];
+    [[GameSoundManager sharedInstance].soundEngine playBackgroundMusic:@"title_theme.mp3" loop:NO];
     
     return self;
 }
