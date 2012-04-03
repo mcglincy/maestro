@@ -30,7 +30,7 @@
 
 - (id)init
 {
-    self = [super initWithFile:@"tear0.png" rect:CGRectMake(0, 0, 32, 32)];
+    self = [super initWithFile:@"tear_0.png" rect:CGRectMake(0, 0, 32, 32)];
     if (self) {
         self.timeToDie = [[GameClock sharedInstance] currentTime] + [GameUtils randomTimeBetweenMin:MIN_LIFE max:MAX_LIFE];
         
