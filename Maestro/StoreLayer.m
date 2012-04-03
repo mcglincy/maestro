@@ -31,15 +31,6 @@
 @synthesize storeMenu = _storeMenu;
 @synthesize tearsLabel = _tearsLabel;
 
-/*
- NSInteger nextLevelNum = self.levelNum + 1;
- if (nextLevelNum > MAX_LEVEL_IDX) {
- [[CCDirector sharedDirector] replaceScene:[CCTransitionCrossFade transitionWithDuration:0.5f scene:[VictoryScene node]]];                        
- } else {
- [[CCDirector sharedDirector] replaceScene:[CCTransitionCrossFade transitionWithDuration:0.5f scene:[GameScene nodeWithLevelNum:nextLevelNum]]];            
- }
-*/
-
 - (void)dealloc
 {
     [[GameManager sharedInstance] removeObserver:self forKeyPath:@"tearsCollectedTotal"];
