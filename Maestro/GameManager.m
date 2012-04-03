@@ -42,6 +42,7 @@
     self = [super init];
     if (self) {
         self.purchasedItems = [NSMutableArray array];
+        self.store = [[[Store alloc] init] autorelease];
     }
     return self;
 }
@@ -63,7 +64,6 @@
         if ([GameClock sharedInstance].currentTime > self.nextTimerTick) {
             self.timeLeft = MAX(0, self.timeLeft - 1);
             self.nextTimerTick = now + TICK_INTERVAL;
-            self.store = [[Store alloc] init];
         }
     }
 }
