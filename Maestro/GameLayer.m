@@ -19,14 +19,13 @@
 #import "GameSoundManager.h"
 #import "Floor.h"
 #import "Maestro.h"
-#import "Note.h"
 #import "Person.h"
 #import "Physics.h"
 #import "PhysicsSprite.h"
 #import "StoreScene.h"
 #import "Tear.h"
-#import "TearBin.h"
 #import "VictoryScene.h"
+#import "ViolinCase.h"
 
 #define MAX_LEVEL_IDX 2
 
@@ -94,10 +93,10 @@
                           FLOOR_HEIGHT + p2.contentSize.height / 2);
         [self addChild:p2 z:1];   
         
-        TearBin *tearBin = [TearBin node];
-        tearBin.position = ccp(284, FLOOR_HEIGHT + tearBin.contentSize.height / 2);
-        [self addChild:tearBin z:1];
-        [tearBin addToPhysics];
+        ViolinCase *violinCase = [ViolinCase node];
+        violinCase.position = ccp(284, FLOOR_HEIGHT + violinCase.contentSize.height / 2);
+        [self addChild:violinCase z:1];
+        [violinCase addToPhysics];
         
         Floor *floor = [Floor node];
         floor.position = ccp(winSize.width / 2, 0 + floor.contentSize.height / 2);
@@ -182,17 +181,6 @@
     [tear addToPhysics];
 }
 
-- (void)addNoteAtPosition:(CGPoint)pos
-{
-    Note *note = [Note node];
-    note.position = ccp(260, 260);
-    [self addChild:note z:2];
-
-    CCMoveBy *moveBy = [CCMoveTo actionWithDuration:5.0 
-                        position:pos];
-    [note runAction:moveBy];   
-}
-
 #pragma mark - touch handling
 
 - (void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
@@ -205,63 +193,18 @@
     }
 }
 
-- (void)addTouchPointWithTouches:(NSSet *)touches
-{
-    /*
-    UITouch *touch = [touches anyObject];
-    CGPoint location = [touch locationInView:[touch view]];
-    location = [[CCDirector sharedDirector] convertToGL:location];
-    
-    [self.touchPoints addObject:[NSValue valueWithCGPoint:location]];    
-     */
-}
-
 - (void)ccTouchesMoved:(NSSet *)touches withEvent:(UIEvent *)event 
 {
-    //self.touchPoints = touches;
-    //[self addTouchPointWithTouches:touches];
 }
 
 - (void)ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
     [self.touchPoints removeAllObjects];
-
-    /*
-	for (UITouch *touch in touches) {
-		CGPoint location = [touch locationInView: [touch view]];
-		location = [[CCDirector sharedDirector] convertToGL: location];
-		//[self addTearAtPosition:location];
-        [self addNoteAtPosition:location];
-	}
-     */
-    
-    //Assuming we roped in some tears, let's change the music on the next loop
-//    if ([GameSoundManager sharedInstance].nextMaestroTrack < ([GameSoundManager sharedInstance].numMaestroTracks - 1)) {
-//        [GameSoundManager sharedInstance].nextMaestroTrack++;
-//        if ([GameSoundManager sharedInstance].nextMaestroTrack == [GameSoundManager sharedInstance].numMaestroTracks - 1) {
-//            //This is the last track, stop looping
-//            [[GameSoundManager sharedInstance] stopMaestroAfterNextLoop];
-//        }
-//    }
 }
 
 - (void)ccTouchCancelled:(UITouch *)touch withEvent:(UIEvent *)event
 {
     [self.touchPoints removeAllObjects];
 }
-
-/* >>>>
-- (void)draw
-{
-    [super draw];
-    CGPoint cgVertices[[self.touchPoints count]];
-    
-    for (int i = 0, len = [self.touchPoints count]; i < len; i++) {
-        CGPoint point = [[self.touchPoints objectAtIndex:i] CGPointValue];
-        cgVertices[i] = point;
-    }
-    ccDrawPoly(cgVertices, [self.touchPoints count], YES);
-}
- <<<< */
 
 @end

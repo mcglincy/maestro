@@ -12,7 +12,7 @@
 
 typedef enum {
     kCollisionTypeTear,
-    kCollisionTypeTearBin,
+    kCollisionTypeViolinCase,
 } CollisionType;
 
 @interface Physics : NSObject
@@ -25,8 +25,7 @@ typedef enum {
 
 + (Physics *)sharedInstance;
 - (void)update:(ccTime)delta;
-- (void)reset;
 
 @end
 
-static int tearHitTearBin(cpArbiter *arb, cpSpace *space, void *data);
+static int tearHitViolinCase(cpArbiter *arb, cpSpace *space, void *data);

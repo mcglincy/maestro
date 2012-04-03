@@ -96,7 +96,7 @@
     [self.parent removeChild:self cleanup:YES];    
 }
 
-- (void)hitBin
+- (void)hitViolinCase
 {
     if (!self.isDead) {
         [[GameSoundManager sharedInstance].soundEngine playEffect:SOUND_TEAR_CASE];

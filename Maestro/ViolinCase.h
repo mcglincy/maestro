@@ -1,5 +1,5 @@
 //
-//  TearBin.h
+//  ViolinCase.h
 //  Maestro
 //
 //  Created by Matthew McGlincy on 3/31/12.
@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "PhysicsSprite.h"
 
-@interface TearBin : PhysicsSprite
+@interface ViolinCase : PhysicsSprite
 
 - (void)addToPhysics;
 

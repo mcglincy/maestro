@@ -52,7 +52,7 @@
     return space_;
 }
 
--(void) initPhysics
+- (void)initPhysics
 {
 	CGSize s = [[CCDirector sharedDirector] winSize];
 	
@@ -88,7 +88,7 @@
 	}	
     
     // add collision handlers
-    cpSpaceAddCollisionHandler(space_, kCollisionTypeTear, kCollisionTypeTearBin, &tearHitTearBin, NULL, NULL, NULL, NULL);
+    cpSpaceAddCollisionHandler(space_, kCollisionTypeTear, kCollisionTypeViolinCase, &tearHitViolinCase, NULL, NULL, NULL, NULL);
 }
 
 - (void)update:(ccTime) delta
@@ -102,11 +102,11 @@
 	}
 }
 
-static int tearHitTearBin(cpArbiter *arb, cpSpace *space, void *data){
+static int tearHitViolinCase(cpArbiter *arb, cpSpace *space, void *data){
 	cpShape *a, *b; 
     cpArbiterGetShapes(arb, &a, &b);
     Tear *tear = (Tear *)a->data;
-    [tear hitBin];
+    [tear hitViolinCase];
 	//MyGame *game = (MyGame*) data;
 ///	cpBodyApplyImpulse(a->body, cpv(1000,3000), cpv(0,0));
 	return 1;

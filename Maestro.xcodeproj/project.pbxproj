@@ -62,7 +62,7 @@
 		0B1A4A071527C5BA0062DECC /* GameLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1A4A061527C5BA0062DECC /* GameLayer.m */; };
 		0B1A4A601527DFE10062DECC /* GameClock.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1A4A5F1527DFE00062DECC /* GameClock.m */; };
 		0B1A4A631527E18C0062DECC /* GameUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1A4A621527E18C0062DECC /* GameUtils.m */; };
-		0B1A4A6A1527F97B0062DECC /* TearBin.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1A4A691527F97A0062DECC /* TearBin.m */; };
+		0B1A4A6A1527F97B0062DECC /* ViolinCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1A4A691527F97A0062DECC /* ViolinCase.m */; };
 		0B1A4A6F1528043B0062DECC /* GameManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1A4A6E1528043A0062DECC /* GameManager.m */; };
 		0B1A4A721528052F0062DECC /* HUDLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1A4A711528052E0062DECC /* HUDLayer.m */; };
 		0B1A4A8A15280BDE0062DECC /* title.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B1A4A8515280BDE0062DECC /* title.wav */; };
@@ -369,8 +369,8 @@
 		0B1A4A5F1527DFE00062DECC /* GameClock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameClock.m; sourceTree = "<group>"; };
 		0B1A4A611527E18B0062DECC /* GameUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameUtils.h; sourceTree = "<group>"; };
 		0B1A4A621527E18C0062DECC /* GameUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameUtils.m; sourceTree = "<group>"; };
-		0B1A4A681527F97A0062DECC /* TearBin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TearBin.h; sourceTree = "<group>"; };
-		0B1A4A691527F97A0062DECC /* TearBin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TearBin.m; sourceTree = "<group>"; };
+		0B1A4A681527F97A0062DECC /* ViolinCase.h */ = {isa = PBXFileReference; fileEncoding = 4; path = ViolinCase.h; sourceTree = "<group>"; };
+		0B1A4A691527F97A0062DECC /* ViolinCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViolinCase.m; sourceTree = "<group>"; };
 		0B1A4A6D152804390062DECC /* GameManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameManager.h; sourceTree = "<group>"; };
 		0B1A4A6E1528043A0062DECC /* GameManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameManager.m; sourceTree = "<group>"; };
 		0B1A4A701528052D0062DECC /* HUDLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUDLayer.h; sourceTree = "<group>"; };
@@ -1005,8 +1005,8 @@
 				0B1A4AF9152923790062DECC /* ShopSign.m */,
 				0B1A46EE1527A0EC0062DECC /* Tear.h */,
 				0B1A46EF1527A0EC0062DECC /* Tear.m */,
-				0B1A4A681527F97A0062DECC /* TearBin.h */,
-				0B1A4A691527F97A0062DECC /* TearBin.m */,
+				0B1A4A681527F97A0062DECC /* ViolinCase.h */,
+				0B1A4A691527F97A0062DECC /* ViolinCase.m */,
 				0B1A4B0415292ABB0062DECC /* VictoryMaestro.h */,
 				0B1A4B0515292ABB0062DECC /* VictoryMaestro.m */,
 			);
@@ -1745,7 +1745,7 @@
 				0B1A4A071527C5BA0062DECC /* GameLayer.m in Sources */,
 				0B1A4A601527DFE10062DECC /* GameClock.m in Sources */,
 				0B1A4A631527E18C0062DECC /* GameUtils.m in Sources */,
-				0B1A4A6A1527F97B0062DECC /* TearBin.m in Sources */,
+				0B1A4A6A1527F97B0062DECC /* ViolinCase.m in Sources */,
 				0B1A4A6F1528043B0062DECC /* GameManager.m in Sources */,
 				0B1A4A721528052F0062DECC /* HUDLayer.m in Sources */,
 				0B1A4A9D1528BAB60062DECC /* StoreScene.m in Sources */,

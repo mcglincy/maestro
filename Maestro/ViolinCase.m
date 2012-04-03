@@ -1,5 +1,5 @@
 //
-//  TearBin.m
+//  ViolinCase.m
 //  Maestro
 //
 //  Created by Matthew McGlincy on 3/31/12.
@@ -7,9 +7,9 @@
 //
 
 #import "Physics.h"
-#import "TearBin.h"
+#import "ViolinCase.h"
 
-@implementation TearBin
+@implementation ViolinCase
 
 - (id)init
 {
@@ -40,7 +40,7 @@
     
     cpShape* shape = cpPolyShapeNew(body, num, verts, CGPointZero);
     shape->e = 0.5f; shape->u = 0.5f;
-    shape->collision_type = kCollisionTypeTearBin;
+    shape->collision_type = kCollisionTypeViolinCase;
     cpSpaceAddShape(physics.space, shape);
     
     [self setPhysicsBody:body];    

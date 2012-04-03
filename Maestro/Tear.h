@@ -13,7 +13,7 @@
 @interface Tear : PhysicsSprite
 - (void)addToPhysics;
 - (void)randomPush;
-- (void)hitBin;
+- (void)hitViolinCase;
 
 @end
 
