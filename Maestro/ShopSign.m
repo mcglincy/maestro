@@ -12,12 +12,12 @@
 
 - (id)init
 {
-    self = [super initWithFile:@"shop_sign_frame_0.png" rect:CGRectMake(0, 0, 256, 256)];
+    self = [super initWithFile:@"shop_sign_0.png" rect:CGRectMake(0, 0, 256, 256)];
     if (self) {
         CCAnimation *anim = [CCAnimation animation];
-        [anim addFrameWithFilename:@"shop_sign_frame_1.png"];
-        [anim addFrameWithFilename:@"shop_sign_frame_2.png"];
-        [anim addFrameWithFilename:@"shop_sign_frame_0.png"];
+        [anim addFrameWithFilename:@"shop_sign_1.png"];
+        [anim addFrameWithFilename:@"shop_sign_2.png"];
+        [anim addFrameWithFilename:@"shop_sign_0.png"];
         
         id animationAction = [CCAnimate actionWithDuration:1.5f
                                                  animation:anim

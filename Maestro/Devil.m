@@ -12,11 +12,11 @@
 
 - (id)init
 {
-    self = [super initWithFile:@"shopkeep_frame_1.png" rect:CGRectMake(0, 0, 384, 384)];
+    self = [super initWithFile:@"devil_1.png" rect:CGRectMake(0, 0, 384, 384)];
     if (self) {
         CCAnimation *anim = [CCAnimation animation];
-        [anim addFrameWithFilename:@"shopkeep_frame_2.png"];
-        [anim addFrameWithFilename:@"shopkeep_frame_1.png"];
+        [anim addFrameWithFilename:@"devil_2.png"];
+        [anim addFrameWithFilename:@"devil_1.png"];
         
         id animationAction = [CCAnimate actionWithDuration:1.5f
                                                  animation:anim
@@ -30,7 +30,7 @@
 - (void)animateForPurchase
 {
     CCAnimation *anim = [CCAnimation animation];
-    [anim addFrameWithFilename:@"shopkeep_frame_0.png"];
+    [anim addFrameWithFilename:@"devil_0.png"];
     
     id animationAction = [CCAnimate actionWithDuration:1.5f
                                              animation:anim

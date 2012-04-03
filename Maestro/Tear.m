@@ -17,8 +17,10 @@
 #define MAX_LIFE 15.0
 
 @interface Tear()
+
 @property (nonatomic) NSTimeInterval timeToDie;
 @property (nonatomic) BOOL isDead;
+
 @end
 
 @implementation Tear
@@ -33,15 +35,15 @@
         self.timeToDie = [[GameClock sharedInstance] currentTime] + [GameUtils randomTimeBetweenMin:MIN_LIFE max:MAX_LIFE];
         
         CCAnimation *anim = [CCAnimation animation];
-        [anim addFrameWithFilename:@"tear1.png"];
-        [anim addFrameWithFilename:@"tear2.png"];
-        [anim addFrameWithFilename:@"tear3.png"];
-        [anim addFrameWithFilename:@"tear4.png"];
-        [anim addFrameWithFilename:@"tear5.png"];
-        [anim addFrameWithFilename:@"tear6.png"];
-        [anim addFrameWithFilename:@"tear7.png"];
-        [anim addFrameWithFilename:@"tear8.png"];
-        [anim addFrameWithFilename:@"tear0.png"];
+        [anim addFrameWithFilename:@"tear_1.png"];
+        [anim addFrameWithFilename:@"tear_2.png"];
+        [anim addFrameWithFilename:@"tear_3.png"];
+        [anim addFrameWithFilename:@"tear_4.png"];
+        [anim addFrameWithFilename:@"tear_5.png"];
+        [anim addFrameWithFilename:@"tear_6.png"];
+        [anim addFrameWithFilename:@"tear_7.png"];
+        [anim addFrameWithFilename:@"tear_8.png"];
+        [anim addFrameWithFilename:@"tear_0.png"];
         
         id animationAction = [CCAnimate actionWithDuration:0.5f
                                                  animation:anim

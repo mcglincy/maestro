@@ -12,16 +12,16 @@
 
 - (id)init
 {
-    self = [super initWithFile:@"end_anim_frame0.png" rect:CGRectMake(0, 0, 512, 384)];
+    self = [super initWithFile:@"victory_maestro_0.png" rect:CGRectMake(0, 0, 512, 384)];
     if (self) {
         CCAnimation *anim = [CCAnimation animation];
-        [anim addFrameWithFilename:@"end_anim_frame1.png"];
-        [anim addFrameWithFilename:@"end_anim_frame2.png"];
-        [anim addFrameWithFilename:@"end_anim_frame3.png"];
-        [anim addFrameWithFilename:@"end_anim_frame4.png"];
-        [anim addFrameWithFilename:@"end_anim_frame5.png"];
-        [anim addFrameWithFilename:@"end_anim_frame6.png"];
-        [anim addFrameWithFilename:@"end_anim_frame7.png"];
+        [anim addFrameWithFilename:@"victory_maestro_1.png"];
+        [anim addFrameWithFilename:@"victory_maestro_2.png"];
+        [anim addFrameWithFilename:@"victory_maestro_3.png"];
+        [anim addFrameWithFilename:@"victory_maestro_4.png"];
+        [anim addFrameWithFilename:@"victory_maestro_5.png"];
+        [anim addFrameWithFilename:@"victory_maestro_6.png"];
+        [anim addFrameWithFilename:@"victory_maestro_7.png"];
         
         id animationAction = [CCAnimate actionWithDuration:2.5f
                                                  animation:anim

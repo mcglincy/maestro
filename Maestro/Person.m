@@ -21,11 +21,11 @@
 
 - (id)init
 {
-    self = [super initWithFile:@"figure-idle-0.png" rect:CGRectMake(0, 0, 384, 384)];
+    self = [super initWithFile:@"person_0.png" rect:CGRectMake(0, 0, 384, 384)];
     if (self) {
         CCAnimation *anim = [CCAnimation animation];
-        [anim addFrameWithFilename:@"figure-idle-1.png"];
-        [anim addFrameWithFilename:@"figure-idle-0.png"];
+        [anim addFrameWithFilename:@"person_1.png"];
+        [anim addFrameWithFilename:@"person_0.png"];
         
         id animationAction = [CCAnimate actionWithDuration:1.5f
                                                  animation:anim

@@ -11,6 +11,7 @@
 #import "PhysicsSprite.h"
 
 @interface Tear : PhysicsSprite
+
 - (void)addToPhysics;
 - (void)randomPush;
 - (void)hitViolinCase;
