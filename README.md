@@ -16,4 +16,4 @@ http://www.youtube.com/watch?v=I9n0uloXIHI&context=C4358069ADvjVQa1PpcFOfb_rTckc
    * James Hofmann ([@triplefox](https://twitter.com/#!/triplefox)) - art, design
    * Eliot Lash ([@Eliot_L](https://twitter.com/#!/Eliot_L)) - coding, design
    * Matt McGlincy ([@mcglincy](https://twitter.com/#!/mcglincy)) - coding, design
-   * Damian Sol ([@rock_violinist](https://twitter.com/#!/rock_violinist)) - sound, design
+   * Damian Sol ([@rock_violinist](https://twitter.com/#!/rock_violinist)) - composing, violin, design
