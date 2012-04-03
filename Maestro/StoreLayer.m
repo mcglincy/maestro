@@ -147,9 +147,7 @@
     for (StoreItem *storeItem in gameManager.store.items) {
         BOOL canAfford = [gameManager canAffordStoreItem:storeItem];
         BOOL alreadyPurchased = [gameManager hasAlreadyPurchasedStoreItem:storeItem];
-        //NSString *checkmark = alreadyPurchased ? @"X ": @"  ";
-        NSString *checkmark = @"";
-        NSString *itemString = [NSString stringWithFormat:@"%@ %d - %@", checkmark, storeItem.price, storeItem.name];
+        NSString *itemString = [NSString stringWithFormat:@"%02d - %@", storeItem.price, storeItem.name];
         CCMenuItemFont *menuItem = [CCMenuItemFont itemWithString:itemString block:^(id sender) {
             [self buyStoreItem:storeItem];
         }];
