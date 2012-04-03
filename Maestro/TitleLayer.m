@@ -18,12 +18,11 @@
     self = [super init];                                           
     if (self != nil) {    
         self.isTouchEnabled = YES;
-        CCSprite *backgroundImage = [CCSprite spriteWithFile:@"title_background.png"];
-        
         CGSize screenSize = [[CCDirector sharedDirector] winSize];
-        [backgroundImage setPosition:CGPointMake(screenSize.width/2, screenSize.height/2)];
-        [self addChild:backgroundImage z:-1 tag:0];
         
+        CCSprite *backgroundImage = [CCSprite spriteWithFile:@"title_background.png"];
+        [backgroundImage setPosition:CGPointMake(screenSize.width/2, screenSize.height/2)];
+        [self addChild:backgroundImage z:-1 tag:0];        
     }
     
     [[GameSoundManager sharedInstance].soundEngine playBackgroundMusic:@"title_theme.mp3" loop:NO];
