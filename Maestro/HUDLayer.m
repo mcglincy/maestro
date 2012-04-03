@@ -68,13 +68,13 @@
 - (NSString *)tearsCollectedString
 {
     GameManager *gameManager = [GameManager sharedInstance];
-    NSString *str = [NSString stringWithFormat:@"%d / %d", gameManager.tearsCollectedThisLevel, gameManager.tearsNeededThisLevel];
+    NSString *str = [NSString stringWithFormat:@"Tears: %02d / %02d", gameManager.tearsCollectedThisLevel, gameManager.tearsNeededThisLevel];
     return str;
 }
 
 - (NSString *)timerString
 {
-    return [NSString stringWithFormat:@"%02d", [GameManager sharedInstance].timeLeft];
+    return [NSString stringWithFormat:@"Time: %02d", [GameManager sharedInstance].timeLeft];
 }
 
 - (void)observeValueForKeyPath:(NSString*)keyPath

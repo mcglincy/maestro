@@ -82,9 +82,6 @@
         [self addChild:self.storeMenu];
         
         // done/continue button
-//        CCMenuItem *doneItem = [CCMenuItemImage 
-//                                    itemFromNormalImage:@"ButtonStar.png" selectedImage:@"ButtonStarSel.png" 
-//                                    target:self selector:@selector(starButtonTapped:)];
         CCMenuItemFont *doneItem = [CCMenuItemFont itemWithString:@"Continue" block:^(id sender) {
             [self doneStore];
         }];
@@ -118,7 +115,7 @@
 
 - (NSString *)tearsString
 {
-    return [NSString stringWithFormat:@"%d", [GameManager sharedInstance].tearsCollectedTotal];
+    return [NSString stringWithFormat:@"Tears: %02d", [GameManager sharedInstance].tearsCollectedTotal];
 }
 
 - (void)observeValueForKeyPath:(NSString*)keyPath
