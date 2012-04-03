@@ -59,10 +59,7 @@
 	// init chipmunk
 	cpInitChipmunk();
 	
-	space_ = cpSpaceNew();
-	
-#warning messing with gravity
-//	space_->gravity = ccp(0, -100);
+	space_ = cpSpaceNew();	
 	space_->gravity = ccp(0, -100);
 	
 	//
