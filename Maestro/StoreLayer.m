@@ -56,7 +56,7 @@
         self.isTouchEnabled = YES;
         
         CCSprite *backgroundImage;
-        backgroundImage = [CCSprite spriteWithFile:@"shop-background.png"];        
+        backgroundImage = [CCSprite spriteWithFile:@"store_background.png"];        
         CGSize winSize = [[CCDirector sharedDirector] winSize];
         [backgroundImage setPosition:
          CGPointMake(winSize.width/2, winSize.height/2)];

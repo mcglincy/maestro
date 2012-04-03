@@ -22,7 +22,7 @@
         
 		CGSize winSize = [[CCDirector sharedDirector] winSize];
         
-        CCSprite *backgroundImage = [CCSprite spriteWithFile:@"ending.png"];
+        CCSprite *backgroundImage = [CCSprite spriteWithFile:@"victory_background.png"];
         backgroundImage.position = CGPointMake(winSize.width/2, winSize.height/2);
         [self addChild:backgroundImage z:-1 tag:0];
 

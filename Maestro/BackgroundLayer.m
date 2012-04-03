@@ -27,7 +27,7 @@
 }
 
 -(id)init { 
-    return [self initWithBackground:@"background_city.png"];
+    return [self initWithBackground:@"level1_background.png"];
 }
 
 @end

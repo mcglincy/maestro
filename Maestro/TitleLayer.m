@@ -18,7 +18,7 @@
     self = [super init];                                           
     if (self != nil) {    
         self.isTouchEnabled = YES;
-        CCSprite *backgroundImage = [CCSprite spriteWithFile:@"Title-Card.png"];
+        CCSprite *backgroundImage = [CCSprite spriteWithFile:@"title_background.png"];
         
         CGSize screenSize = [[CCDirector sharedDirector] winSize];
         [backgroundImage setPosition:CGPointMake(screenSize.width/2, screenSize.height/2)];
