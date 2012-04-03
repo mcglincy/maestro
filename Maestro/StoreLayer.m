@@ -133,7 +133,7 @@
         gameManager.tearsCollectedTotal = gameManager.tearsCollectedTotal - item.price;
         [gameManager.purchasedItems addObject:item];
         
-        [[GameSoundManager sharedInstance].soundEngine playEffect:SOUND_MENU_1];
+        [[GameSoundManager sharedInstance].soundEngine playEffect:SOUND_STORE_REGISTER];
         [self updateMenu];
         
         [self.devil animateForPurchase];
@@ -164,7 +164,7 @@
 
 - (void)doneStore 
 {
-    [[GameSoundManager sharedInstance].soundEngine playEffect:SOUND_STORE_REGISTER];
+    [[GameSoundManager sharedInstance].soundEngine playEffect:SOUND_MENU_1];
     GameManager *gameManager = [GameManager sharedInstance];
     NSInteger nextLevelNum = gameManager.currentLevelNum + 1;
     [[CCDirector sharedDirector] replaceScene:[CCTransitionCrossFade transitionWithDuration:0.5f scene:[GameScene nodeWithLevelNum:nextLevelNum]]];                        
