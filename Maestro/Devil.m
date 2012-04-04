@@ -32,7 +32,7 @@
     CCAnimation *anim = [CCAnimation animation];
     [anim addFrameWithFilename:@"devil_0.png"];
     
-    id animationAction = [CCAnimate actionWithDuration:1.5f
+    id animationAction = [CCAnimate actionWithDuration:2.0f
                                              animation:anim
                                   restoreOriginalFrame:YES];
     //id repeatAnimation = [CCRepeatForever actionWithAction:animationAction];
