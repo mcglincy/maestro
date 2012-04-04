@@ -1,6 +1,6 @@
 # The Maestro
 
-"The Maestro" is an iOS game our team made for Molyjam 2012 in San Francisco (http://whatwouldmolydeux.com).
+"The Maestro" is an iPad game our team made for Molyjam 2012 in San Francisco (http://whatwouldmolydeux.com).
 
 Our molydeux tweet: "You are man with violin. You go around playing sad music sucking in peoples tears which can be used as a currency for weapons."
 
