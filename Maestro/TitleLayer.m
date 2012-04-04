@@ -34,6 +34,9 @@
 
 - (void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    // make sure the game is reset
+    [[GameManager sharedInstance] reset];
+
     //[[GameSoundManager sharedInstance].soundEngine playEffect:SOUND_STAB1]; //This conflicts with the intro music if it's playing
     [[CCDirector sharedDirector] replaceScene:[CCTransitionCrossFade transitionWithDuration:0.5f scene:[BackstoryScene node]]];
 }
