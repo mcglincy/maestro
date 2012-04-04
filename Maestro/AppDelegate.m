@@ -41,7 +41,7 @@
 	director_.wantsFullScreenLayout = YES;
 
 	// Display FSP and SPF
-	//[director_ setDisplayStats:YES];
+	[director_ setDisplayStats:YES];
 
 	// set FPS at 60
 	[director_ setAnimationInterval:1.0/60];
@@ -79,7 +79,7 @@
     // When in iPhone RetinaDisplay, iPad, iPad RetinaDisplay mode, CCFileUtils will append the "-hd", "-ipad", "-ipadhd" to all loaded files
     // If the -hd, -ipad, -ipadhd files are not found, it will load the non-suffixed version
     [CCFileUtils setiPhoneRetinaDisplaySuffix:@"-hd"];              // Default on iPhone RetinaDisplay is "-hd"
-    [CCFileUtils setiPadSuffix:@"-ipad"];                                   // Default on iPad is "" (empty string)
+    [CCFileUtils setiPadSuffix:@""];                                   // Default on iPad is "" (empty string)
     [CCFileUtils setiPadRetinaDisplaySuffix:@"-ipadhd"];    // Default on iPad RetinaDisplay is "-ipadhd"
     
 	// Assume that PVR images have premultiplied alpha
