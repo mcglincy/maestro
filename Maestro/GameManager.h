@@ -28,6 +28,7 @@
 + (GameManager *)sharedInstance;
 
 - (void)update:(ccTime)delta;
+- (void)reset;
 - (void)resetForGameScene:(GameScene *)scene;
 - (void)playerCollectedTear;
 - (BOOL)outOfTime;
