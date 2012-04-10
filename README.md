@@ -4,6 +4,9 @@
 
 Our molydeux tweet: "You are man with violin. You go around playing sad music sucking in peoples tears which can be used as a currency for weapons."
 
+# Download
+http://itunes.apple.com/us/app/the-maestro/id516493348?ls=1&mt=8
+
 # Molyjam page
 http://whatwouldmolydeux.com/display.php?GameID=194
 
