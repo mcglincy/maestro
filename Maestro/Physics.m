@@ -7,6 +7,7 @@
 //
 
 #import "Constants.h"
+#import "FormFactor.h"
 #import "Physics.h"
 #import "PhysicsSprite.h"
 #import "Tear.h"
@@ -55,6 +56,7 @@
 - (void)initPhysics
 {
 	CGSize s = [[CCDirector sharedDirector] winSize];
+    NSLog(@"size %@", NSStringFromCGSize(s));
 	
 	// init chipmunk
 	cpInitChipmunk();
@@ -67,7 +69,7 @@
 	// We have to free them manually
 	//
 	// bottom
-	walls_[0] = cpSegmentShapeNew( space_->staticBody, ccp(0,FLOOR_HEIGHT), ccp(s.width,0), 0.0f);
+	walls_[0] = cpSegmentShapeNew( space_->staticBody, ccp(0, [FormFactor floorHeight]), ccp(s.width,0), 0.0f);
 	
 	// top
 	walls_[1] = cpSegmentShapeNew( space_->staticBody, ccp(0,s.height), ccp(s.width,s.height), 0.0f);

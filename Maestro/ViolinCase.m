@@ -13,7 +13,7 @@
 
 - (id)init
 {
-    self = [super initWithFile:@"violin_case.png" rect:CGRectMake(0, 0, 128, 128)];
+    self = [super initWithFile:@"violin_case.png"];
     if (self) {
     }
     return self;

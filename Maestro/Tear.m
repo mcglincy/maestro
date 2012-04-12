@@ -6,6 +6,7 @@
 //  Copyright (c) 2012 n/a. All rights reserved.
 //
 
+#import "FormFactor.h"
 #import "GameClock.h"
 #import "GameManager.h"
 #import "GameUtils.h"
@@ -30,7 +31,7 @@
 
 - (id)init
 {
-    self = [super initWithFile:@"tear_0.png" rect:CGRectMake(0, 0, 32, 32)];
+    self = [super initWithFile:@"tear_0.png"];
     if (self) {
         self.timeToDie = [[GameClock sharedInstance] currentTime] + [GameUtils randomTimeBetweenMin:MIN_LIFE max:MAX_LIFE];
         
@@ -60,7 +61,7 @@
 
 - (void)addToPhysics
 {
-    cpBody *body = cpBodyNew(1.0f, cpMomentForCircle(1.0f, 0, 100.0f, cpvzero)); //Tear diameter = 100. Using defines was causing compiler errors here :(
+    cpBody *body = cpBodyNew(1.0f, cpMomentForCircle(1.0f, 0, [FormFactor tearPhysicsBodyDiameter], cpvzero)); //Tear diameter = 100. Using defines was causing compiler errors here :(
 
     body->p = self.position;
     Physics *physics = [Physics sharedInstance];

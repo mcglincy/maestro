@@ -12,7 +12,7 @@
 
 - (id)init
 {
-    self = [super initWithFile:@"maestro_0.png" rect:CGRectMake(0, 0, 384, 384)];
+    self = [super initWithFile:@"maestro_0.png"];
     if (self) {
         CCAnimation *anim = [CCAnimation animation];
         [anim addFrameWithFilename:@"maestro_1.png"];

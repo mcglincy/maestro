@@ -18,6 +18,7 @@
 #import "GameScene.h"
 #import "GameSoundManager.h"
 #import "Floor.h"
+#import "FormFactor.h"
 #import "Maestro.h"
 #import "Person.h"
 #import "Physics.h"
@@ -80,21 +81,22 @@
         CGSize winSize = [[CCDirector sharedDirector] winSize];
         Maestro *maestro = [Maestro node];
         maestro.position = ccp(maestro.contentSize.width / 2, 
-                               FLOOR_HEIGHT + maestro.contentSize.height / 2);
+                               [FormFactor floorHeight] + maestro.contentSize.height / 2);
         [self addChild:maestro z:1];                         
         
         Person *p1 = [Person node];
         p1.position = ccp(winSize.width - p1.contentSize.width / 2, 
-                          FLOOR_HEIGHT + p1.contentSize.height / 2);
+                          [FormFactor floorHeight] + p1.contentSize.height / 2);
         [self addChild:p1 z:1];                         
         
         Person *p2 = [Person node];
         p2.position = ccp(winSize.width - p2.contentSize.width / 2 - 100, 
-                          FLOOR_HEIGHT + p2.contentSize.height / 2);
+                          [FormFactor floorHeight] + p2.contentSize.height / 2);
         [self addChild:p2 z:1];   
         
         ViolinCase *violinCase = [ViolinCase node];
-        violinCase.position = ccp(284, FLOOR_HEIGHT + violinCase.contentSize.height / 2);
+        violinCase.position = ccp([FormFactor violinCasePositionX], 
+                                  [FormFactor floorHeight] + violinCase.contentSize.height / 2);
         [self addChild:violinCase z:1];
         [violinCase addToPhysics];
         

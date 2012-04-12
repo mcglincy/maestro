@@ -11,7 +11,7 @@
 @implementation Floor
 - (id)init
 {
-    self = [super initWithFile:@"floor.png" rect:CGRectMake(0, 0, 1024, 40)];
+    self = [super initWithFile:@"floor.png"];
     if (self) {
     }
     return self;

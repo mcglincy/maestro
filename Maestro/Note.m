@@ -12,7 +12,7 @@
 
 - (id)init
 {
-    self = [super initWithFile:@"gray_note.png" rect:CGRectMake(0, 0, 68, 84)];
+    self = [super initWithFile:@"gray_note.png"];
     if (self) {
     }
     return self;

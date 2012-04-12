@@ -21,7 +21,7 @@
 
 - (id)init
 {
-    self = [super initWithFile:@"person_0.png" rect:CGRectMake(0, 0, 384, 384)];
+    self = [super initWithFile:@"person_0.png"];
     if (self) {
         CCAnimation *anim = [CCAnimation animation];
         [anim addFrameWithFilename:@"person_1.png"];
